@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Budokai-Online</title>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="description" content="Budokai-Online an online free-to-play Dragon Ball Z Game. Fight against other players around the world to determine who is truely the fighter!" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/custom3.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/default.css" rel="stylesheet">
+    <link href="/library/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/tagsort.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-tour-standalone.min.css" rel="stylesheet">
+</head>
+
+
+<body class="hold-transition">
+     <img class="center-block img-responsive" src="/images/custom/banner2.png">
+<div class="container cleanblack2">
+    <div class="row cleanblack2">
+        <nav class="navbar navbar-custom span12 noround">
+
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed black" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                    <a class="navbar-brand hidden-sm-down" href="/"> Budokai-Online</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav hidden-md-down">
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="/arena">
+                                <div class="nav-text"><strong>
+                <div class="top-text">Play the</div>                
+               Arena</strong></div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="/forum">
+                                <div class="nav-text"><strong>
+                <div class="top-text">Visit the</div>                
+                Forum</strong></div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="/how_to_play">
+                                <div class="nav-text"><strong>
+                <div class="top-text">Learn the</div>
+                Mechanics</strong></div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="/ladder">
+                                <div class="nav-text"><strong>
+                <div class="top-text">Check the</div>
+                Leaderboards</strong></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+                </div></div>
+        </nav>
+
+
+
+
+
+
+
+
+
+
+        <!--<div class="row cleanblack2">
+        <div class="navbar navbar-custom span12 noround">
+
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -/->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed black" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                    <a class="navbar-brand " href="/"> Budokai-Online</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -/->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/arena"> Arena</a></li>
+                        <!--<li ><a class="fa fa-globe" href="/arena"> Planet War</a></li>-/->
+                        <li><a href="/forums"> Forum</a></li>
+                        <li><a href="/how_to_play"> How To Play</a></li>
+                        <li><a href="/ladder"> Ladder</a></li>
+                        <li><a href="/characters"> Characters</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Other <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/faq"> FAQ</a></li>
+                                <li><a href="/staff"> Staff</a></li>
+                                <li><a href="/legal"> Legal</a></li>
+                                <li><a href="/contact"> Contact</a></li>
+                                <li><a href="/thank"> Special Thanks!</a></li>
+                                <li role="separator"></li>
+                                <li><a href="/sitemap"> Site-Map</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -/->
+            </div>
+            <!-- /.container-fluid -/->
+        </div>
+    </div>-->
+
+
+        <div class="col-lg-8">
+            <% if flash[:success] %>
+                <div class="alert alert-success fade in">
+                    <%= flash[:success] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                <% elsif flash[:error] %>
+                    <% if flash[:error].class == Array %>
+                        <% flash[:error].each do |e| %>
+                            <div class="alert alert-danger fade in">
+                                <%=e.to_s %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                            <% end %>
+                                <% else %>
+                                    <div class="alert alert-danger fade in">
+                                        <%= flash[:error] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                                    <% end %>
+                                        <% elsif flash[:info] %>
+                                            <div class="alert alert-info fade in">
+                                                <%= flash[:info] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                                            <% end %>
+                                                <%=yield%>
+
+                                                    <!---Side information Begin-->
+                                                    <div class="col-md-4">
+                                                        <!---User Panel Begin-->
+                                                        <% if session? %>
+                                                            <div class="list-group  ">
+
+                                                                <li class="list-group-item-user noround">
+                                                                    <div class="fa fa-angle-double-right title"> User Panel</div>
+                                                                </li>
+                                                                <a href="/user/<%=@user.username%>" class="list-group-item noround text-center" title="Profile"><img class="img-game img-responsive center-block" src="<%=@user.avater%>"> <br> 
+                                                                      <i class="fa fa-user"> <%=@user.username%></i></a>
+                                                                <li class="list-group-item text-center"> <b class="fa fa-level-up fa"> Level - <%=@user.rank%> </b>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar progress-bar-warning progress-bar-striped active cb" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: <%=@user.percent%>%">
+                                                                            Next Rank:
+                                                                            <%=@user.percent%>%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <a href="/settings" class="list-group-item "> <b class=" fa fa-cogs"> Control Panel</b></a>
+                                                                <a href="/messages" class="list-group-item"><span class="badge"><%=@user.messages.count(:read => false)%></span> <b class="fa fa-inbox"> Private Messages</b></a>
+                                                                <a href="/friends" class="list-group-item"><span class="badge"><%=@user.friendships.all(:status => "friends").target.count(:updated_at.gt =>  30.minutes.ago)%></span> <b class="fa fa-users"> Friends</b></a>
+                                                                </li>
+
+                                                                <a href="/planet" class="list-group-item "><span class="badge"><%=@user.members.count(:status => "Pending")%></span> <b class="fa fa-globe "> Planet Panel</b></a>
+                                                                <a href="/logout" class="list-group-item "> <b class="fa fa-sign-out"> Sign Out</b></a>
+                                                            </div>
+
+                                                            <% end %>
+                                                    </div>
+        </div>
+    </div>
+    <!---User Panel End-->
+    <!--Row End-->
+</div>
+
+<!---Side Information End-->
+
+<!---Bottom container-->
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4 panel-heading-footer navbar-custom-titles">
+                <b>RECENT NEWS</b>
+            </div>
+            <div class="col-sm-4 panel-heading-footer navbar-custom-titles">
+                <b>RECENT NEWS</b>
+            </div>
+            <div class="col-sm-4 panel-heading-footer navbar-custom-titles">
+                <b>RECENT NEWS</b>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel cleanblack title">
+                <div class="panel-heading">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel cleanblack title">
+                <div class="panel-heading">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel cleanblack title">
+                <div class="panel-heading">
+                    <i class="fa fa-fw fa-signal"></i> COMMUNITY POLL
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container navbar-custom-titles">
+        <span class="fixed1">Budokai-Online is a fansite that is no way affiliated with the Dragon Ball Brand, Namco Bandai, Toei Animation or Akira Toriyama. All images, video footage and other media are copyright to their respective owners, no copyright infringement
+                is intended. To view more regarding terms and conditions please visit our <u><a class="fixed2" href="/legal">Disclaimer</a></u></span>
+        <!--<b><p align="center" style="margin-top: 10px;">&copy; Budokai-Online 2016-17</p></b>-->
+    </div>
+
+    <div class="subP">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fa fa-fw fa-copyright"></i> BUDOKAI ONLINE 2016</div>
+                <div class="col-md-6">
+                    <ul class="list-inline list-socials">
+                        <li><a href="https://www.facebook.com/" data-toggle="tooltip" title="" target="_blank" data-original-title="Facebook"><i class="fa fa-fw fa-facebook"></i></a></li>
+                        <li><a href="https://www.twitter.com/" data-toggle="tooltip" title="" target="_blank" data-original-title="Twitter"><i class="fa fa-fw fa-twitter"></i></a></li>
+                        <li><a href="https://www.google.com/" data-toggle="tooltip" title="" target="_blank" data-original-title="Google"><i class="fa fa-fw fa-google"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/jq.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/tagsort.min.js"></script>
+<script src="/js/vadiation.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('body').popover({
+            selector: '[data-toggle=popover]',
+            container: 'body',
+            trigger: 'hover'
+        });
+
+        $('body').tooltip({
+            selector: '[data-toggle=tooltip]'
+        });
+
+    });
+</script>
+</body>
+
+</html>
+<!---Footer Information End-->
+
+
+<nav class="navbar navbar-custom span12 noround">
+
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed black" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <a id="main-nav-toggle" class="nav-icon">Menu <i class="fa fa-bars" style="font-size: 12px;"></i></a></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav hidden-md-down">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/">
+                                        <div class="nav-text-fixed"><strong>Homepage</strong></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/arena">
+                                        <div class="nav-text"><strong>
+                <div class="top-text">Play the</div>                
+               Arena</strong></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/forums">
+                                        <div class="nav-text"><strong>
+                <div class="top-text">Visit the</div>                
+                Forum</strong></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/how_to_play">
+                                        <div class="nav-text"><strong>
+                <div class="top-text">Learn the</div>
+                Mechanics</strong></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/ladders">
+                                        <div class="nav-text"><strong>
+                <div class="top-text">Check the</div>
+                Leaderboards</strong></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/characters">
+                                        <div class="nav-text"><strong>
+                <div class="top-text">View the</div>
+                Characters</strong></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="dropdown" href="#">
+                                        <div class="nav-text"><strong>
+                <div class="top-text">Additional</div>
+                Sections</strong></div>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/faq"> FAQ</a></li>
+                                        <li><a href="/staff"> Staff</a></li>
+                                        <li><a href="/legal"> Legal</a></li>
+                                        <li><a href="/contact"> Contact</a></li>
+                                        <li><a href="/thank"> Special Thanks!</a></li>
+                                        <li role="separator"></li>
+                                        <li><a href="/sitemap"> Site-Map</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container-fluid -->
+                    </div>
+            </div>
+            </nav>
+            
+            
+            <div class="row ">
+  <div class="col-lg-12 ">
+
+    <div class="carousel slide article-slide carousel-fade "  id="myCarousel">
+      <!-- Indicators -->
+      <div class="col-lg-1">
+        <ol class="carousel-indicators ">
+          <li class="active" data-slide-to="0" data-target="#myCarousel">
+            <img alt="" title="" height="44" width="120" src="/images/slider3.png">
+
+          </li>
+          <li class="" data-slide-to="1" data-target="#myCarousel">
+            <img alt="" title="" height="44" width="120" src="/images/slider2.png">
+          </li>
+          <li class="" data-slide-to="2" data-target="#myCarousel">
+            <img alt="" title="" height="44" width="120" src="/images/slider1.png">
+          </li>
+         
+        </ol>
+      </div>
+      <div class="carousel-inner cont-slider " >
+
+        <div class="item active">
+         <iframe width="120" height="315" src="https://www.youtube.com/embed/pLtmSe8Rj18" frameborder="0" allowfullscreen></iframe>
+          <div class="carousel-caption text-left hidden-xs">
+            <h3 class="header text-center up1 OB titledisplay">Welcome To Budokai-Online</h3>
+            <h6 class="open-s descdisplay">The long awaited Dragon Ball Universe Multiplayer Game has arrived. Stay tuned for new content weekly and be sure to give feedback on the <u><a class="fixed7" href="/forum/">forum!</a></u></h6>
+          </div>
+        </div>
+        <div class="item">
+          <a href="/arena"><img class="img-responsive" src="/images/slider2.png"></a>
+          <div class="carousel-caption text-left hidden-xs">
+            <h3 class="header  up1 OB text-center titledisplay">Start playing today!</h3>
+            <h6 class="open-s descdisplay">Checkout the arena and go head to head with players around the world.</h6>
+          </div>
+        </div>
+         <div class="item">
+          <a href="/how_to_play"><img class="img-responsive" src="/images/slider1.png"></a>
+          <div class="carousel-caption text-left hidden-xs">
+            <h3 class="header up1 OB text-center titledisplay">Visit the Game Manual</h3> 
+            <h6 class="open-s descdisplay">Need help on learning how to play? Budokai Online's game manual teaches you everything you need to know regarding on site experiences.</h6>
+          </div>
+        </div>
+        
+      </div>
+
+
+    </div>
+
+  </div>

@@ -1,0 +1,228 @@
+<%# This is Main Menu Code %>
+
+  </div>
+  <!--End of Column-->
+  <div class="col-md-12 ">
+    <div class="panel ">
+      <div class="panel-heading navbar-custom text-center border"><b>Main Menu</b>
+        <a data-toggle="collapse" class="pull-right orange fa fa-minus-square" onclick="change(this);return false;" href="#options"></a>
+      </div>
+      <div id="options" class="panel-collapse collapse in">
+        <div class="panel-body border">
+          <div class="progress" id="load">
+            <div id="loadingbar" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+              <span id="loadingbarText" class="text-center"> 0%</span>
+            </div>
+          </div>
+          <div class="row img-check">
+          </div>
+          <div class="panel-body">
+            <div class="col-sm-3 hidden choice hovereffect"><img class="navb img-thumbnail" id="4" onclick="Menu(this);" src="/images/custom/ladder.png">
+              <div class="overlay" id="4" onclick="Menu(this)">
+                <h2>Ladder <br><small>Tackle other players in the Public Ladder</small></h2>
+                
+              
+              </div>
+            </div>
+            <div class="col-sm-3 hidden choice hovereffect"><img class="img-thumbnail" id="3" onclick="Menu(this);" src="/images/custom/teambuilder.png">
+              <div class="overlay" id="3">
+                <h2>Team Builder <br><small>Build the ulimate team for victory</small></h2>
+              </div>
+            </div>
+            <div class="col-sm-3 hidden choice hovereffect"><img class="img-thumbnail coming" id="7" src="/images/custom/dragonquest.png">
+              <div class="overlay" id="7">
+                <h2>Dragon Quest <br><small>Coming Soon</small></h2>
+              </div>
+            </div>
+            <div class="col-sm-3 hidden choice hovereffect"><img class="img-thumbnail coming" id="9" src="/images/custom/characterbuilder.png">
+              <div class="overlay" id="9">
+                <h2>Character Builder <br><small>Coming Soon</small></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="img-check">
+            <div class="panel-body col-md-12 ">
+              <div class="panel panel-default">
+                <div class="panel-body skill"></div>
+              </div>
+            </div>
+
+            <div class="panel-body col-md-6 ">
+              <div class="panel panel-default">
+                <div class="panel-body characterSelection">
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-body col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-body stats"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <div id="endgame" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header modal-header-warning">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 id="title" class="modal-title cb text-center resulttext"></h2>
+        </div>
+        <div class="modal-body resultscroll">
+          <img src="" id="result" class=" center-block img-thumbnail img-responsive hidden-xs">
+          <br>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <img src="/assets/zGu.jpg" id="c1e" class="img-thumbnail img-message ftitle">
+              <div class="progress">
+                <div id="pb-1" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                  <span id="pb-text1" class="text-center"> 60%</span>
+                </div>
+              </div>
+              <div id="info1" class="grey"></div>
+            </div>
+          </div>
+          <br>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <img src="/assets/zGu.jpg" id="c2e" class="img-thumbnail img-message ftitle">
+              <div class="progress">
+                <div id="pb-2" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                  <span id="pb-text2" class="text-center"> 60%</span>
+                </div>
+              </div>
+              <div id="info2" class="grey"></div>
+            </div>
+          </div>
+          <br>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <img src="/assets/zGu.jpg" id="c3e" class="img-thumbnail img-message ftitle">
+              <div class="progress">
+                <div id="pb-3" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                  <span id="pb-text3" class="text-center"> 60%</span>
+                </div>
+              </div>
+              <div id="info3" class="grey"></div>
+            </div>
+          </div>
+       
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-body">
+    
+            <img src="/assets/zGu.jpg" id="c4e" class="img-thumbnail img-message ftitle">
+            <div class="progress">
+                <div id="pb-4" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                  <span id="pb-text4" class="text-center"> 60%</span>
+                </div>
+              </div>
+      <div id="info4" class="grey"></div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal autoplay-->
+
+  <div id="items" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center ">Item Selection</h4>
+        </div>
+        <div class="modal-body text-center">
+
+          <div>
+            <img src="/assets/capsulegreen.png">
+          </div>
+          <br>
+          <select id="itemlist" class="form-control">
+   
+</select>
+          <hr>
+          <div id="itemDescription">
+          </div>
+          <hr>
+          <small id="itemInfo" class="wspace"> </small>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success pull-left" onclick="itemChoice();">Save</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="bootstrap snippet">
+    <div class="row">
+      <div id="game" class="col-md-12 hidden">
+     <div class="container canvasTop">
+    
+       <canvas id="myCanvas"> </canvas>
+     </div>
+        
+        <canvas id="info" class="hidden"> </canvas>
+       
+      </div>
+ <canvas id="canvas" class="hidden"></canvas>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+      </div>
+    </div>
+      <div class="container hidden" id="music">
+    <div class="panel panel-default ">
+  <div class="panel-body "><div class="col-md-4 " id="musicstatus">Paused</div><a href="#" class="col-md-2 colfa fa fa-backward fa-2x" onclick="swap(5); return false;"></a> <a href="#" class="fa fa fa-forward fa-2x col-md-3" onclick="swap(4); return false;"></a><div class="col-md-3 " id="musictitle">Friedrich Habetler - Challengers (DBZ Budokai )</div></div>
+   <div class="panel-body"> <audio class="col-xs-12" id="play" controls><source id="current_audio"  src="/assets/music1.mp3" type="audio/mpeg">Your browser does not support the audio tag.</audio>
+                </div>
+                <div class="track">
+     <div class="panel-body"><a href="#" onclick="swap(1); return false;"><small class="pull-left">1.Friedrich Habetler - Challengers (DBZ Budokai )</small><small class="pull-right">3:31</small></a> </div>
+      <div class="panel-body"><a href="#" onclick="swap(2); return false;"><small class="pull-left">2.94stones - Gogeta Theme</small><small class="pull-right">2:41</small> </a></div> 
+       <div class="panel-body"><a href="#" onclick="swap(3); return false;"><small class="pull-left">3.94stones - Heroic Trunks</small><small class="pull-right">3:18</small> </a></div>
+       </div>
+        </div>
+  
+           
+<div id="chat" class="modal fade " tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content trans">
+      <div class="modal-header ui-dialog-title">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Chatroom</h4>
+      </div>
+      <div class="modal-body">
+       <div id="insertchat" class="insertchat" ></div>
+      </div>
+      <div class="modal-body">
+        <textarea  id="chatroomtext" name="body" class="form-control" rows="5" placeholder="Place your message here!"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

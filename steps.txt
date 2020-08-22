@@ -1,0 +1,104 @@
+rackup config.ru -p $PORT -o $IP
+
+To bring up the number, decrease the number.
+To bring down the target, increase the number.
+To bring the target to the left, decrease the number.
+To bring the target to the right, increase the number.
+--------------------------------------------------------------------------------
+General Classes and Terminologies
+
+>>> if check(2,30,skill,0,player,2) #This means (bp, energy, skill, cooldown, player, type of skill it is).
+>>> find == player.effect.index("50") #This checks if the player is effected by another skill ("50"), then the else effect of happens.
+>>> if find == nil #This means that if the skill is not effected by another skill then the skill remains the same.
+>>> skill_turns(player,2,49,"49",2, true) #This means (how many turns, skillID, JS SkillID, type, true means show, false means invisible).
+>>> cD #This means Current Description
+>>> if (trans === means Transformation #This means the skill is a transformation.
+>>> [c+1] #This means character. 
+>>> [c+2] #This means name or skill ID.
+>>>> #First is target(self means you, player means ally or enemy). Second is turns(use 99 long turns). Third is skillID. Fourth is trans name. Fifth is type.
+
+<!---  
+<div class="col-lg-3"><%=@u.username%> </div><div class="col-lg-2"><%=@u.group%></div>
+<div class="col-lg-2"><a href="#" id="<%=@u.username%>" id4="7" onclick="updateTextConverter(this);return false"><img class="img-responsive " src="/images/mail.png" alt="message"></a></div>
+<button class="btn btn-primary TW" data-toggle="modal" data-target="#new_friend"> Add Friend!</button>
+-->
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Parameters for Focusing (game.js)
+
+Focus = 1 means you want to attack a single enemy.
+Focus = 2 means you want to attack all enemies.
+Focus = 3 means you want to put a skill on yourself.
+Focus = 4 means you want to put a skill on a single ally.
+Focus = 5 means you want to put a skill on all allies.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Parameters for Immunities & General (game.js)
+
+0 for full.
+1 for ki.
+2 for strength.
+3 for power down.
+4 for friendly.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Example of a skill that increases its damage if effected by another skill.
+
+when 49
+if check(2,30,skill,0,player,2)
+find = player.effect.index("50")
+if find == nil
+s_damage(player,20)
+skill_turns(player,2,49,"49",2, true)
+else
+s_damage(player,30)
+end
+end
+
+when 50
+if check(2,30,skill,2,player,1)
+find = player.effect.index("49")
+if find = nil
+k_damage(player, 20)
+skill_turns(player,2,50,"50",1,true)
+else
+k_damage(player, 30)
+end
+end
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Steps to creating a character.
+
+STEP 1
+Find: def self.create_team(controlling_player, c, s, stats, item) on game.rb near line 684. This is to add the character for creating teams.
+Input the data for the character.
+
+STEP 2
+Go to account.rb and find "get '/update' do" near line 12. Add in the character's abbreviations. This enables the character to be unlocked by players.
+Go to game.js and search for "function characterList(a)" near line 644. Add in the character values.
+>>> First is character description.
+>>> Second is character image path.
+>>> Third is character name (Abbreviation).
+>>> Fourth is characters tag (Villian, Saiyan).
+On game.js, find "function currentDescription(num1,num2,num3,num4)" near 7073. This is for the ingame's code.
+Input the data for the character. Remember to use \n so that the descriptions dont overlap the canvas.
+
+STEP 3
+Check that the character is added and working with his generic skills only. 
+
+
+Steps for creating a characters skills.
+
+STEP 1
+Go to game.rb and find: "class GenericClass < Character". Copy this and paste it below the entire class.
+Go to game.js and find: "switch (num2)" near line 7188. Add in characters skills.
+Go to game.js and find: "function skillList(a)" near line 306. Add in characters skills.
+Check that the character is added and working.
+
+STEP 2
+Add the effects to the character class "class Raditz < Character" by copying the generic character set then starting from there.
+Go to game.js and find: "genericSkills(1);" near line 2249. Scroll down to add in the characters details. If the character has skills that are automatically locked, then 
+add:
+

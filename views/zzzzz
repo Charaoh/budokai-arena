@@ -1,0 +1,36 @@
+<header id="navbar-header">
+        <div id="header-outer" class="outer">
+            <div id="navbar-header" class="nav-container">
+                <a id="main-nav-toggle" class="nav-icon"><i class="fa fa-bars" style="font-size: 12px;"> MENU</i></a>
+                <div class="nav-container-inner">
+                    <ul id="main-nav ">
+                        <li class="main-nav-list-item">
+                            <a class="main-nav-list-link links" href="/">Homepage</a>
+                        </li>
+                        <li class="main-nav-list-item">
+                            <a class="main-nav-list-link links" href="/arena">Play Now</a>
+                        </li>
+                        <li class="main-nav-list-item">
+                            <a class="main-nav-list-link links" href="/forum">Forum</a>
+                        </li>
+                        <li class="main-nav-list-item">
+                            <a class="main-nav-list-link links" href="/characters">Characters & Items</a>
+                        </li>
+                        <li class="main-nav-list-item">
+                            <a class="main-nav-list-link links" href="/ladder">Leaderboards</a>
+                        </li>
+                        <li class="main-nav-list-item top-level-menu">
+                            <a class="main-nav-list-link" href="#">Misc.</a>
+                            <ul class="main-nav-list-child" style="display: none;">
+                                <li class="main-nav-list-item"><a class="main-nav-list-link" href="/faq">F.A.Q</a></li>
+                                <li class="main-nav-list-item"><a class="main-nav-list-link" href="#">Contribution List</a></li>
+                                <li class="main-nav-list-item"><a class="main-nav-list-link" href="/staff">Staff</a></li>
+                                <li class="main-nav-list-item"><a class="main-nav-list-link" href="/legal">Legal</a></li>
+                                <li class="main-nav-list-item"><a class="main-nav-list-link" href="#">Sitemap</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>

@@ -1,0 +1,337 @@
+<div class="navbar-orange">
+<div class="panel noround transparent " style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange marginup2 profile">
+            
+             <img src="<%=@u.avater%>" class="img-circle img-responsive  profile-title">
+                 <h2 class="panel-text text-center newsize"> Profile of <%=@u.username%></h2>
+             </div>
+             </div>
+             
+             
+         <div class="panel noround transparent " style="margin: 0px; border:black;">
+          
+             <div class="panel-body profile-body ">
+               <div class="col-lg-12 scrollList5 ">
+         
+              
+     <table class="table table-responsive">
+              <tbody>
+                <tr>
+                  <td>Username</td>
+                  <td>
+                    <%=@u.username%>
+                  </td>
+                </tr>
+               <tr>
+                  <td>Status</td>
+                  <td>
+                    <%=@u.group%>
+                  </td>
+              
+                     <% if @user %>
+     <% if @user.staff%>
+     </tr>
+      <tr>
+                  
+                </tr>
+                
+               
+     
+  <% end %>
+    <% end %>
+              <tr>
+             
+                  <td>Private Message</td>
+                  <td>
+                    <a href="#" id="<%=@u.username%>" class="button1" id4="7" onclick="updateTextConverter(this);return false "><div class="fa  fa-envelope"></div> Message</a>
+                  </td>
+                  </tr>
+                  <tr>
+                  <td>Add Friend</td>
+                  <td>
+                    <a href="#" class="button1  " data-toggle="modal" data-target="#new_friend"> <div class="fa fa-users"></div> Add Friend!</a>
+                  </td>
+                </tr>
+                <tr>
+             
+                  
+                </tr>
+              
+                <tr>
+             
+                  <td>Zennie</td>
+                  <td>
+                    <%=@u.money%>
+                  </td>
+                  </tr>
+                  <tr>
+                  <td>Forum Posts</td>
+                  <td>
+                    <%=@u.post_count%>
+                  </td>
+                </tr>
+                
+                
+                <tr>
+                  <td>Country</td>
+                  <td>
+                    <%=@u.country%>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td>Gender</td>
+                  <td>
+                    <%=@u.gender%>
+                  </td>
+                </tr>
+                
+                <td>Birthday</td>
+                
+                <td>
+                  <%=@u.birthday%>
+                </td>
+                </tr>
+                 <% if @user.staff %>
+                <tr>
+                <td>Ip-address</td>
+                    <td>
+                    
+                 <%= @u.ip_address%>
+                  </td>
+          
+                </tr>
+           <% end %>     
+                   
+
+
+
+
+              </tbody>
+            </table>
+           
+            
+            
+                <div class="panel noround transparent" style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange profile">
+              <h2 class="panel-text text-center newsize"> Battle Info</h2>
+             </div>
+          
+             <div class="panel-body ">
+                 <table class="table ">
+            <tbody>
+
+              <tr>
+                <td>Rank</td>
+                <td>
+                  <%=@u.rank%>
+                </td>
+                <td>Average:
+                  <%=@u.average%>%</td>
+              </tr>
+              <tr>
+                <td>Power Level</td>
+                <td>
+                  <%=@u.power_level%>
+                </td>
+                <td>
+                  
+                      <%=@u.percent%>%</div>
+                </td>
+              </tr>
+              <tr>
+                <td>Battle Streak</td>
+                <td>Streak:
+                  <%=@u.streak%>
+                </td>
+                <td>Highest Streak:
+                  <%=@u.high_streak%></td>
+              </tr>
+              <tr>
+                <td>Ratio</td>
+                <td>Wins:
+                  <%=@u.wins%>
+                </td>
+                <td>Losses:
+                  <%=@u.losses%>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+               </div>
+                 </div>
+                  
+                   
+                          <div class="panel noround transparent" style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange profile">
+            <h2 class="panel-text text-center newsize"> Match History</h2>
+             </div>
+          
+             <div class="panel-body matchhistory ">
+               
+               
+               
+               <table class="table table-responsive ">
+    
+
+
+              <% if @u.battlelogs %>
+                <% if @u.battlelogs.all(:order => [ :created_at.desc ]).each  do |b| %>
+                  <tr>
+                    <td>
+                      <a  href="/user/<%=b.winner%>">
+                        <%= b.winner %>
+                      </a>
+                    </td>
+                    <td>
+                      <%= b.vs %>
+                    </td>
+                    <td>
+                      <%= b.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+                    </td>
+                  </tr>
+                  <% end %>
+                    <% end %>
+                      <% end %>
+            </table>
+               </div>
+               <br>
+                             <div class="panel noround transparent" style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange  profile">
+             <h2 class="panel-text text-center newsize"> Signature</h2>
+             </div>
+          
+             <div class="panel-body ">
+          
+
+  <div class="panel-body img-check ">
+    <%= RDiscount.new(@u.signature, :smart, :filter_html).to_html %>
+    
+    <% if @user %>
+ <% if @u.username == @user.username || @user.staff%>
+ <br>
+    <a href="#" id2="<%=@u.id%>" id3="<%=@u.signature%>" id4="10" class="button1 btn-block text-center" onclick="updateTextConverter(this);">  Change Signature</a>
+    <% end %>
+     <% end %>
+ </div>
+                 </div>
+               </div>
+               </div>
+
+            </div>
+            
+</div>
+
+     </div>                   
+                  
+                  
+             </div>      
+                     
+                   
+            
+             
+    <!-- New Friend --->
+    <div class="modal fade" id="new_friend" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+       
+          <div class="modal-body modal-bg">
+            <div class="button1 " >Add <%= @u.username%></div> 
+            <div class="shadow2 text-center">
+              
+            <form action="/friends2" method="post" id="new_friend_form">
+
+              <input type="hidden" name="username" class="form-control" value="<%= @u.username%>" required>
+              <b class="text-center">Are you sure?</b>
+<input type="submit" class="btn btn-default btn-block" value="Add Friend">
+          </form>
+          </div>
+           
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- New Message --->
+    <div class="modal fade" id="edit_reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+         
+          <div class="modal-body modal-bg">
+            <div class="button1 newText">New message</div>
+            <!--<div class="alert alert-danger" role="alert">Uses spaces!</div>-->
+<div class="shadow2">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <img src='/images/smileys/s1.png' id="1" id2="textUpdate" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" id2="textUpdate" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" id2="textUpdate" onclick='smiley(this);'
+                /><img src='/images/smileys/s4.png' id="4" id2="textUpdate" id2="textUpdate" onclick='smiley(this);' />
+                <img src='/images/smileys/s5.png' id="5" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" id2="textUpdate" onclick='smiley(this);'
+                /><img src='/images/smileys/s8.png' id="8" id2="textUpdate" onclick='smiley(this);' />
+                <img src='/images/smileys/s9.png' id="9" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" id2="textUpdate" onclick='smiley(this);'
+                /><img src='/images/smileys/s12.png' id="12" id2="textUpdate" onclick='smiley(this);' />
+                <img src='/images/smileys/s13.png' id="13" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" id2="textUpdate" onclick='smiley(this);'
+                /><img src='/images/smileys/s16.png' id="16" id2="textUpdate" onclick='smiley(this);' />
+                <img src='/images/smileys/s17.png' id="17" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" id2="textUpdate" onclick='smiley(this);'
+                /><img src='/images/smileys/s20.png' id="20" id2="textUpdate" onclick='smiley(this);' />
+                <img src='/images/smileys/s21.png' id="21" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" id2="textUpdate" onclick='smiley(this);'
+                /><img src='/images/smileys/s24.png' id="24" id2="textUpdate" onclick='smiley(this);' />
+                <img src='/images/smileys/s25.png' id="25" id2="textUpdate" onclick='smiley(this);' />
+              </div>
+            </div>
+
+
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="btn-group " role="group" aria-label="...">
+                  <button class="btn btn-default" id="1" id2="textUpdate" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" id2="textUpdate" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3"
+                    id2="textUpdate" onclick="changeText(this)">Quote</button><button class="btn btn-default" id="4" id2="textUpdate" onclick="changeText(this)">Link</button>
+                  <button class="btn btn-default" id="5" id2="textUpdate" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" id2="textUpdate" onclick="changeText(this)">Image</button><button class="btn btn-default" id="13"
+                    id2="textUpdate" onclick="changeText(this)">Image with Link</button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default">Text Size</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                    <ul class="dropdown-menu">
+                      <li><a id="7" id2="textUpdate" onclick="changeText(this)">H1 Largest</a></li>
+                      <li><a id="8" id2="textUpdate" onclick="changeText(this)">H2</a></li>
+                      <li><a id="9" id2="textUpdate" onclick="changeText(this)">H3</a></li>
+                      <li><a id="10" id2="textUpdate" onclick="changeText(this)">H4</a></li>
+                      <li><a id="11" id2="textUpdate" onclick="changeText(this)">H5</a></li>
+                      <li><a id="12" id2="textUpdate" onclick="changeText(this)">H6 Smallest</a></li>
+                    </ul>
+                  </div>
+
+
+                </div>
+
+
+              </div>
+              
+              </div>
+                          <form id="form" action="/messages" method="post">
+              <input type="hidden" name="location" id="location" class="form-control">
+              <input type="hidden" value="" name="previous" class="form-control">
+              <input type="hidden" value="" name="new_id" id="comment_id" class="form-control">
+              <div id="hideuser">To user: <input type="text" id="user" name="send_to" value="" class="form-control"> <br></div>
+              <div id="titlehold">Title: <input type="text" name="title" class="form-control"> <br></div>
+              <b>Body</b> <textarea id="textUpdate" name="body" class="form-control" placeholder="Your message text goes here" rows="5" required></textarea>
+              <br>
+              <input type="submit" class="btn btn-default btn-block" value="Send">
+            </form>
+            </div>
+
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+</div>
+

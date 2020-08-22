@@ -1,0 +1,488 @@
+<!---< % if (User.first(:username => session[:username]).admin == true) %> --->
+<%# This is True Menu Code %>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Budokai-Online</title>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="public">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link href="/css/tagsort.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/custom.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/jquery-ui.css" rel="stylesheet">
+    <link href="/library/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="black">
+
+    <div class="container">
+        <div class="row">
+
+    
+            
+            <div id="contents">
+                <div class="container">
+                    <div class="row">
+                        <%= yield %>
+                        
+                        
+      
+            
+
+
+</div>
+<div class="container " id="Online">
+<button class="btn-block button2 margin-left1 " href="#chat" data-backdrop="false" data-toggle="modal" onclick="showchat();"> Chatroom</button>
+                 
+                </div>
+            
+            
+        
+ <div class="modal fade" id="Ladder" tabindex="-1" role="dialog">
+  <div class="modal-dialog shadow5" role="document">
+    <div class="modal-content" style="background-color:transparent;">
+      <div class="modal-body">
+          <div class=" panel-body">
+            <h4 class="modal-title text-center">Private Match: Enter Username</h4>
+ <input class="form-control" id="enemy_username" type="text">
+       <button type="button" class="button2 pull-left btn-block"  onclick="ladderChoice('Private');" >Load Game</button>
+    
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </div>
+        </div>
+        
+        <div id="save" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm ">
+
+            <!-- Modal content-->
+            <div class="modal-content modal-small">
+               
+                
+                <div class="modal-body modal-body-small white">
+                     <div class="shadow2 ">
+                    <h4 class=" text-center">Saving</h4>
+                    </div>
+                    <div class="shadow2 text-center">
+                    <p>Loading Info To Sever....</p>
+                    <div id="report" class="report"></div>
+                </div>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+  
+
+<!-- Modal -->
+<div class="modal fade" id="showteam" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-team">
+      <div class="modal-body teamtitle">
+          <h4 class=" text-center" id="teamtitle">Modal title</h4>
+          <div class="panel-body body-size">
+          
+          <div class="row">
+              
+        <div class="col-lg-2"><div class="img"><a href="#"><img id="currentimage" class="" src="/ava/box.png"></a><div class="desc" id="currentlevel">Lv 6</div></div></div>
+        <div class="col-lg-10"><h4 id="currentTitle" class="OB"></h4> <div id="currentdescription" class="description-size" >gfiousfdhfgsahsg </div>
+        <small class="wspace text-center padding" id="currentinfo" >Strength:53 Ki:53 Defense:53 Speed:53</small>
+        
+        </div>
+       
+     <div class="col-lg-12"> <small class="wspace text-center" id="currentstats" ></small> <div class="padding"></div> <button class="button2 btn-block " onclick="alternative(this);" id2="" id="Alter">Check Alternative Skill</button></div>
+        
+        
+        </div>
+       <div class="padding2"></div>
+        <div class="tagsort-tags-container tags-size "></div>
+        <div class="padding2"></div>
+        <div class="row select selection"></div>
+        
+         
+       </div>
+      <div id="savebutton">
+        
+        
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade " tabindex="-1" role="dialog" id="planetMenu">
+  <div class="modal-dialog modal-lg " role="document">
+    <div class="modal-content  modal-dragon-large">
+      
+      <div class="modal-body" >
+          <div class="row">
+             <div class="col-lg-12"> <div class="panel-body aero ">
+ <div class="col-lg-2"><img id="planetPanelAvatar" src="/ava/box.png" class="img-responsive center-block planetAvater">
+
+<div id="memberDisplay"><button class="button2 btn-block">Alliences</button> <button class="button2 btn-block defend" id2="" id3="" onclick='selected(this);battlePlanet("Defend");'>Defend</button><button class="button2  btn-block" onclick="planetControls(1);"> Quit</button></div> 
+
+  </div><div class="col-lg-8" >  <h2 class="col-lg-8 aero" id="planetPanelName"></h2><div class="col-lg-4 coin" id="planetPanelMoney"> </div><br><br><br><br> <div class="table-responsive col-lg-12">          
+  <table class="table">
+    <tbody id="planetPanelTable">
+     
+   
+    </tbody>
+  </table>
+  </div>
+ </div>
+ 
+ <div class="col-lg-2" id="buttonStaff"><button class="button2 btn-block Commanderonly" onclick="planetControls(26);"> Disband</button><button class="button2 btn-block Commanderonly" > Transfer</button><button class="button2 btn-block Commanderonly" > Upgrade</button><button class="button2 btn-block Officeronly" onclick="planetControls(9); "> Edit</button><button class="button2  btn-block Captainonly" onclick="planetControls(8);"> Invite</button><button class="button2 btn-block Commanderonly">Shop</button><button class="button2 btn-block Officeronly" onclick="planetControls(12);">Manage</button></button></div>
+ <div class="col-sm-12">
+     <button class="btn-block button2" onclick="planetControls(15);" id="planetpanelDescription">
+     Biography and Recruitment Display
+     </button>
+     <button class="btn-block button2" onclick="planetControls(22);" id="planetpanelSearch">
+     Biography and Recruitment Display
+     </button></div></div></div>
+
+
+       </div>
+       </div>
+       
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade " tabindex="-1" role="dialog" id="checkingPlanet">
+  <div class="modal-dialog modal-md " role="document">
+    <div class="modal-content ">
+      
+      <div class="modal-body model-sizes" >
+          <div class="row">
+<div class="col-lg-12"><img id="planetBanner" src="/assets/test.png" class="img-responsive img-rounded"></div> 
+  <div class="col-lg-12 scrollList2" id="planetCheck">
+
+       </div>
+       
+       <button class="button2 btn-block" id="planetAction" onclick="battlePlanet();">Attack</button>
+       </div>
+       
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+</div>
+
+<div class="modal fade " tabindex="-1" role="dialog" id="invite" style="margin-left: 65px;">
+  <div class="modal-dialog modal-lg shadow" role="document">
+    <div class="modal-content " style="background-color:transparent;"  id="planetInfo">
+<!--- Copy Post -->
+
+<div class="modal-body model-sizes shadow " >
+    
+    </div>
+     
+
+        <!---Copy Post --->
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade " tabindex="-1" role="dialog" id="management">
+  <div class="modal-dialog modal-md  " role="document">
+    <div class="modal-content modalContentManage"  id="planetInfo">
+<!--- Copy Post -->
+<div class="modal-body  img-check  body-size shadow">
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs nav-justified " role="tablist">
+                <li role="presentation" class="active"><a href="#inviteInfo" aria-controls="inviteInfo" role="tab" data-toggle="tab" >Invite</a></li>
+                <li role="presentation"><a href="#manage" aria-controls="manage" role="tab" data-toggle="tab" >Manage Society</a></li>
+                <li role="presentation"><a href="#alliences" aria-controls="alliences" role="tab" data-toggle="tab">Alliences</a></li>
+             
+            </ul>
+            <div class="tab-content">
+               
+               <div role="tabpanel" class="tab-pane active scrollList6" id="inviteInfo">
+                    <div class="panel-body">
+
+                        <div class=""> Enter Username:</div>
+                        <input class="form-control" id="invite_name" type="text">
+                        <button class="button2 btn-block" onclick="planetControls(3);"> Simple Search</button>
+                    </div>
+                      <div class="panel-body">
+                       <div> Rank:</div>
+                        <input class="form-control" value="0" id="invite_rank" type="text">
+                        <div> High-Streak:</div>
+                        <input class="form-control" value="0" id="invite_streak" type="text">
+                        <div> Average %:</div>
+                        <input class="form-control" value="10" id="invite_average" type="text">
+                        <button class="button2 btn-block" onclick="planetControls(4);"> Advance Search</button>   
+                    </div>
+                    
+                    <div class="panel-body">
+                    
+                        <div> Lowest Rank to Join:</div>
+                        <input class="form-control" value="0" id="setting_rank" type="text">
+                        <div> Lowest Highest Streak to Join:</div>
+                        <input value="0" class="form-control" id="setting_streak" type="text">
+                        <div> Lowest Average %</div>
+                        <input value="0" class="form-control" id="setting_average" type="text">
+                        <div>Society Type:</div>
+                        <select id="invitePlanet" class="form-control">
+                            <option value="Public">Public: Any can join if they met requirements without invitation.</option>
+                            <option value="Invite-Only">Invite Only: Members have to be invited to join.</option>
+                            <option value="Private">Private: You are not recruiting and will not show up in search results.</option>
+                        </select>
+                        <button class="button2 btn-block" onclick="planetControls(16);">Update Society Requirements </button>
+
+                        
+      
+                    </div>
+                    </div>
+                    
+                    
+
+                <div role="tabpanel" class="tab-pane scrollList6" id="manage">
+                <div class="panel-body">
+                <div id="manage"> </div>
+                </div>
+                </div>
+            
+                <div role="tabpanel" class="tab-pane scrollList6" id="alliences">
+                    
+                </div>
+          <div class="panel-body" id="planetError"> </div>
+        
+ 
+</div>
+    </div> 
+    </div> 
+    </div> <!---Copy Post --->
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade " tabindex="-1" role="dialog" id="Commander">
+  <div class="modal-dialog modal-md  " role="document">
+    <div class="modal-content modalContentManage"  id="planetInfo">
+<!--- Copy Post -->
+<div class="modal-body  img-check  body-size shadow">
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs nav-justified " role="tablist">
+                <li role="presentation" class="active"><a href="#Edit" aria-controls="Edit" role="tab" data-toggle="tab" >Edit</a></li>
+                <li role="presentation"><a href="#Disband" aria-controls="Disband" role="tab" data-toggle="tab" >Disband</a></li>
+          
+             
+            </ul>
+            
+                 <div class="tab-content">
+               <div role="tabpanel" class="tab-pane active scrollList4 white" id="Edit">
+                    <div class="panel-body aero ">
+                        <div class="panel-body shadow2" id="planetDescError"></div>
+                        <div class="form-group text-center"><form onsubmit=" return planetControls(10); return false;" id="fileinfo"> 
+                        <div>Symbol: (Image Must Be 100 x 100 in size)</div> 
+                        <input class="form-control" type="file" name="file" id="file" accept="image/x-png,image/gif,image/jpeg">
+                        <input method="post" type="submit" value="submit" class="btn-block button2"></form>
+                        </div> 
+                        <div class="form-group text-center"> <div>Society Recruitment and Biography</div> <div class="panel panel-default"> <div class="panel-body"> 
+                        <div class="btn-group " role="group" aria-label="..."> <button class="btn btn-default" id="1" id2="1" onclick="changeText(this)">Bold</button>
+                        <button class="btn btn-default" id="2" id2="1" onclick="changeText(this)">Italic</button>
+                        <button class="btn btn-default" id="3" id2="1" onclick="changeText(this)">Quote</button> 
+                        <button class="btn btn-default" id="4" id2="1" onclick="changeText(this)">Link</button> 
+                        <button class="btn btn-default" id="6" id2="1" onclick="changeText(this)">Image</button> 
+                        <div class="btn-group"> <button type="button" class="btn btn-default">Text Size</button> 
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span> </button> <ul class="dropdown-menu"> <li><a id="7" id2="1" onclick="changeText(this)">H1 Largest</a></li><li>
+                            <a id="8" id2="1" onclick="changeText(this)">H2</a></li><li><a id="9" id2="1" onclick="changeText(this)">H3</a></li><li>
+                                <a id="10" id2="1" onclick="changeText(this)">H4</a></li><li><a id="11" id2="1" onclick="changeText(this)">H5</a></li><li>
+                                    <a id="12" id2="1" onclick="changeText(this)">H6 Smallest</a></li></ul> </div></div></div></div>
+                        <button class="btn-block button2" onclick="planetControls(11);">Change Bio/Recruitment</button><br><div class="form-group" id="descriptionError"> <textarea class="form-control" type="text" id="textUpdate" rows="10"> </textarea></div><button class="button2 btn-block" onclick="previewShow();">Preview</button><br><div id="planetPreview"></div>  </div></div>
+                    </div>
+                      
+        
+                    
+
+                <div role="tabpanel" class="tab-pane scrollList" id="Disband">
+                <div class="panel-body">
+                    <div class=""> Select the Disband Society to Peramentally remove your society from the game.</div>
+                    <br><br><br>
+            <button class="button2 btn-block" onclick="planetControls(26);">Disband Society</button>
+            
+                </div>
+                </div>
+              </div>
+              
+          <div class="panel-body" id="planetError"> </div>
+        
+
+</div>
+</div>
+</div>
+        <!---Copy Post --->
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade " tabindex="-1" role="dialog" id="itemList">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content modal-itemlist" >
+        <div class="modal-body">
+<div class="row border"> 
+ <div class="col-lg-2"> <img id="shopItemImage" src="/assets/blue_capsule.png" class="center-block"></div><div class="col-lg-9"><h4 id="itemNameShop"></h4> <div id="itemDescriptionShop" ></div><br> <small class="wspace" id="itemConditionShop"></small></div>
+</div>
+<br>
+
+ <div class="row border"> 
+
+ <div class="col-md-4">
+     <img src="/assets/blue_capsule.png" class="center-block">
+        <label>
+     <select id="itemcommon" class="" onchange="newItem(this);">
+    <option value="none">
+        None
+    </option>
+   <option value="c1">
+    Tempura Bowl
+   </option>
+   <option value="c2">Fried Pork Bowl</option>
+   <option value="c3">Chicken &amp; Egg Bowl</option>
+   <option value="c4">Chilled Drink</option>
+   <option value="c5">Well Chilled Drink</option>
+   <option value="c6">Extremely Chilled Drink</option>
+   <option value="c7">King Kai's Water</option>
+   <option value="c8">Super Holy Water Drop</option>
+   <option value="c9">Hercule Drink</option>
+   <option value="c10">Super Kami Water Drop</option>
+   <option value="c11">Magic Pot</option>
+   <option value="c12">Pills</option>
+ 
+</select> 
+<input type="text" class="custom-input" id="commonAmount" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="costItem(this,1);" placeholder="Amount" value=1>
+<button class="button2 btn-block " id="itemButtonCommon" onclick="buyItem(1);"> Buy 250</button>
+ </div>
+<div class="col-md-4">
+     <img src="/assets/purple_capsule.png" class="center-block">
+        <label>
+     <select id="itemrare" class="" onchange="newItem(this);">
+         <option value="none">
+        None
+    </option>
+   <option value="o1">Senzu Bean: Fourth</option>
+   <option value="o2">Senzu Bean: Third</option>
+   <option value="o3">Supreme Kai's water</option>
+   <option value="o4">Super Holy Water Bottle</option>
+   <option value="o5">Hercule Drink DX</option>
+   <option value="o6">Super Kami Water Bottle</option>
+   <option value="o7">Baba's Pot</option>
+   <option value="o8">Vaccine</option>
+
+ 
+</select> 
+ 
+</select> 
+<input type="text" class="custom-input" id="rareAmount"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="costItem(this,2);" placeholder="Amount" value=1 >
+<button class="button2 btn-block " id="itemButtonRare" onclick="buyItem(2);">Buy 500</button>
+ </div>
+
+<div class="col-md-4">
+     <img src="/assets/gold_capsule.png" class="center-block">
+        <label>
+     <select id="itemsuperrare" class="" onchange="newItem(this);">
+         <option value="none">
+        None
+    </option>
+   <option value="r1">Senzu Bean: Half</option>
+   <option value="r2">Senzu Bean</option>
+   <option value="r3">Grand Supreme Kai’s Water</option>
+   <option value="r4">Super Holy Water</option>
+   <option value="r5">Hercule Drink SP</option>
+   <option value="r6">Super Kami Water</option>
+   <option value="r7">Bibidi's Pot</option>
+
+</select> 
+<br>
+<input type="text" class="custom-input" id="superrareAmount" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="costItem(this,3);" placeholder="Amount" value=1>
+<button class="button2 btn-block" id="itemButtonSuperrare" onclick="buyItem(3);">Buy 750</button>
+
+ </div>
+
+</div>
+</div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="request">
+  <div class="modal-dialog modal-lg shadow" role="document">
+    <div class="modal-content " style="background-color:transparent;">
+      
+      <div class="modal-body" >
+          <div class="row">
+           <div class="col-lg-12 " id="inviteList">
+
+       </div>
+       
+      
+  </div>
+       </div>
+       
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="tutorial">
+  <div class="modal-dialog modal-md shadow6" role="document">
+    <div class="modal-content " style="background-color:transparent;">
+      
+      <div class="modal-body" id="tutorialPost">
+        
+       </div>
+       
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="chat" >
+  <div class="modal-dialog modal-sm " role="document">
+      
+    <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="chatmove">ChatRoom</h4>
+      </div>
+ <div class="col-lg-12 scrollList6"><div id="insertchat" class="img-check " ></div></div>
+ <br>
+ <textarea  id="chatroomtext" name="body" class="form-control" rows="5" placeholder="Place your message here!"></textarea>
+  <button type="button" class="button2 btn-block" onclick="planetControls(24);">Send</button>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+            <script src="/js/jquery-1.11.3.js"></script>
+            <script src="/js/jquery-ui.min.js"></script>
+            <script src="/js/Chart.min.js"></script>
+            <script src="/js/tagsort.min.js"></script>
+            <script src="/js/bootstrap.min.js"></script>
+            <script language="javascript" type="text/javascript" src="/js/create.js"></script>
+            <script language="javascript" type="text/javascript" src="/js/game.js?version=0.4"></script>
+
+
+</body>
+
+</html>
+<!--< % end %> -->

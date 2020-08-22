@@ -1,0 +1,33 @@
+ <%=will_paginate @ladders, renderer: BootstrapPagination::Sinatra %> 
+  <table class="table table-responsive ">
+    <thead>
+                    <tr>
+                       <th>Avatar</th>
+                        <th>Username</th>
+                      <th>Rank</th>
+                      <th>Power Level</th>
+                      <th>Streak</th>
+                    </tr>
+                    </thead>
+
+    
+    
+    <tbody>
+
+        <% if @ladders %>
+     <% @ladders.each do |l| %>
+      <tr>
+        <td><img class="img-message img-thumbnail pointer"  src="<%= l.avater %>"></td>
+        <td><%= l.username %></td>
+        <td><%= l.rank %></td>
+        <td><%= l.power_level %></td>
+        <td><%= l.streak %></td>
+       
+      
+      </tr>
+      <% end %>
+     
+  <% end %>
+    </tbody>
+    
+  </table>

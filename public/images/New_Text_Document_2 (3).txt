@@ -1,0 +1,67 @@
+Hello.
+
+- The game's name can be easily changed to something that fits the theme of dragon ball.
+- The games engine can be easily re-used to make another type of game.
+- The game can easily be transfered into a mobile game with out much funding.
+- The game is player friendly. You can learn how to play with just a few games, and just incase theres a 
+game manual to explain how the game works.
+- The game itself is already done and playable. We have everything completed in terms of how the game works, 
+game effects, graphics and its an online multiplayer competitive game. Note that the graphics can easily be 
+changed to better suit the theme of the anime.
+- We have a dragonverse, a game-created social platform where all players are able to connect and interact 
+with each other before battling in the game.
+- Updating is fairly cheap. It doesnt costs much to update the game effects, skills, characters and other 
+potential ideas and they can be done in a fairly short time.
+- The game's primary source of income is within its capsule corp. The Capsule Corp is where players use zenny 
+to purchase ingame items, characters, and other assets. With your partnership we can easily add in premium
+features that would benefit not only the indivual with premium goods, but also budokai online because of micro 
+transactions that can be reinvested into the game to make it better overall.
+- Explain how the game exploits/takes advantage of latest technology, such as the features of the canvas system,
+html, javascript, w/e else.
+- Explain why you made the game, what plans you intended for it and where you would like to see it in the future.
+- Explain how you changed the game from its testing stages to how complex it is now, via images, code, and gameplay.
+- Explain how the concept is done, but the game can be cleaned up better with hired artists.
+- We take feedback from our playerbase. We accept ideas to make it better, and like to see
+what other people have to say about the game and its features. 
+- $300,000 budget split into salary for employees, website/game costs, and artists, maintenance, and advertising.
+
+Server Costs: 
+- $1,000-$2,000 for a stable load during the 6 month development phase or $1920 for an entire year.
+- $640 a month for a stable load or $10,000 a year during production phase.
+- $2,000 for server maintenance.
+
+Sound Costs:
+- $20,000-$25,000 for ingame sounds and effects.	
+
+Design Costs: 
+- $80,000-$85,000 for graphic designers and artists. 
+- Main goal is to hire 3 main artists, each paid on a monthly basis for their work.
+- Designers and artists will be assigned background art, user interface design, rendering, and general designs for both the game and website.
+
+Marketing Costs: 
+- $20,000-$25,000 for marketing, promoting and advertising. 
+- Marketing includes: Social media/advertising (Facebook, Twitter, Youtube, Redit).
+- Promoting includes advergaming. We want to not only promote the game, but also Dragon Ball and how it works on our platform.
+- *Inhouse advertising is fully accepted by Bandai itself.
+
+Contractor Costs: 
+- $30,000 for developer costs. Developers are paid by the hour.
+
+Legal Costs:
+- $25,000-$30,000 for legal/lawyer.
+
+Game Reserves: 
+- $50,060 Used for emergencies and subsidary support.
+
+Employee Costs:
+- Christopher J.Rosendo (Chris): Chairman of Nymph Studio.
+- - Christopher J. makes $4,480/bi-weekly, $8,960/monthly, $26,880 after development.
+
+- Christopher D.Williams (Melo): CEO of Nymph Studio.
+- - Christopher D. makes $3,680/bi-weekly, $7,360/monthly, $22,080 after development.
+
+- Daniel B.Lopez (Danny): Assistant Programmer. Danny assists the developers with maintaining code stability.
+- - Danny makes $1,120/bi-weekly, $2,240/monthly, $26,880/yearly. He's salary but also contract and does his own taxes, working 40 hours a week for full-time. 
+
+- Francisco A.Encarnacion (Gankz): Media Manager. Francisco is in charge of promoting and advertising the game via social media and other production services.
+- - Francisco makes $960/bi-weekly, $1,920/monthly, $23,040/yearly. He's salary but also contract and does his own taxes, working 40 hours a week for full-time. 

@@ -1,0 +1,42 @@
+
+<div class="panel noround ">
+    <div class="navbar-heading text-center btn-lg  OB noround " >
+      Latest discussion 
+    </div>
+</div>
+
+
+ <% if @newC  %>
+        <% @newC.each do |c| %>
+        
+    <div class="panel noround" style="margin: 0px; margin-bottom:0px;  border:black;">
+    <div class="panel-heading noround">
+        <div class="row custcolor">
+            <div class="col-lg-1 "><img src="<%=c.user.avater%>" class="img-message img-circle"></div>
+            <div class="col-lg-7">
+                <a href="<%=c.url%>" class="OB title"><%=c.body[0,73]%></a><br><small> Last Post By <a href="/user/<%=c.author%>"><%=c.author%></a> in <a href="<%c.url %>"><%=c.forumpost.title[0,20]%></a> at <%=c.created_at.strftime("%m/%d/%Y %I:%M%p")%> </small></div>
+            <div class="col-lg-2"><%=c.forumpost.comments%>
+                <br> <small> Posts</small> </div>
+            <div class="col-lg-2"><%=c.forumpost.views%>
+                <br> <small> Views</small> </div>
+        </div>
+ </div>
+    </div>
+     <% end %>
+               <% end %>
+       
+           
+
+
+
+        
+
+  
+     
+        
+        </div>
+        <br>
+
+    </div>
+</div>
+</div>

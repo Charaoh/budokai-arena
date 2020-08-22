@@ -1,0 +1,50 @@
+</div>
+<ol class="breadcrumb navbar-inverse" style="background-color:#222;">
+  <li><a href="/forums">Formpage</a></li>
+  <li><a href="/forums/category/<%= @category.name %>"><%= @category.name %></a></li>
+</ol>
+
+<div class="panel noround navbar-inverse">
+    <div class="navbar-heading text-center btn-lg  OB noround " >
+      <%=@category.name %>
+    </div>
+
+
+ 
+
+ <% if @forums  %>
+        <% @forums.each do |f| %>
+        
+   
+    <div class="panel-heading noround navbar-inverse">
+        <div class="row custcolor">
+            <div class="col-lg-1 "> <% if f.updated_at < 30.minutes.ago  %><img src="/images/forum/Active_Topic.png" class="img-responsive hidden-xs ">
+                 <% else %>
+                <img src="/images/forum/unActive_Topic.png" class="img-responsive hidden-xs ">
+            <% end %> </div>
+            <div class="col-lg-7">
+             <a href="/forums/<%=f.url%>" class="OB title"><%=f.title%></h6><br></a><small><%=f.body%></small> </div>
+            <div class="col-lg-2">
+               <%=f.post_count%>  <br><small> Posts</small> </div>
+            <div class="col-lg-2">
+               <%=f.topics%>  <br> <small> Topics</small> </div>
+        </div>
+
+  
+     <% end %>
+               <% end %>
+       
+           
+
+
+    
+        
+
+   </div>
+    </div>
+    <br>
+   
+    </div>
+</div>
+</div>
+<!--Row-->

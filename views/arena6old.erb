@@ -1,0 +1,96 @@
+<%# This is Dragon Quest Code %>
+
+ <div class="col-md-12">
+  <div class="panel">
+   <div class="panel-heading navbar-custom  text-center"><b>Dragon Quest </b>
+    <a data-toggle="collapse" class="pull-right white fa fa-minus-square" onclick="change(this);return false;" href="#search"></a>
+   </div>
+   <div id="search" class="panel-collapse collapse in">
+    <div class="panel-body">
+     <div class="col-sm-4 ">
+
+      <ul class="nav nav-tabs" role="tablist">
+       <li role="presentation" class="active"><a href="#List" aria-controls="List" role="tab" data-toggle="tab">List</a></li>
+       <li role="presentation"><a href="#Available" aria-controls="Available" role="tab" data-toggle="tab">Incomplete</a></li>
+       <li role="presentation"><a href="#Completed" aria-controls="Completed" role="tab" data-toggle="tab">Completed</a></li>
+       <li role="presentation"><a href="#Daily" aria-controls="Daily" role="tab" data-toggle="tab">Daily</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content listHeight">
+       <div role="tabpanel" class="tab-pane active " id="List">
+        <ul class="list-group" id="questList">
+         <a href="#" class="list-group-item" data-quest="1" onclick="updateQuest(this); return false;">Victory! <span class="badge"><div class="fa " id="q0"></div></span></a>
+         <a href="#" class="list-group-item" data-quest="2" onclick="updateQuest(this); return false;">Experience! <span class="badge"><div class="fa" id="q1"></div></span></a>
+         <a href="#" class="list-group-item" data-quest="3" onclick="updateQuest(this); return false;">Determination! <span class="badge"><div class="fa" id="q2"></div></span></a>
+         <a href="#" class="list-group-item" data-quest="4" onclick="updateQuest(this); return false;">Z Warriors Victory! <span class="badge"><div class="fa" id="q3"></div></span></a>
+         <a href="#" class="list-group-item" data-quest="5" onclick="updateQuest(this); return false;">Goku Victory! <span class="badge"><div class="fa" id="q4"></div></span></a>
+
+
+        </ul>
+
+       </div>
+       <div role="tabpanel" class="tab-pane" id="Available"></div>
+       <div role="tabpanel" class="tab-pane" id="Completed"></div>
+       <div role="tabpanel" class="tab-pane" id="Daily">
+        <a href="#" class="list-group-item" data-quest-daily="1" onclick="updateQuestDaily(this); return false;">Daily Reward <span class="badge"><div class="fa" id="q5"></div></span></a>
+       </div>
+      </div>
+
+
+     </div>
+     <div class="col-sm-8">
+      <ul class="nav nav-tabs">
+       <li class="active"><a href="#">Description</a></li>
+      </ul>
+      <br>
+      <div id="dText"></div>
+      <hr>
+
+      <ul class="nav nav-tabs">
+       <li class="active"><a href="#">Conditions</a></li>
+
+      </ul>
+      <br>
+      <div id="dCondition"></div>
+      <hr>
+      <div id="serverspot">
+
+      </div>
+
+      <hr>
+
+      <ul class="nav nav-tabs">
+       <li class="active"><a href="#">Requirements</a></li>
+      </ul>
+      <br>
+      <div id="require"></div>
+      <hr>
+
+      <ul class="nav nav-tabs">
+       <li class="active"><a href="#">Rewards</a></li>
+      </ul>
+      <br>
+      <div class="col-sm-4">
+       <div class="dbzfont">
+        <div class="coin gold dbzfont">
+         <p>Z</p>
+        </div> <b class="up sp" id="mReward"></b> </div>
+      </div>
+      <div class="col-sm-4">
+       <div class="dbzfont">
+        <div class="fa fa-level-up fa-3x dbzfont down"> </div> <b class="down sp" id="eReward"></b> </div>
+      </div>
+      <div class="col-sm-4">
+       <div class="dbzfont">
+        <div> <img class="img-thumbnail img-avater down" src="/assets/capsulegreen.png"> <b class="down1 sp" id="iReward"></b></div>
+       </div>
+      </div>
+
+
+
+     </div>
+
+    </div>
+   </div>
+  </div>

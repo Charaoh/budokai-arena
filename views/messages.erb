@@ -1,0 +1,244 @@
+  <div class="col-lg-12 ">
+ 
+           </div>
+                   <div class="panel noround transparent" style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange ">
+             <h2 class="OB text-center panel-text pageName">Private Messages<%=will_paginate @messages, renderer: BootstrapPagination::Sinatra %></h2>
+             
+       <div class="panel-body navbar-orange privatemessages">
+         
+             <div class="row">
+               <button id4="5" onclick="updateTextConverter(this);" class="button2 noround col-xs-4">Compose</button>
+              
+    <button  class="button2 active noround col-xs-4">Inbox</button>
+    <button class="button2 noround col-xs-4 " id="delete" data-toggle="modal" data-target="#confirm">Delete</button>
+    </div>
+    <br>
+          <div class="">
+          
+            <% if @messages.count != 0 %>
+                 <table class="table table-responsive ">
+        <thead>
+          <tr>
+            <th>Avatar</th>
+            <th>Username</th>
+            <th>Title</th>
+            <th>Time</th>
+            <th>Delete</th>
+
+          </tr>
+        </thead>
+
+
+
+        <tbody>
+
+          
+            <% @messages.each do |message| %>
+
+              <tr>
+
+                <td><img class="img-message img-circle pointerhidden-xs"  src="<%=message.from_user.avater %>">  </td>
+                <td><b><a href="/user/<%=message.from_user.username %>"><%=message.from_user.username %></a></b>
+                </td>
+                <td>
+                  <a href="/messages/<%= message.id %>"><small ><%=message.title[0...20] %>...</small></a>
+                </td>
+                <td>
+                  <%=message.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+                </td>
+                <td><input type="checkbox" name="messages" class="checkItem " id="<%=message.id%>"> </td>
+
+              </tr>
+
+           <%end%>
+             
+
+        </tbody>
+      </table>
+      <% else %>
+      You currently have no messages right now.
+                <%end%>
+        </div>     
+         </div>
+             </div>
+             </div>
+
+</div>
+
+ 
+
+
+<div id="mobiletopic" class="panel noround hidden cb">
+  <div class="panel-heading navbar-custom">New Topic</div>
+  <div class="panel-body">
+  
+    <!--<div class="alert alert-danger" role="alert">Uses spaces!</div>-->
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <img src='/images/smileys/s1.png' id="1" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s4.png'
+          id="4" id2="1" id2="textUpdate" onclick='smiley(this);' />
+        <img src='/images/smileys/s5.png' id="5" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s8.png'
+          id="8" id2="1" onclick='smiley(this);' />
+        <img src='/images/smileys/s9.png' id="9" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s12.png'
+          id="12" id2="1" onclick='smiley(this);' />
+        <img src='/images/smileys/s13.png' id="13" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s16.png'
+          id="16" id2="1" onclick='smiley(this);' />
+        <img src='/images/smileys/s17.png' id="17" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s20.png'
+          id="20" id2="1" onclick='smiley(this);' />
+        <img src='/images/smileys/s21.png' id="21" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s24.png'
+          id="24" id2="1" onclick='smiley(this);' />
+        <img src='/images/smileys/s25.png' id="25" id2="1" onclick='smiley(this);' />
+      </div>
+    </div>
+    
+
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="btn-group " role="group" aria-label="...">
+          <button class="btn btn-default" id="1" id2="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" id2="1" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" id2="1" onclick="changeText(this)">Quote</button>
+          <button class="btn btn-default" id="4" id2="1" onclick="changeText(this)">Link</button>
+          <button class="btn btn-default" id="5" id2="1" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" id2="1" onclick="changeText(this)">Image</button><button class="btn btn-default" id="13" id2="1" onclick="changeText(this)">Image with Link</button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">Text Size</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+            <ul class="dropdown-menu">
+              <li><a id="7" id2="1" onclick="changeText(this)">H1 Largest</a></li>
+              <li><a id="8" id2="1" onclick="changeText(this)">H2</a></li>
+              <li><a id="9" id2="1" onclick="changeText(this)">H3</a></li>
+              <li><a id="10" id2="1" onclick="changeText(this)">H4</a></li>
+              <li><a id="11" id2="1" onclick="changeText(this)">H5</a></li>
+              <li><a id="12" id2="1" onclick="changeText(this)">H6 Smallest</a></li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <form action="/messages" method="post">
+      <input type="hidden" name="location" value="/messages" class="form-control">
+      <input type="hidden" id="previous" name="previous" class="form-control"> <b>Input Username Below</b> <input type="text" id="user" name="send_to" class="form-control"> <br><b>Subject</b> <input type="text" id="title" name="title" class="form-control"
+        required> <br> Content:
+      <textarea name="body" id="textUpdate" class="form-control" min="5" max="5000" rows="15" required>  </textarea>
+      <br>
+
+      <input type="submit" class="btn btn-primary col-lg-12" value="Post"><br>
+    </form>
+
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+<!-- New Message --->
+<div class="modal fade" id="create_topic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    
+      <div class="modal-body modal-bg">
+         <div class="button1 btn-block" id="myModalLabel">New Message</div>
+        <div class="shadow2">
+        <!--<div class="alert alert-danger" role="alert">Uses spaces!</div>-->
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <img src='/images/smileys/s1.png' id="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4"
+              onclick='smiley(this);' />
+            <img src='/images/smileys/s5.png' id="5" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" onclick='smiley(this);' /><img src='/images/smileys/s8.png' id="8"
+              onclick='smiley(this);' />
+            <img src='/images/smileys/s9.png' id="9" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" onclick='smiley(this);' /><img src='/images/smileys/s12.png'
+              id="12" onclick='smiley(this);' />
+            <img src='/images/smileys/s13.png' id="13" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" onclick='smiley(this);' /><img src='/images/smileys/s16.png'
+              id="16" onclick='smiley(this);' />
+            <img src='/images/smileys/s17.png' id="17" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" onclick='smiley(this);' /><img src='/images/smileys/s20.png'
+              id="20" onclick='smiley(this);' />
+            <img src='/images/smileys/s21.png' id="21" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" onclick='smiley(this);' /><img src='/images/smileys/s24.png'
+              id="24" onclick='smiley(this);' />
+            <img src='/images/smileys/s25.png' id="25" onclick='smiley(this);' />
+          </div>
+        </div>
+
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="btn-group " role="group" aria-label="...">
+              <button class="btn btn-default" id="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" onclick="changeText(this)">Quote</button>
+              <button class="btn btn-default" id="4" onclick="changeText(this)">Link</button>
+              <button class="btn btn-default" id="5" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" onclick="changeText(this)">Image</button>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">Text Size</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                <ul class="dropdown-menu">
+                  <li><a id="7" onclick="changeText(this)">H1 Largest</a></li>
+                  <li><a id="8" onclick="changeText(this)">H2</a></li>
+                  <li><a id="9" onclick="changeText(this)">H3</a></li>
+                  <li><a id="10" onclick="changeText(this)">H4</a></li>
+                  <li><a id="11" onclick="changeText(this)">H5</a></li>
+                  <li><a id="12" onclick="changeText(this)">H6 Smallest</a></li>
+                </ul>
+              </div>
+
+
+            </div>
+
+
+          </div>
+        </div>
+        
+
+
+        <form action="/messages" method="post" id="new_message_form">
+          <input type="hidden" name="location" value="/messages" class="form-control">
+          <input type="hidden" id="previous" name="previous" class="form-control"> <b>Input Username Below</b> <input type="text" id="user" name="send_to" class="form-control"> <br><b>Subject</b> <input type="text" name="title" class="form-control"> <br>          <b>Body</b> <textarea id="textUpdate" name="body" class="form-control" rows="8" placeholder="Place your message here!"></textarea> <br>
+          <input type="submit" class="btn btn-default col-lg-12" value="Send">
+        </form>
+        <br>
+        <br>
+      </div>
+     
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Confirm--->
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    
+      <div class="modal-body modal-bg">
+<div class="button1 btn-block" >Confirm</div>
+
+<div class="shadow2">
+  <div class="text-center">
+          Are you sure? </div> 
+
+ 
+<button onclick="checkMessages();" class="btn btn-default col-lg-3 pull-left"> Yes</button><button type="button" class="btn btn-default col-lg-3 pull-right " data-dismiss="modal">No</button>
+ <br> <br>
+</div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

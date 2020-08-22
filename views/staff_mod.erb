@@ -1,0 +1,84 @@
+<div class="panel panel-primary noround">
+  <div class="panel-heading noround">
+    Banned users
+  </div>
+  <div class="panel-body cb">
+    <% if @banned_users %>
+      <% @banned_users.each do |user| %>
+        <%= user.username %><br>
+          <% end %>
+            <% end %>
+           
+  </div>
+</div>
+
+<div class="panel panel-primary noround">
+  <div class="panel-heading noround">
+   Avatar Checker
+  </div>
+  <div class="panel-body cb">
+     
+    <% @images.each_with_index do |image, i| %>
+     
+   <div class="col-xs-2">
+         
+                    <img src="<%=image.gsub("public/", "") %>" id="picture1" class="img-responsive" />
+                    <div class="col-xs-2 col-xs-offset-3">
+                        <input type="radio" class="center-block text-center" required name="avater" id="avater" value="<%=image.gsub("public/", "") %>" checked>
+                    </div>
+                </div>
+ 
+               <% if i % 5 == 0 && i != 0%>
+               <hr>
+               <% end %>
+     <%end%>
+            </div>
+             </div>
+             
+               <div class="panel-heading noround"><form role="form" action="/staff/avater" method="post" id="approve">  <input type="hidden" value="yes" name="choice"> <input type="hidden" id="approveAvater" name="avater"></form><button class="btn btn-success btn-block" id="buttona">Approve</button>
+     </div>
+   
+  <div class="panel-heading noround"><form role="form" action="/staff/avater" method="post" id="disapprove"> <input type="hidden" value="no" name="choice"> <input type="hidden" id="disapproveAvater" name="avatar"> </form>
+   </form><button id="buttond" class="btn btn-danger btn-block">Disapprove </button> 
+    </div>
+    
+    
+            <div class="panel panel-primary noround">
+  <div class="panel-heading noround">
+   Planet Avatar Checker
+  </div>
+  <div class="">
+              <div class="panel-body cb">
+     
+         <% @planet.each_with_index do |image, i| %>
+     
+   <div class="col-xs-2">
+         
+                    <img src="<%=image.gsub("public/", "") %>" id="picture1" class="img-responsive" />
+                    <div class="col-xs-2 col-xs-offset-3">
+                        <input type="radio" class="center-block text-center" required name="avater1" id="avater1" value="<%=image.gsub("public/", "") %>" checked>
+                    </div>
+                </div>
+ 
+               <% if i % 5 == 0 && i != 0%>
+               <hr>
+               <% end %>
+     <%end%>
+   
+   <div class="panel-body">
+       <%= @statics.info %>
+     
+   </div>
+     
+ </div>
+  </div>
+    <div class="panel-heading noround"><form role="form" action="/staff/planet/avatar" method="post" id="approve1">  <input type="hidden" value="yes" name="choice"> <input type="hidden" id="approveAvater1" name="avater1"></form><button class="btn btn-success btn-block" id="button1">Approve</button>
+     </div>
+   
+  <div class="panel-heading noround"><form role="form" action="/staff/planet/avater" method="post" id="disapprove1"> <input type="hidden" value="no" name="choice"> <input type="hidden" id="disapproveAvater1" name="avatar1"> </form>
+   </form><button id="button2" class="btn btn-danger btn-block">Disapprove </button> 
+    </div>
+ 
+
+</div>
+

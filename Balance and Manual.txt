@@ -1,0 +1,1253 @@
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CHARACTERS AND STATS
+
+Chiaotzu   	   | Health: 250 | Energy: 100 | Strength: 7   | Ki: 9   | Defense: 8   | Speed:  10 | Total: 34
+Goku       	   | Health: 290 | Energy: 100 | Strength: 13  | Ki: 10  | Defense: 10  | Speed:  9  | Total: 43
+Kid Gohan  	   | Health: 250 | Energy: 100 | Strength: 10  | Ki: 10  | Defense: 9   | Speed:  8  | Total: 37
+Krillin 	   | Health: 260 | Energy: 100 | Strength: 11  | Ki: 14  | Defense: 10  | Speed:  9  | Total: 44
+Nappa 	       | Health: 290 | Energy: 100 | Strength: 12  | Ki: 10  | Defense: 12  | Speed:  9  | Total: 43
+Piccolo    	   | Health: 300 | Energy: 100 | Strength: 8   | Ki: 8   | Defense: 15  | Speed:  10  | Total: 44
+Nail    	   | Health: 300 | Energy: 100 | Strength: 9   | Ki: 9   | Defense: 12  | Speed:  10  | Total: 44
+Radditz 	   | Health: 280 | Energy: 100 | Strength: 10  | Ki: 10  | Defense: 11  | Speed:  11 | Total: 42
+Saibaman 	   | Health: 200 | Energy: 100 | Strength: 5   | Ki: 5   | Defense: 5   | Speed:  9  | Total: 24
+Scouter Vegeta | Health: 290 | Energy: 100 | Strength: 12  | Ki: 13  | Defense: 10  | Speed:  10 | Total: 45
+Tien 	       | Health: 250 | Energy: 100 | Strength: 10  | Ki: 14  | Defense: 10  | Speed:  9  | Total: 43
+Yajirobe	   | Health: 250 | Energy: 100 | Strength: 15  | Ki: 7   | Defense: 10  | Speed:  7  | Total: 39
+Yamacha 	   | Health: 250 | Energy: 100 | Strength: 12  | Ki: 12  | Defense: 10  | Speed:  11 | Total: 45
+Chiaotzu       | Health: 230 | Energy: 100 | Strength: 7   | Ki: 9   | Defense: 8   | Speed:  10 | Total: 45
+Guldo 	       | Health: 230 | Energy: 100 | Strength: 9   | Ki: 7   | Defense: 8   | Speed:  8  | Total: 32
+Recoome        | Health: 290 | Energy: 100 | Strength: 10  | Ki: 11  | Defense: 10  | Speed:  9  | Total: 40
+Jeice          | Health: 290 | Energy: 100 | Strength: 10  | Ki: 11  | Defense: 10  | Speed:  9  | Total: 40
+Burther        | Health: 290 | Energy: 100 | Strength: 10  | Ki: 11  | Defense: 10  | Speed:  9  | Total: 40
+Ginyu          | Health: 280 | Energy: 100 | Strength: 12  | Ki: 12  | Defense: 8   | Speed:  11 | Total: 40(edited)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BATTLE MECHANICS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DAMAGE TERMINOLOGY
+
+Afflication Damage: Damaging effects that reduces the targets health over time. *Afflictions are not effected by stats.
+Damage: The normal deduction of a characters HP.
+Ki Damage: Damaging effects that are directly affected by a characters Kai stat.
+Penetrating Damage: True damage is when a skills effect completely ignores stats as well as friendly or enemy immunity. *True damage can still be revoked.
+Piercing Damage: Damaging effects that are directly affected by both Strength and Kai stats.
+Strength Damage: Damaging effects that are directly affected by a characters Strength stat.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DURATIONS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GAME TERMINOLOGY
+
+Active: When skills are active, their effects are currently being displayed through the game. *Active skills have varous effects which depends heavily on the duration it lasts.
+Alter: Altering is when a skill's original use has been changed in terms of damage or effect. 
+BP: Battle Points (Short for BP), are points used to control your characters. To keep the game balanced, each character requires a certain number of BP to perform a skill. You gain BP every turn and all un-used BP rollsover to the following turn.
+Charge: Charges are skills with effects that stacks upon use or effects that deplete after a specific number of stacks have been depleted. These types of skills can target both friendly and enemy targets.
+Clash: Clashing is condition where one characters skill is altered by another characters stats.
+Classes: Types of skills that are being used on a given target.
+Cooldown: Cooldowns are time intervals between turns in which the selected skill can be used again. They range from none to finite; none means that the skill can be used an unlimited number of times during gameplay while finite skills permanently ends after their first time being used.
+Debuff: A debuff is any negative effect that is applied to a specific target. *Debuffs can be both friendly or non-friendly and targets all characters.
+Disable: When a skill or specific type becomes disabled, the action will have no effect for the duration of the turn(s). *Disabled effects can last numerous turns. This applies to both friendly and enemy effects.
+EP: Energy Power (Short for EP), is a characters energy level. Majority of the games skills uses energy and without enough energy a character cannot perform a certain skill.
+Focus: A skills focus is the initial target the skill is being redirected towards, whether it is an enemy or an ally.
+(G): A shorter term for Dragon Ball GT.
+HP: Health Points (Short for HP), is a characters health level. Health is decreased by enemy skills and some friendly effects. When a characters HP reaches zero, they will be considered dead and becomes unusable for the remainder of the game.
+Invisible: Skills that are invisible have no active notifications for the enemy team. *All skills are visible while in battle. However, when an invisible skill is being used the effect remains hidden regardless if the skill is used or not.
+(M): A shorter term for movie characters in the Dragon Ball Universe.
+LV: A characters level. Leveling up characters increases their battle capabilities as well as enabling them to use more advance skills.
+(S): A shorter term for Dragon Ball Super.
+Stats: A characters battle stats, used to determine how much damage a character deals, receives, and which characters moves first during each turn.
+TP: Training Points (Short for TP), are points used to level your character's stats. You gain TP each time you level your character up through missions or battles.
+(Z): A shorter term for Dragon Ball Z.
+Zenny: A players ingame funds, used to purchase additional characters, items, and other miscellaneous options.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SKILL CONDITIONS
+----------------------
+
+TYPES OF IMMUNITIES
+
+Full: When a target becomes immune to all offensive class types.
+Ki: When the target becomes immune to all Ki based skills.
+Power Down: When the target becomes immune to all Power Downs.
+Strength: When the target becomes immune to all Strength based skills.
+
+TYPES OF STUNS
+
+Friendly: The target cannot perform or be targeted by friendly skills.
+Full: The target cannot perform any skills.
+Ki: The target cannot perform Ki skills.
+Strength: The cannot perform Strength skills.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SKILL TYPES
+---------------
+
+MAIN TYPES
+
+Defense: Defense Types increases a characters defensive capabilities. Most defensive skills are immunities and reflections.
+Power Up: Power Ups increases a characters energy, health, stats or fighting capabilities. Power Ups are stackable upon each other and usually lasts for long periods of time.
+Power Down: Power Downs decreases a characters stats or fighting capabilities. Power Downs are stackable upon each other and usually lasts long periods of time.
+Ki: Skills that are based on the characters energy level. *The defense stat reduces the amount of ki damage a character receives.
+Strength: Skills that are based on the characters raw strength. *The defense stat reduces the amount of strength damage a character receives.
+Transformation: A characters physical change from one form to another, increasing their stats and allowing new capabilities. *Transformations are not stackable and usually end after energy runs out.
+
+
+SUB TYPES
+
+Counter: Counters has an immediate response to another skill or a specific effect, negating those skills in the process.
+Immunity: Immunity makes the target invulnerable to certain enemy skills and effects. *Immunity always triggers first regardless of character speed. However it becomes void in certain cases. If a skill ignores immunity the target becomes prone to the incoming effect.
+Leech: Leeching is when the target has BP, HP, or EP drained, leaving them unable to perform certain skills.
+Passive: Passives have effect that are automatically applied to a specific character or item.
+Reflect: Reflections have their skills mirrored via an ally or enemies effect. * Reflections prioritize speed and can target both enemies and allies, sometimes simultaneously.
+Removal: A removal deletes a skill or item's effect from a given target. * Skills that have been removed can be re-applied only if they aren't cancelled by another effect.
+Restoration: Skills based on giving health or energy to a given target or reviving them from the dead.
+Stun: Stuns prevent a character from performing a certain effect or action. * Stuns can be ignored by skills with immunity effects, a characters speed, or a general effect that allows the character to ignore stuns. 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TARGETS AND FOCUS
+
+Ally: Targets a single ally on the player team.
+Enemy: Targets a single enemy on the enemy team.
+Multiple Allies: Targets all available allies.
+Multiple Enemies: Targets all available enemies.
+Other Allies: Targets one or more allies on the player team. *This does not target the skills performer.
+Other Enemies: Targets one or more enemies on the enemy team but not the initial target. *Some effects vary or may not apply to the initial target.
+Random Ally: Targets a random ally on the player team. *This includes the skills performer.
+Random Enemy: Targets a random enemy on the enemy team.
+Self: Targets the initial character of the skill.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GENERIC SKILLS
+
+Afterimage: Permanently increases the characters speed by 3 points.
+> Energy: 20
+> Cooldown: 2
+> BP: 2
+> Focus: Self
+> Type: Defensive
+>>> Skill Variation:
+Rarity:Common
+
+Basic Punch: Deals 10 damage to one enemy.
+> Energy: 10
+> Cooldown: None
+> BP: None
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+Rarity:Common
+
+Energy Deflection: The target becomes immune to the first enemy ki skill used on them for one turn.
+> Energy: 20
+> Cooldown: 2
+> BP: 1
+> Focus: Self
+> Type: Defensive
+>>> Skill Variation:
+Rarity:Common
+
+Energy Punch: Deals 10 damage and lowers the target's energy by 10 for one turn.
+> Energy: 20
+> Cooldown: 1
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+Rarity:Good
+
+Explosive Wave: Deals 5 damage to all enemies.
+> Energy: 20
+> Cooldown: 1
+> BP: 2
+> Focus: Multiple Enemies
+> Type: Ki
+>>> Skill Variation:
+Rarity:Common
+
+Ki Blast: Deals 10 damage to one enemy.
+> Energy: 15
+> Cooldown: None
+> BP: None
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation:
+Rarity:Common
+
+Physical Block: The target becomes immune to all strength skills for one turn.
+> Energy: 20
+> Cooldown: 2
+> BP: 1
+> Focus: Self
+> Type: Defensive
+>>> Skill Variation:
+Rarity:Common
+
+Power Up: Increases all stats by 25% but decreases the users energy by 10 each turn. Re-use of this skill or energy hitting zero while active will remove its current effects.
+> Energy: 10
+> Cooldown: None
+> BP: 1
+> Focus: Self
+> Type: Transformation
+>>> Skill Variation: 
+Rarity:Common
+
+Solar Flare: Decreases the targets strength and defense by 5 points for two turns.
+> Energy: 20
+> Cooldown: 2
+> BP: 2
+> Focus: Enemy
+> Type: Power Down
+>>> Skill Variation:
+Rarity:Common
+
+Sonic Sway: The target becomes immune to all enemy skills for one turn.
+> Energy: 20
+> Cooldown: 3
+> BP: 2
+> Focus: Self
+> Type: Defensive
+>>> Skill Variation:
+Rarity:Common
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CHARACTER DESCRIPTIONS
+
+Chiaotzu: A fellow member of the Z warriors who shares a strong bond with Tien. 
+Goku: Goku may seem human but he is actually a Sayian. Though born into the Saiyan race, he has never once tried to destroy earth. Data says he seems to possess incredible power.
+Kid Gohan: Gohan is the son of goku. Gohan has shown amazing potential at such a young age. Analysis of scouter data indicated untapped potential not yet revealed.
+Krillin: Krillin is a bald, short guy as well as a powerful earthling who also happens to be one of Goku's best friends.
+Nappa: Nappa is an elite Saiyan warrior from planet vegeta, and Vegeta's partner in combat. Nappa is destructive and cocky which makes him fight in a powerhouse style of fighting.
+Piccolo: Piccolo is a wise strategist who was originally a ruthless enemy of Goku. He later becomes a permanent member of the Z Fighters during Dragon Ball Z.
+Raditz: Raditz is the brother of goku but has a completely different attitude and personality. He is a heartless Saiyan that uses dangerous energy beams to destroy his opponents.
+Saibaman: Saibaman are green, humanoid creatures that grow from a planted seed placed in the ground. Saibamen possess only enough intelligence to understand orders and will do whatever it takes to kill there target.
+Scouter Vegeta: Vegeta is the son of King Vegeta and a ruthless Saiyan, slaying even those who are loyal to him. He later has a change of heart and assists Goku and friends against the threats that target planet earth.
+Tien: Tien is one of the strongest humans in the Z universe and a close friend of Chiaotzu. He is proficient in ki and uses martial arts to his advantage.
+Yajirobi: Yajirobi is a gallant warrior who trains mostly at Korin's Tower. Though not the strongest warrior, his swordsmanship and supportive capabilities aids the Z warriors through some of their toughest experiences.
+Yamcha: Yamcha is a human on planet earth and a Z fighter who aids goku and his friends in upcoming battles. He is cocky and arrogant but has ferocious abilities.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CHARACTER TRANSFORMATION DESCRIPTIONS
+
+Kaio-ken: It's Goku's Kaio-ken! He gains a massive upsurge of energy. Everything is heightened: power, speed, even hearing. However, it seems to take a toll on his body.
+Ozaru Gohan: After exposing himself to a full moon, Gohan transforms into a Great Ape, greatly increasing his power level while losing his sanity in the process.
+Ozaru Vegeta: Vegeta transforms into his Great Ape form after denying defeat from his foes.
+Fused With Nail: After fusing with Nail, Piccolo gains a boost in power level, rivaling even those of the greatest level of power.
+Unlocked Potential - Gohan: Gohan powers has been unlocked. Analysis of scouter data shows overall power has increased by a great margin. It seems he is getting serious now!
+Unlocked Potential - Krillin: Krillin powers have been unlocked. Analysis of scouter data determines that power has jumped quite a bit. Is this really the same Krillin?
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CHIAOTZU
+
+SKILLS
+
+Psychokinesis - Grab:  This skill lowers all of stats of one enemy by 5 and stuns friendly skills for two turns. 
+> Energy: 20
+> Cooldown: 2
+> BP: 1
+> Focus: Enemy
+> Type: Power Down
+>>> Skill Variation: None
+Rarity: Common
+
+Psychokinesis -Control : This skill decreases defense by 15, stuns strength based skills, and lowers BP by 1 to one enemy .This skill last for 1 turn.
+> Energy: 30
+> Cooldown: 2
+> BP: 2
+> Focus: Enemy
+> Type: Power-Down
+>>> Skill Variation: 
+Rarity: Good
+
+Psychokinesis - Revoke: For two turns all new enemy skills will reflect to random enemy allies. This skill is invisible.
+> Energy: 50
+> Cooldown: 4
+> BP: 3
+> Focus: Single-Enemy
+> Type: Ki
+>>> Skill Variation: 
+Rarity: Rare
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GOKU
+
+SKILLS
+
+Kaio-ken: Increases Goku's strength, speed, and ki by 4 each turn but decreases his defense by 1 and his energy by 15. Re-use of this skill or energy hitting zero while active will remove its current effects.
+> Energy: 15
+> Cooldown: 1
+> BP: None
+> Focus: Self
+> Type: Transformation
+>>> Skill Variation:
+Rarity:Common
+
+Kamehameha: Deals 15 damage to one enemy.
+> Energy: 20
+> Cooldown: 1 
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation: Kaio-Ken
+> Kaio-ken Kamehameha: Deals 20 damage to one enemy.
+> Energy: 20
+> Cooldown: 1 
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+Rarity:Common
+
+Punishing Blow: Deals 10 damage to one enemy and decreases their ki by 10 for one turn.
+> Energy: 20
+> Cooldown: 1 
+> BP: 2
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation: Kaio-ken
+Punishing Blow: Deals 10 damage to one enemy and decreases their strength and ki by 10 for one turn.
+> Energy: 20
+> Cooldown: 1 
+> BP: 2
+> Focus: Enemy
+> Type: Strength
+Rarity:Common
+
+Small Spirit Bomb: After three turns this skill deals 20 piercing damage to one enemy. If Goku is stunned during its duration, this skill will end and deal half the damage to the enemy.
+> Energy: 30
+> Cooldown: 4 
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation: Kaio-ken
+Large Spirit Bomb: After three turns this skill deals 30 true damage to one enemy. If Goku is stunned during its duration, this skill will end and deal half the damage to the enemy.
+> Energy: 35
+> Cooldown: 5 
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+Rarity:Rare
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+KID GOHAN
+
+SKILLS
+
+Gohan's Unlocked Potential: Increases Kid Gohan's stats by 40% but decreases his energy by 15 each turn. Re-use of this skill while active or energy hitting zero will remove its current effects.
+> Energy: 15
+> Cooldown: None
+> BP: 2
+> Focus: Self
+> Type: Transformation
+>>> Skill Variation:
+
+Oozaru: Increases Kid Gohan's stats strength, defense, and ki by 60% but decreases his energy by 20 each turn. Re-use of this skill while active or energy hitting zero will remove its current effects.
+> Energy: 20
+> Cooldown: None
+> BP: 3
+> Focus: Self
+> Type: Transformation
+>>> Skill Variation:
+
+Hidden Power: Increases Gohan's BP gain by 1 for two turns.
+> Energy: 20
+> Cooldown: 2
+> BP: 0
+> Focus: Self
+> Type: Power Up
+>>> Skill Variation: Unlocked Potential
+Hidden Power: Increases Gohan's BP gain by 1 for three turns.
+> Energy: 30
+> Cooldown: 3
+> BP: 0
+> Focus: Self
+> Type: Power Up
+Rarity:
+>>> Skill Variation: Oozaru
+Howl: Gohan's strength and ki increases by 5 during Oozaru Transformation.
+> Energy: 10
+> Cooldown: 2
+> BP: 1
+> Focus: Self
+> Type: Power Up
+
+Masenko: Deals 15 damage to one enemy. This skill deals 5 more damage if used consecutively on the same target the following turn.
+> Energy: 30
+> Cooldown: 0
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation: Unlocked Potential
+Masenko: Deals 20 damage to one enemy. This skill deals 10 more damage if used consecutively on the same target the following turn.
+> Energy: 30
+> Cooldown: 0
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation: Oozaru
+Mouth Blast: Deals 20 damage to one enemy. This skill deals 15 more damage if used consecutively on the same target the following turn.
+> Energy: 30
+> Cooldown: 0
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+
+
+Rushing Assualt: Temporarily increases Kid Gohan's speed by 5 then deals 15 damage to one enemy.
+> Energy: 20
+> Cooldown: 1
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation: Unlocked Potential
+Rushing Assualt: Temporarily increases Kid Gohan's speed by 10 then deals 15 damage to one enemy. 
+> Energy: 25
+> Cooldown: 1
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation: Oozaru
+Oozaru Assualt: Deals 20 damage to one enemy and permanenty lowers the enemies speed by 3.
+> Energy: 30
+> Cooldown: 1
+> BP: 2
+> Focus: Enemy
+> Type: Strength
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+KRILLIN
+
+SKILLS
+
+Destructo Disk: Deals 10 piercing damage to one enemy. 
+> Energy: 20
+> Cooldown: 1 
+> BP: 1
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation: Unlocked Potential
+Destructo Disc Barrage: Deals 15 piercing damage to one enemy for two turns.
+> Energy: 35
+> Cooldown: 1
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+Rarity:Rare
+
+High Velocity Kick: Targets one enemy, countering the first harmful skill they use for one turn.
+> Energy: 15
+> Cooldown: 1
+> BP: 2
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation: Unlocked Potential
+High Velocity Kick: Targets one enemy, countering the first harmful skill they use for two turns.
+> Energy: 25
+> Cooldown: 1
+> BP: 2
+> Focus: Enemy
+> Type: Strength
+Rarity:Common
+
+Scattering Bullets: Deals 10 damage to all enemies.
+> Energy: 30
+> Cooldown: 1 
+> BP:2
+> Focus: Multiple Enemies
+> Type: Ki
+>>> Skill Variation: Unlocked Potential
+Scattering Bullets: Deals 15 damage to all enemies.
+> Energy: 30
+> Cooldown: 1 
+> BP:2
+> Focus: Multiple Enemies
+> Type: Ki
+Rarity:Good
+
+Unlocked Potential: Increases Krillin's stats by 40% but decreases his energy by 15 each turn. Re-use of this skill while active or energy hitting zero will remove its current effects.
+> Energy: 15
+> Cooldown: None
+> BP: 2
+> Focus: Self
+> Type: Transformation
+>>> Skill Variation:
+Rarity:Good
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NAPPA
+
+SKILLS
+
+Bomber DX: Deals 10 damage for every surging assault stack on the affected character.
+> Energy: 35
+> Cooldown: 1 
+> BP: 3
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation:
+Rarity:Good
+
+Exploding Wave: This skill does 5 affliction damage to all enemies. This skill last until the end of the game or until Nappa dies. This skill stacks. 
+> Energy: 30
+> Cooldown: 1 
+> BP: 2
+> Focus: Multiple Enemies
+> Type: Afflication
+>>> Skill Variation:
+Rarity:Common
+
+Surging Assault: Deals 15 damage to one enemy and any enemy who uses a skill on Nappa the following turn is permanently marked by Surging Assault, receiving 5 affliction damage. This affliction stacks.
+> Energy: 20
+> Cooldown: 1
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+Rarity:Good
+
+Power Amp: Increases Nappa's speed and strength by 25% but decreases his energy by 15 each turn. During this time any enemy who uses a new skill on Nappa receives 10 affliction damage and is permanently marked by Surging Assault. This effect stacks and re-use of this skill while active or energy hitting zero will remove its current effects.
+> Energy: 15
+> Cooldown: None
+> BP: 2
+> Focus: Self
+> Type: Transformation
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PICCOLO
+
+SKILLS
+
+Charge: Increases Piccolo's ki by 2 for two turns.
+> Energy: None
+> Cooldown: 1
+> BP: 1
+> Focus: Self
+> Type: Power Up
+>>> Skill Variation:
+
+Fuse With Nail: If Nail is on the team both characters become one and the following effects happen. Stuns on Piccolo are ignored. Health becomes 450,Both health and energy become full and all stats are increased by 20 points. This skill can only be used once.
+> Energy: 80
+> Cooldown: None
+> BP: 2
+> Focus: Ally
+> Type: Transformation
+>>> Skill Variation:
+
+Sacrifice: Reflects the first harmful enemy skill used on one ally to Piccolo for one turn. 
+> Energy: 20
+> Cooldown: 2
+> BP: 2
+> Focus: Ally
+> Type: Defensive
+>>> Skill Variation:
+
+Special Beam Cannon: Deals 15 damage to one enemy. The target will have one random move's cooldown increased by 2.
+> Energy: 30
+> Cooldown: 1
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nail
+
+
+SKILLS
+
+Neck chop: This skill deals 10 damage and the target's strength skills are lowered by 10 for 1 turn.
+> Energy: 20
+> Cooldown: 1
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+
+Mystic Flasher: Nail does 15 ki damage to one enemy. For one turn, if that enemy uses a harmful skill it will be reflected to Nail.
+> Energy: 30
+> Cooldown: 1
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation:
+
+Regeneration: Nail heals for 30 health (Scales with ki). For two turns nails defense is increased by 10 and physical and ki skills are reduced by 5.
+> Energy: 30
+> Cooldown: 3
+> BP: 2
+> Focus: Ally
+> Type: Power-up
+>>> Skill Variation:
+
+Fuse with Nail: This skill is invisible. If nail dies while piccolo is an ally, Piccolo will regain 100 hp and 50 energy, gains 20 strength and ki, speed, and defense permanently.
+> Energy: 40
+> Cooldown: 1
+> BP: 2
+> Focus: Ally
+> Type: Transformation
+>>> Skill Variation:
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+RADITZ
+
+SKILLS
+
+Crushing Assault: Deals 20 damage to one enemy and if the target uses a skill they will lose one bp for the battle phase. If the enemy is still affected by Double Sunday this skill effects will be doubled.
+> Energy: 30
+> Cooldown: 1
+> BP: 2
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+Rarity: Common
+
+Double Sunday: Deals 15 piercing damage to one enemy for two turns. If the enemy was affected by Crushing Knee the previous turn it will last one additional turn.
+> Energy: 40
+> Cooldown: 2
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation:
+Rarity: Good
+
+Scouter Analysis: This skill makes all previous counter effects no longer work on all allies.
+> Energy: 20
+> Cooldown: 3
+> BP: 1
+> Focus: Multiple Allies
+> Type: Defensive
+>>> Skill Variation:
+Rarity: Common
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SAIBAMAN
+
+SKILLS
+
+Acid: This skill lowers enemy defenses by 3 permanently and does 10 Affliction damage.
+> Energy: 20
+> Cooldown: 0
+> BP: 1
+> Focus: Enemy
+> Type: Afflication
+>>> Skill Variation - Plant Seed:
+Acid: Permanently lowers all the enemies defense by 3 permanently and does 10 Afflication damage.
+> Energy: 20
+> Cooldown: 0
+> BP: 1
+> Focus: All Enemies
+> Type: Afflication
+
+Saibaman Bomb: Targets one enemy and if the enemy is stunned the target will lose 50% of their health. Saibaman dies after using this skill.
+> Energy: 40
+> Cooldown: 2
+> BP: 3
+> Focus: Enemy
+> Type: Afflication
+>>> Skill Variation - Plant Seed:
+Saibaman Bomb: Targets one enemy and if the enemy is stunned the target will lose 75% of their health. Saibaman dies after using this skill.
+> Energy: 40
+> Cooldown: 3
+> BP: 3
+> Focus: Enemy
+> Type: Afflication
+
+Saibaman Grab: Targets one enemy, Full stunning them for one turn.
+> Energy: 30
+> Cooldown: 1
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation - Plant Seed:
+Saibaman Grab: Targets one enemy, Full stunning them for two turns.
+> Energy: 30
+> Cooldown: 2
+> BP: 2
+> Focus: Enemy
+> Type: Strength
+
+Plant Seed: Grants Saibaman one Revival Charge. If Saibaman dies he will be brought back to life with half HP and EP. This skill cannot be used while active.
+> Energy: 50
+> Cooldown: 5
+> BP: 3
+> Focus: Self
+> Type: Transformation
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TIEN
+
+SKILLS
+
+Neo Tri Beam: Deals 25 affliction damage to one enemy and 10 affliction damage to Tien for each Neo Tri-Beam Charge affecting the target.This skill deals 20 more affliction damage for each Tri Beam Charge on the enemy.
+> Energy: 50
+> Cooldown: 2
+> BP: 3
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation: 
+Rarity: Rare
+
+Tri Beam: Deals 10 piercing damage to one enemy and 5 affliction damage to Tien. This skill deals 5 more piercing damage for each Tri Beam Charge on the enemy.
+> Energy: 30
+> Cooldown: 1
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation: 
+Rarity: Good
+
+Tri Beam Charge: Targets one enemy permanently marking them with Tri-Beam Charge. Each charge increases Tri-Beam and Neo Tri-Beams effects. This skill stacks.
+> Energy: 20
+> Cooldown: None
+> BP: 1
+> Focus: Enemy
+> Type: Power Up
+>>> Skill Variation: None
+Rarity: Common
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SCOUTER VEGETA
+
+SKILLS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+73: Galick Gun: This is has a clash effect. If Vegeta Scouter ki is higher than target this skill deals doubles damage. This skill deals 15 damage.
+BP: 2 Cooldown:0  Focus: Enemy Type:Ki  Energy:25
+
+74: Scouter Analysis:This skill blocks friendly skills on the enemy and stuns friendly skills. This skill last 1 for turn.
+BP:1      Cooldown:2        Focus: Enemy     Type: Power-Down Energy:20
+
+75: Aerial Smash: This skill does 15 damage and increases Vegeta's speed by 3 permanently.
+BP:1 Cooldown:1    Type:Strength    Focus:Enemy Energy:25
+
+ Great Ape: This boosts Vegeta stats all but speed by 60%.  BP 2 Cooldown:0  Type:Transformation Focus:self  Energy:20
+
+76: Mouth Blast: This is has a clash effect. If Vegeta Scouter ki is higher  than target this skill doubles damage. This skill deals 20 damage.
+BP: 2 Cooldown:0  Focus: Enemy Type:Ki  Energy:30
+
+77: Howl: This skill increases  Vegeta Scouter Ki and Strength by 10. This skill boost last until great ape ends.(edited)
+BP:1   Cooldown:1  Focus:self Type: Power-Up Energy:15
+
+78: Great Ape Smash: Great Ape Vegeta smashes through an enemy dealing 20 damage.
+BP:2 Cooldown:0 Focus:Enemy Type:Strength  Energy:20
+
+Focus: 1: One enemy 2: All Enemies 3:Self 4:One Ally 5:All Allies
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+YAJIROBE
+
+SKILLS
+
+Miracle Ka-Blam Slash: This skill does 15 damage and lowers the enemy defense by 2.
+> Energy: 30
+> Cooldown: None
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+Rarity: Common
+
+Yajirobe Flees: Yajirobe and one ally gain immunity to ki skills for 1 turn. 
+> Energy: 30
+> Cooldown: 2
+> BP: 2
+> Focus: Enemy
+> Type: Defensive
+>>> Skill Variation:
+Rarity: Common
+
+Senzu Supply: This skill can be used on one ally or yourself. This will recover 25% of the target health and energy. Each time this skill is used the cooldown will increase by 1.
+
+> Energy: 40
+> Cooldown: 0
+> BP: 2
+> Focus:  Allies
+> Type: Support
+>>> Skill Variation:
+Rarity: Rare
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+King Kai
+
+King Kai's Training: This skill last for 2 turns. The first turn strength is increased by 20%.The second turn his defense is increased by 20%.
+> Energy: 30
+> Cooldown: 1
+> BP: 1
+> Focus: Ally
+> Type: Power-Up
+>>> Skill Variation:
+Rarity: Common
+
+Bubbles's Training: This skill last for 2 turns. The first turn ki is increased by 20%.The second turn his speed is increased by 20%.
+> Energy: 30
+> Cooldown: 1
+> BP: 1
+> Focus: Ally
+> Type: Power-Up
+>>> Skill Variation:
+Rarity: Common
+
+Telepathy : The targeted enemy loses one bp.For one turn if an enemy uses a ki skill it will be countered. If the enemy is countered there ki and strength is reduced by 20%.
+> Energy: 30
+> Cooldown: 2
+> BP: 2
+> Focus:  Enemy
+> Type: Support
+>>> Skill Variation:
+Rarity: Rare
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+YAMCHA
+
+SKILLS
+
+Spirit Ball: Deals 10 damage to one enemy for three turns. This skill ends if Yamcha becomes immune or immobilized.
+> Energy: 30
+> Cooldown: 3
+> BP: 2
+> Focus: Enemy
+> Type: Ki
+>>> Skill Variation:
+Rarity:Good
+
+Suprise Attack: Stuns one enemy and lowers their defense by 5 for one turn.
+> Energy: 20
+> Cooldown: 1 
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+Rarity:Common
+
+Wolf Fang Fist: Deals 10 damage to one enemy for three turns. This skill ends if Yamcha becomes immune or immobilized.
+> Energy: 30
+> Cooldown: 3 
+> BP: 2
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+Rarity:Good
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cui
+
+Explosion Punch: This skill removes all current defense on one enemy.
+> Energy: 30
+> Cooldown: 1
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+Rarity: Common
+
+Ah! Lord Frieza! : This skill puts the target in a confused state for 1 turn and Cui's ki increases by 5.
+> Energy: 30
+> Cooldown: 2
+> BP: 1
+> Focus: Enemy
+> Type: Power-Down
+>>> Skill Variation:
+Rarity: Rare
+
+Energy Bullet:This has a clash effect.If Cui's ki is higher than the enemy defense this skill does 25 damage and lowers enemy defense by 5.If less this skill does 15 damage and lowers enemy defense by 3.
+> Energy: 30
+> Cooldown: 0
+> BP: 2
+> Focus:  Enemy
+> Type: Ki
+>>> Skill Variation:
+Rarity: Rare
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Guldo
+
+SKILLS
+Time-Freezing:  All enemies lose 10 EP and defenses are lowered by 10 for 1 turn. Each character that is effected by paralysis will have their energy lowered by 20.
+> Energy: 30
+> Cooldown: 2
+> BP: 2
+> Focus: Enemies
+> Type: Power-Down
+>>> Skill Variation:
+Rarity: Common
+
+Guldo's Special: This skill does 20 damage to all enemies. If the enemy is effected by time-freezing this skill will lower there energy by 20.If the enemy is effected by paralysis this will also be Full Stun all enemies.
+> Energy: 40
+> Cooldown: 1
+> BP: 3
+> Focus: All Enemies
+> Type: Strength
+>>> Skill Variation:
+Rarity: Common
+
+Paralysis:  All enemies friendly skills are stunned for 1 turn.If the enemy is affected by time-freeze this will also stun Ki based skills.
+> Energy: 30
+> Cooldown: 2
+> BP: 2
+> Focus:  All Enemies
+> Type: Ki
+>>> Skill Variation:
+Rarity: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Recoome
+
+Skills
+
+Recoome Boom: Recoome smashes an enemy to the ground dealing 15 damage and stunning their strength skills for one turn.
+> Energy: 30
+> Cooldown: 1
+> BP: 1
+> Focus: Enemy
+> Type: Strength
+>>> Skill Variation:
+Rarity: Common
+
+Recoome Grapple: Recoome catches the enemy during their attack countering all skills used on him for one turn. The countered enemy will take double damage from Recoome Boom or Eraser Gun the following turn.
+> Energy: 30
+> Cooldown: 2
+> BP: 2
+> Focus: Self
+> Type: Defensive
+>>> Skill Variation:
+Rarity: Rare
+
+Eraser Gun: Recoome fires Eraser Gun at the enemy dealing 15 damage. This skill increases Recoome's Ki by 5 and 5 energy every time it is used.
+> Energy: 30
+> Cooldown: 0
+> BP: 2
+> Focus:  Enemy
+> Type: Ki
+>>> Skill Variation:
+Rarity: Rare(edited)
+----------------------------------------------------------------------------------------------------------------------------------
+Burter: A member of the infamous mercenary squad known as the ginyu force. Burter is often partnered with Jeice and they combine their powers to perform deadly signature attacks.
+Nicknamed the blue hurricane, he was once known as the fastest person in the universe next to Frieza.
+
+Skills 
+
+Blue Hurricane Crasher: Burter moves at high speed increasing his Speed and strength by 10 for 1 turn. If used with Red Magma Crasher is used this skill last 2 turns instead and stuns will last 1 turn less on burter.
+Bp: 1 Cd: 1 Energy: 20 Type: Ki Focus: All Allies
+
+Mach Punch: This skill has a clash effect. Burter punches an enemy at high speed dealing 20 damage to one enemy and if Burters speed is higher than his opponent This skill deals piercing. If Blue Hurricane Crasher is in effect this skill will stun friendly skills for 1 turn. This skill will do an additional 10 damage to an enemy affected by a G-force.If this skill is used in combination with Crusher Ball the target will recieve 1 G-Force Mark.
+Bp: 2 Cd: 1 Energy: 30 Type: strength Focus: enemy
+
+Purple Comet Crush. If used on enemy takes 15 damage and enemy speed is decreased by 3. If Purple spiral is used on Buther this skill will lower all stats by 5 and deal 35 damage.If Blue Hurricane Crasher is in effect, burter team gains 5 speed. If G-force is on the enemy this will deal piercing damage.
+Bp: 2 Cd: 1 Energy: 40 Type: strength Focus: Enemy/Ally
+-------------------------------------------------------------------------------------------------------------------------------------
+Jeice: A member of the infamous mercenary squad known as the ginyu force. Jeice is often partnered with Burter and they combine their powers to perform deadly signature attacks.
+Nicknamed the red magma, he's Ginyu's second in command and resembles a rock star in appearance. 
+
+Red Magma Crasher: Jeice moves swiftly increasing his Speed and Ki by 10 for 1 turn. If used with Blue Hurricane Crasher this skill will last 2 turns instead and any counters or reflects used on jeice will last 1 turn less.
+Bp: 1 Cd: 1  Energy: 20 Type: Ki Focus: All Allies
+
+Crusher Ball: This skill has a clash effect. Aiming his crusher ball at an enemy, Jeice hits One enemy dealing 10 ki damage and if Jeice's speed is higher than the enemy
+this skill will go be before all skills. If used during Red Magama Crasher this skill this will give him immunity to strength skills for one turn. If the enemy has G-force on him they will lose 10 energy.
+If this skill is used in combination with Mach Punch the target will recieve 1 G-Force Mark.
+Bp: 2 Cd: 1 Energy: 30 Type: Ki Focus: Enemy
+
+Purple Spiral Flash: Burter and Jeice combine to attack the enemy team. This skill does 10 damage to all enemies and an additional 5 damage if the energy has a G-force mark.
+If Red Magma Crasher is on this character all allies gain 5 ki.                                                       
+Bp: 2 Cd: 2 Energy: 40 Type: Ki  Focus: All enemies/Ally
+--------------------------------------------------------------------------------------------------------------------------------------
+Ginyu
+
+Skills
+Body Change :  This skill makes Ginyu swap body with one character on the enemy team. All skills,stats,hp,ep, cooldowns, and character are swapped.
+> Energy: 50
+> Cooldown: 3
+> BP: 4
+> Focus: Enemy
+> Type: Transformation
+>>> Skill Variation: None
+Rarity: Common
+
+Self-Harm: This causes Ginyu to lose 20% of his health. Ginyu gains immunity to ki skills and cannot die for one turn.The targeted character will have immunity to friendly skills from him for two turns.
+> Energy: 30
+> Cooldown: 2
+> BP: 1
+> Focus: Enemy
+> Type: Power-Down
+>>> Skill Variation: 
+Rarity: Good
+
+Tornado Kick: You can use this skill on an ally or yourself. If the selected character is attacked then the enemy will be strength stunned for two turns.This skill last on ally or yourself for one turn.
+> Energy: 30
+> Cooldown: 3
+> BP: 2
+> Focus: One Ally/Self
+> Type: Strength
+>>> Skill Variation: 
+Rarity: Rare
+
+Milky Cannon- This skill deals 15 damage and removes 10 energy from the the enemy. If used in a row this skill effects are doubled. This doesn't stack.
+> Energy: 30
+> Cooldown: 0
+> BP: 1
+> Focus: Single-Enemy
+> Type: Ki
+>>> Skill Variation: 
+Rarity: Rare
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+COMMON ITEMS
+------------------------------
+
+>>> Items
+
+
+Tonkatsu (Fried Pork) Bowl This heals one character by 30 hp.
+> Cooldown: 0
+> BP: 1
+
+Chicken & Egg Bowl --- This heals one character by 40 hp.
+> Cooldown: 1
+> BP: 1
+
+Chilled Drink --- This recovers energy for one character by 20.
+> Cooldown: 0
+> BP: 0
+
+Well Chilled Drink --- This recovers energy for one character by 30.
+> Cooldown: 0
+> BP: 1
+
+Extremely Chilled Drink --- This recovers energy for one character by 40.
+> Cooldown: 1
+> BP: 1
+
+King Kai’s Water --- All cooldowns on one character is reduced by 1.
+> Cooldown: 1
+> BP: 1
+
+Hercule Drink --- For one turn a character defense is increased by 10.
+> Cooldown: 0
+> BP: 1
+
+
+Super Holy Water Bottle --- For two turns a character strength is increased by 5.
+> Cooldown: 1
+> BP: 1
+
+Dragon Soul! --- If you win money is increased by 20%
+Dragon Soul!! --- If you win money is increased by 40%
+
+Dynamic! --- If you win experience is increased by 20%
+Dynamic!! --- If you win experience is increased by 40%
+
+Magic Pot --- 1 random effect is put one of your characters.
+> Cooldown: 2
+> BP: 1
+
+Super Kami Water Drop --- For one turn a character kai is increased by 5.
+> Cooldown: 0
+> BP: 1
+
+Vaccine --- Removes one current effect on one of your characters.
+> Cooldown: 2
+> BP: 1
+
+
+GOOD ITEMS
+------------------------------
+1/4 Senzu Bean --- This recovers for one character 30 hp and 30 energy.
+> Cooldown: 1
+> BP: 2
+
+1/3 Senzu Bean --- This recovers for one character 40 hp and 40 energy.
+> Cooldown: 2
+> BP: 2
+
+Supreme Kai’s Water --- All cooldowns on one character is reduced by 2.
+> Cooldown: 1
+> BP: 2
+
+Super Holy Water Drop --- For one turn a character strength is increased by 10.
+> Cooldown: 0
+> BP: 1
+
+Dragon Soul!!! --- If you win money is increased by 60%
+Dragon Soul!!!! --- If you win money is increased by 80%
+
+Dynamic!!! --- If you win experience is increased by 60%
+Dynamic!!!! --- If you win experience is increased by 80%
+
+
+Hercule Drink DX --- For one turn a character defense is increased by 10.
+> Cooldown: 1
+> BP: 1
+
+Baba’s Pot  --- 2 random effects is put on one of your character.
+> Cooldown: 2
+> BP: 2
+
+
+Super Kami Water Bottle --- For one turn a character kai is increased by 10.
+> Cooldown: 1
+> BP: 1
+
+Pills --- Increases bp by 1.
+> Cooldown: 2
+> BP: 0
+
+
+Lord Slug's Pills: Increases BP gain by 1 for two turns.
+> Cooldown: 3
+> BP: 0
+
+
+RARE ITEMS
+------------------------------
+Grand Supreme Kai’s Water --- All cooldowns on one character is reduced by 3.
+> Cooldown: 2
+> BP: 2
+½ Senze Bean --- This recovers for one character 50 hp and 50 energy.
+> Cooldown: 3
+> BP: 3
+Senzu Bean --- This fully recovers for one character hp and energy.
+> Cooldown: 10
+> BP: 3
+Super Holy Water --- For one turn a character strength is increased by 15.
+> Cooldown: 1
+> BP: 1
+Dragon Soul!!!!! --- If you win money is increased by 100%
+Dynamic!!!!! --- If you win experience is increased by 100%
+Hercule Drink SP --- For one turn a character defense is increased by 15.
+> Cooldown: 2
+> BP: 1
+Bibidi’s Pot  --- 2 random effects is put on one of your character.
+> Cooldown: 2
+> BP: 2
+Super Kami Water --- For one turn a character kai is increased by 15.
+> Cooldown: 2
+> BP: 1
+
+
+
+25%     40%     60%   75%    90%     100%
+10      15      20    25     30      35
+P       K       S1    S2     S3      S4
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NORMAL DAMAGE STANDARDS & RANGES
+
+High Damage: 75-90
+Medium Damage: 40-60
+Low Damage: 15-30 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PIERCING DAMAGE STANDARDS & RANGES
+
+High Damage: 50-60
+Medium Damage: 30-40
+Low Damage: 10-20
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ULTIMATE GOAL
+
+Our ultimate goal for this game is to be releasing content almost every week. We are going to have a Community Team, Balance Team, and Quest Team. Community Team will only focus on the forum/website and game problems. Balance Team will be in charge of balancing the game, helping to create characters, and new skills. Quest Team will be in charge of creating storylines, quest missions, and helping me with new game ideas. Each of these teams will have group supervisors who over look everything and than give the final result to the webmasters to review (Ninetailschris and Nelo).
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+STAT INCREASE MEASURES
+
+Every stat increases by 2, however speed only increases by 1.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The ladder system matches players based on character level.
+Highest Level  1-3  4-6  7-9
+
+
+Week 1: Site/Forum/Ladder Only  -Working Shop Design
+Week 2: Team Builder and Piccolo's Skillset   -Working Shop Design
+Preliminery Weeks
+
+
+Week 3: Capsule Corp and 5 New Items -Working Quests System Code and Design/Gohan added to shop
+Week 4: Private Matches -Working Quests Design
+Phase 1 - Grand Opening Tournament
+
+
+Week 5: Character Builder -Planet System Panel Deisgn 
+Week 6: Quests System -Planet System Panel Design 
+Phase 2 
+
+Week 7: Planet System -Character Builder
+Week 8: Beta - Reset Of Accounts / Add Characters Saga One Pack
+
+Side Note: Increase the gap between leveling up ( Character ExP by Wins )
+1->2 = 2 Wins
+2->3 = 4 Wins
+3->4 = 8 Wins
+4->5 = 16 Wins
+5->6 = 32 Wins
+7->8 = 64 Wins
+8->9 = 128 Wins
+
+Side Note: Create Tier names for every 3 ranks.
+1->3 = Novice
+4->6 = Intermediate
+7->9 = Advanced
+
+//Planet Panel
+<a href="/planet" class="list-group-item "><span class="badge"><%=@user.members.count(:status => "Pending")%></span> <b class="fa fa-globe open-s"> Planet Panel</b></a>
+
+
+
+UNLOCKED ITEMS
+
+Well Chilled Drink --- This recovers energy for one character by 30.
+> Cooldown: 0
+> BP: 1
+
+Tonkatsu (Fried Pork) Bowl This heals one character by 30 hp.
+> Cooldown: 0
+> BP: 1
+
+King Kai’s Water --- All cooldowns on one character is reduced by 1.
+> Cooldown: 1
+> BP: 1
+
+Dragon Soul!!! --- If you win money is increased by 60%
+Dynamic!!! --- If you win experience is increased by 60%
+
+
+
+
+
+

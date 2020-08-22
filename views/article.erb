@@ -1,0 +1,244 @@
+<div class="box box-primary">
+  <div class="box-header with-border">
+    <h3 class="box-title">Latest News </h3>
+    <div class="box-tools pull-right">
+      <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+      <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+    </div>
+  </div>
+  <!-- /.box-header -->
+
+  <div class="box-body">
+    <ul class="products-list product-list-in-box">
+
+
+      <li class="item">
+        <div class="product-img">
+          <a href="/user/<%=@post.author %>"><img src="<%=@post.user.avater %>" alt="Product Image"> </a>
+        </div>
+        <div class="product-info">
+          <a href="/news/<%= @post.id%>" class="product-title">
+            <%=@post.title %> <span class="label label-warning pull-right">By <%=@post.author %> at <%=@post.created_at.strftime("%m/%d/%Y at %I:%M%p") %></span></a>
+          <span class="product-description">
+                        <blockquote> <%= RDiscount.new(@post.body, :smart, :filter_html).to_html %></blockquote> 
+                        </span>
+          <span><button id="<%=@post.author%>" id2="<%=@post.body%>" id3="<%=@post.id%>"id4="7" OnClick="updateTextConverter(this);">Edit</button> 
+                  <button  class="" id="<%=@post.author%>" id2="<%=@post.body%>" id4="3" OnClick="updateTextConverter(this);">Reply</button></span>
+        </div>
+      </li>
+      <!-- /.item -->
+
+
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer text-center">
+    <a href="/news" class="uppercase">View All News</a>
+  </div>
+  <!-- /.box-footer -->
+</div>
+<!-- /.box -->
+
+<div class="box box-primary">
+  <div class="box-header with-border">
+    <h3 class="box-title">Comments </h3>
+    <div class="box-tools pull-right">
+      <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+      <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+    </div>
+  </div>
+  <!-- /.box-header -->
+
+  <div class="box-body">
+    <% if @post.comments %>
+      <% @post.comments.each do |c| %>
+
+        <div>
+          <ul class="media-list">
+            <li class="media">
+
+              <a class="pull-left" href="/user/<%=c.author%>">
+          <img class="media-object"  src="<%=c.user.avater%>">
+        </a>
+
+              <div class="media-body comment-box">
+                <span class="label label-primary pull-right">Post at <%=c.created_at.strftime("%m/%d/%Y at %I:%M%p") %></span>
+                <h4 class="media-heading"><a href="/user/<%=c.author%>"><%=c.author%> </a></h4>
+                <p class="media-heading">
+                  <p>
+                    <%= RDiscount.new(c.body, :smart, :filter_html).to_html %>
+                  </p>
+                  <button id="<%= @post.id %>" id2="<%=c.id%>" id3="<%=c.body%>" id4="1" OnClick="updateTextConverter(this);">Edit</button> <button class="" id="<%= @post.id %>" id2="<%=c.id%>" id3="<%=c.body%>" id4="2" id5="<%=c.author%>" OnClick="updateTextConverter(this);">Reply</button></p>
+                <hr>
+
+                <% c.replies.each do |r| %>
+
+                  <!-- Nested media object -->
+
+                  <div class="media user-comment-box" id="show">
+                    <a class="pull-left" href="/user/<%=r.author%>">
+              <img class="media-object" src="<%=r.user.avater%>" alt="Avater">
+            </a>
+
+                    <div class="media-body">
+                      <span class="label label-primary pull-right">Post at <%=r.created_at.strftime("%m/%d/%Y at %I:%M%p") %></span>
+                      <h4 class="media-heading"><a href="/user/<%=r.author%>"><%=r.author%> </a></h4>
+                      <p class="media-heading">
+                        <p>
+                          <%= RDiscount.new(r.body, :smart, :filter_html).to_html %>
+                        </p>
+                        <button id="<%= @post.id %>" id2="<%=r.id%>" id3="<%=r.body%>" id4="5" OnClick="updateTextConverter(this);">Edit</button> <button class="" id="<%= @post.id %>" id2="<%=c.id%>" id3="<%=r.body%>" id4="4" id5="<%=r.author%>" OnClick="updateTextConverter(this);">Reply</button></p>
+
+                    </div>
+                  </div>
+
+                  <% end %>
+                    <button class="see-more">Load more</div>
+
+    </div>
+           
+<hr>
+    <% end %>
+ <% end %>                
+          
+                </div><!-- /.box-body -->
+               
+              </div><!-- /.box -->
+ 
+    <div class="panel panel-default">
+  <div class="panel-body">
+    <div class="alert alert-danger" role="alert">Uses spaces!</div>
+      
+      <div class="panel panel-default">
+  <div class="panel-body">
+    <img src='/images/smileys/s1.png' id="1" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4" id2="1"  onclick='smiley(this);' />
+    <img src='/images/smileys/s5.png' id="5" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s8.png' id="8" id2="1" onclick='smiley(this);' />
+    <img src='/images/smileys/s9.png' id="9" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11"id2="1" onclick='smiley(this);' /><img src='/images/smileys/s12.png' id="12" id2="1" onclick='smiley(this);' />
+    <img src='/images/smileys/s13.png' id="13" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s16.png' id="16" id2="1" onclick='smiley(this);' />
+    <img src='/images/smileys/s17.png' id="17" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s20.png' id="20" id2="1" onclick='smiley(this);' />
+    <img src='/images/smileys/s21.png' id="21" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s24.png' id="24" id2="1" onclick='smiley(this);' />
+    <img src='/images/smileys/s25.png' id="25" id2="1" onclick='smiley(this);' />
+  </div>
+</div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+    <div class="btn-group "  role="group" aria-label="...">
+   <button class="btn btn-default" id="1" id2="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" id2="1" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" id2="1" onclick="changeText(this)">Quote</button>
+                    <button
+                      class="btn btn-default" id="4" id2="1" onclick="changeText(this)">Link</button>
+                      <button class="btn btn-default" id="5" id2="1" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" id2="1" onclick="changeText(this)">Image</button><button class="btn btn-default" id="13" id2="1" onclick="changeText(this)">Image with Link</button>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-default">Text Size</button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                        <ul class="dropdown-menu">
+                          <li><a id="7" id2="1" onclick="changeText(this)">H1 Largest</a></li>
+                          <li><a id="8" id2="1" onclick="changeText(this)">H2</a></li>
+                          <li><a id="9" id2="1" onclick="changeText(this)">H3</a></li>
+                          <li><a id="10" id2="1" onclick="changeText(this)">H4</a></li>
+                          <li><a id="11" id2="1" onclick="changeText(this)">H5</a></li>
+                          <li><a id="12" id2="1" onclick="changeText(this)">H6 Smallest</a></li>
+                        </ul>
+                      </div>
+
+
+              </div>
+
+
+        </div>
+  </div>
+
+
+  <form action="/news/<%= @post.id %>/comment" method="post" id="comment_form">
+    Make a comment: (Max: 250 characters) <textarea id="textUpdate" name="body" class="form-control" form="comment_form" value="" min="5" max="250" rows="7" required> </textarea>
+
+
+    <br>
+
+
+
+    <input type="submit" class="btn btn-primary col-lg-12" value="Post comment">
+</div>
+<div>
+  </form>
+
+</div>
+</div>
+
+<!-- Edit Comment --->
+<div class="modal fade" id="edit_reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title newText" id="myModalLabel">Edit Comment</h4>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger" role="alert">Uses spaces!</div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <img src='/images/smileys/s1.png' id="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4"
+              onclick='smiley(this);' />
+            <img src='/images/smileys/s5.png' id="5" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" onclick='smiley(this);' /><img src='/images/smileys/s8.png' id="8"
+              onclick='smiley(this);' />
+            <img src='/images/smileys/s9.png' id="9" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" onclick='smiley(this);' /><img src='/images/smileys/s12.png'
+              id="12" onclick='smiley(this);' />
+            <img src='/images/smileys/s13.png' id="13" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" onclick='smiley(this);' /><img src='/images/smileys/s16.png'
+              id="16" onclick='smiley(this);' />
+            <img src='/images/smileys/s17.png' id="17" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" onclick='smiley(this);' /><img src='/images/smileys/s20.png'
+              id="20" onclick='smiley(this);' />
+            <img src='/images/smileys/s21.png' id="21" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" onclick='smiley(this);' /><img src='/images/smileys/s24.png'
+              id="24" onclick='smiley(this);' />
+            <img src='/images/smileys/s25.png' id="25" onclick='smiley(this);' />
+          </div>
+        </div>
+
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="btn-group " role="group" aria-label="...">
+              <button class="btn btn-default" id="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" onclick="changeText(this)">Quote</button>
+              <button
+                class="btn btn-default" id="4" onclick="changeText(this)">Link</button>
+                <button class="btn btn-default" id="5" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" onclick="changeText(this)">Image</button><button class="btn btn-default" id="13" onclick="changeText(this)">Image with Link</button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default">Text Size</button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                  <ul class="dropdown-menu">
+                    <li><a id="7" onclick="changeText(this)">H1 Largest</a></li>
+                    <li><a id="8" onclick="changeText(this)">H2</a></li>
+                    <li><a id="9" onclick="changeText(this)">H3</a></li>
+                    <li><a id="10" onclick="changeText(this)">H4</a></li>
+                    <li><a id="11" onclick="changeText(this)">H5</a></li>
+                    <li><a id="12" onclick="changeText(this)">H6 Smallest</a></li>
+                  </ul>
+                </div>
+
+
+            </div>
+
+
+          </div>
+        </div>
+        <form action="" id="form" method="post" id="news_post_form">
+          <input id="put" name="_method" type="hidden" value="put" /> Body: <textarea name="body" id="textUpdate" class="form-control addText" rows="10" value="" required></textarea> <br>
+          <input type="submit" id="button" class="btn btn-primary col-lg-12" value="Edit Comment"><br>
+        </form> <br>
+        <form action="" id="form2" method="post">
+          <input type="hidden" class="btn btn-primary" name="_method" value="delete">
+          <input type="submit" id="hidden" class="btn btn-danger col-lg-12" value="Delete this comment">
+        </form><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,293 @@
+
+<div class="panel  noround">
+    <div class="panel-heading navbar-heading text-center btn-lg  OB noround " data-toggle="collapse" href="#collapse1">
+      Create New Topic
+    </div>
+                         <% if session? %> <div class="panel-body panel-collapse collapse" id="collapse1"  >
+                      
+         <div class="panel noround">
+           <div class="panel-heading navbar-heading noround">
+                   <img src='/images/smileys/s1.png' id="1" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s5.png' id="5" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" id2="1" onclick='smiley(this);'
+                                                  /><img src='/images/smileys/s8.png' id="8" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s9.png' id="9" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s12.png' id="12" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s13.png' id="13" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s16.png' id="16" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s17.png' id="17" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s20.png' id="20" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s21.png' id="21" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s24.png' id="24" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s25.png' id="25" id2="1" onclick='smiley(this);' />
+           </div>
+   
+           <div class="panel-body navbar-heading ">
+                <div class="btn-group center-block" role="group" aria-label="...">
+                                                    <button class="btn btn-default" id="1" id2="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" id2="1" onclick="changeText(this)">Italic</button><button class="btn btn-default"
+                                                      id="3" id2="1" onclick="changeText(this)">Quote</button><button class="btn btn-default" id="4" id2="1" onclick="changeText(this)">Link</button>
+                                                    <button class="btn btn-default" id="5" id2="1" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" id2="1" onclick="changeText(this)">Image</button><button class="btn btn-default"
+                                                      id="13" id2="1" onclick="changeText(this)">Image with Link</button>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default">Text Size</button>
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li><a id="7" id2="1" onclick="changeText(this)">H1 Largest</a></li>
+                                                        <li><a id="8" id2="1" onclick="changeText(this)">H2</a></li>
+                                                        <li><a id="9" id2="1" onclick="changeText(this)">H3</a></li>
+                                                        <li><a id="10" id2="1" onclick="changeText(this)">H4</a></li>
+                                                        <li><a id="11" id2="1" onclick="changeText(this)">H5</a></li>
+                                                        <li><a id="12" id2="1" onclick="changeText(this)">H6 Smallest</a></li>
+                                                      </ul>
+                                                    </div>
+
+
+                                                  </div>
+
+               </div>
+              
+    <div class="panel-body navbar-inverse">
+    <form action="/forums/<%=@forum.url%>/create_topic" method="post" class="OB white">
+
+Create Post Title: <input type="text" name="title" class="form-control OB " required> 
+      <br>
+                                                <input type="hidden" id="newlocation" name="location" value="">
+
+                                                <input type="hidden" name="_method" id="moblieput"> <b class="OB white">Text</b> <textarea name="body" id="textUpdate" min="5" max="5000" rows="15" class="form-control noround OB" required>  </textarea>
+                                                <br>
+                                                <input type="submit" class="btn navbar-heading col-lg-12 OB" value="Post"><br><br>
+                                                
+                                              </form>
+                                              <button class="button1 btn-block" onclick="previewShow();">Preview</button>
+                                              
+    </div></div>
+    
+    <div class="panel  noround">
+                                      <div class="navbar-heading btn-lg  TW noround ">
+                        
+                                        <small class=""> Preview </small><b class="TW changeb pull-right"></b> 
+                                      </div>
+                                      <div class="panel-body forum_comments navbar-inverse">
+                                        <div class="row-eq-height ">
+                                          <div class="col-xs-12 col-sm-3 fixed4">
+                                              <br>
+                                            <a class="TW center-block text-center2 title " href="/user/<%=@user.username%>">
+                                             <%=@user.username%>
+                                            </a><br>
+                                            <img src="<%=@user.avater%>" class="img-responsive center-block  fimage">
+                                            
+                                            <hr>
+                                            <div class="text-center">
+                                              <span class="testing <%=@user.group%>">
+                                                <%=@user.group%>
+                                            </span>   
+                                            </div>
+                                           
+                                            
+                                              <div class="forum_comments TW smalltext text-center ">Posts:
+                                             <%=@user.post_count%>
+                                            </div>
+                                        
+                                            
+                                          
+                                           
+                                              <div class=" forum_comments TW smalltext text-center">Joined On:
+                                              <%=@user.created_at.strftime("%m/%d/%Y")%>
+                                            </div>
+                                            
+                                             <br>
+                                             
+                                            <br>
+                                             <br>
+                                        
+
+
+                                          </div>
+                                          <div class="col-xs-12 col-sm-9 img-check forum_comments TW">
+
+                                            <div id="planetDescError" class="TW"></div>
+                                              <hr>
+                                              <%= RDiscount.new(@user.signature, :smart, :filter_html).to_html %>
+
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                      <!-- /.box-body -->
+
+                                    </div>
+                         <% end %></div>
+                        </div>
+</div>
+
+
+    
+            
+              <%= will_paginate @fp.all, renderer: BootstrapPagination::Sinatra %>
+             <br>
+                 <ol class="breadcrumb navbar-inverse" style="background-color:#222;">
+  <li><a href="/forums">Formpage</a></li>
+  <li><a href="/forums/category/<%= @forum.incategory %>"><%= @forum.incategory %></a></li>
+  <li><a href="/forums/<%= @forum.url %>"><%= @forum.title %></a></li>
+</ol>
+    <div class="panel noround">
+    <div class="panel-heading navbar-heading text-center btn-lg  OB noround " >
+      <%=@forum.title%> 
+          
+                   
+  </div>
+   
+<% if @forum.forumposts.all(:announcements => true).count > 0%>          
+                         
+    
+                                      <% @forum.forumposts.all(:announcements => true).each do |f| %>
+                                 <div class="panel-body noround  navbar-inverse">
+        <div class="row custcolor">
+   
+            <div class="col-lg-1 "><img src="<%=f.user.avater%>" class="img-message img-circle"></div>
+            <div class="col-lg-7">
+                <a href="/forums/<%=f.url%><%=f.id%>" class="OB title"><%=f.title%></a><br><small> Last Post By <a href="/user/<%=f.author%>"><%=f.author%></a> in <a href="#"><%=f.inforum%></a> at <%=f.created_at.strftime("%m/%d/%Y %I:%M%p")%> </small></div>
+            <div class="col-lg-2"><%=f.comments%>
+                <br> <small> Posts</small> </div>
+            <div class="col-lg-1"><%=f.views%>
+                <br> <small> Views</small> </div>
+                <div class="col-lg-1"> <img src="/images/forum/announce3.png"> </div>
+        
+
+    </div>
+      </div>
+                                        <% end %>
+
+              <% end %>
+               <% if @forum.forumposts.all(:sticky => true).count > 0%>          
+                         
+                               
+                                      <% @forum.forumposts.all(:sticky => true).each do |f| %>
+                                 <div class="panel-body noround  navbar-inverse">
+        <div class="row custcolor">
+   
+            <div class="col-lg-1 "><img src="<%=f.user.avater%>" class="img-message img-circle"></div>
+            <div class="col-lg-7">
+                <a href="/forums/<%=f.url%><%=f.id%>" class="OB title"><%=f.title%></a><br><small> Last Post By <a href="/user/<%=f.author%>"><%=f.author%></a> in <a href="#"><%=f.inforum%></a> at <%=f.created_at.strftime("%m/%d/%Y %I:%M%p")%> </small></div>
+            <div class="col-lg-2"><%=f.comments%>
+                <br> <small> Posts</small> </div>
+            <div class="col-lg-1"><%=f.views%>
+                <br> <small> Views</small> </div>
+                <div class="col-lg-1"> <img src="/images/forum/sticky.png"> </div>
+        
+
+    </div>
+      </div>
+                                        <% end %>
+
+              <% end %>
+ <% if @fp %>
+        <% @fp.each do |p| %>
+   <div class="panel-body noround  navbar-inverse">
+        <div class="row custcolor">
+   
+            <div class="col-lg-1 "><img src="<%=p.user.avater%>" class="img-message img-circle"></div>
+            <div class="col-lg-7">
+                <a href="/forums/<%=p.url%><%=p.id%>" class="OB title"><%=p.title%></a><br><small> Last Post By <a href="/user/<%=p.author%>"><%=p.author%></a> in <a href="#"><%=p.inforum%></a> at <%=p.created_at.strftime("%m/%d/%Y %I:%M%p")%> </small></div>
+            <div class="col-lg-2"><%=p.comments%>
+                <br> <small> Posts</small> </div>
+            <div class="col-lg-2"><%=p.views%>
+                <br> <small> Views</small> </div>
+        
+
+    </div>
+      </div>
+     <% end %>
+               <% end %>
+       
+   </div>
+
+    
+     </div>
+      </div>
+      <br>
+ 
+    </div>
+</div>
+</div>
+
+ <!-- Create_list -->
+                                  <div class="modal fade" id="create_topic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content  modal-bg">
+                                    
+                                        <div class="modal-body ">
+                                            
+                                          <!--<div class="alert alert-danger" role="alert">Uses spaces!</div>-->
+                                         <div class="button1 btn-block modal-title OB"> Create Forum Post</div>
+                                          <div class="panel shadow2">
+                                            <div class="panel-body">
+                                              <img src='/images/smileys/s1.png' id="1" id2="textUpdate" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" id2="textUpdate" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3"
+                                                id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4" id2="textUpdate" id2="textUpdate" onclick='smiley(this);' />
+                                              <img src='/images/smileys/s5.png' id="5" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7"
+                                                id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s8.png' id="8" id2="textUpdate" onclick='smiley(this);' />
+                                              <img src='/images/smileys/s9.png' id="9" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s11.png'
+                                                id="11" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s12.png' id="12" id2="textUpdate" onclick='smiley(this);' />
+                                              <img src='/images/smileys/s13.png' id="13" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s15.png'
+                                                id="15" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s16.png' id="16" id2="textUpdate" onclick='smiley(this);' />
+                                              <img src='/images/smileys/s17.png' id="17" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s19.png'
+                                                id="19" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s20.png' id="20" id2="textUpdate" onclick='smiley(this);' />
+                                              <img src='/images/smileys/s21.png' id="21" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s23.png'
+                                                id="23" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s24.png' id="24" id2="textUpdate" onclick='smiley(this);' />
+                                              <img src='/images/smileys/s25.png' id="25" id2="textUpdate" onclick='smiley(this);' />
+                                            </div>
+                                         
+
+
+                                        
+                                            <div class="panel-body">
+                                              <div class="btn-group " role="group" aria-label="...">
+                                                <button class="btn btn-default" id="1" id2="textUpdate" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" id2="textUpdate" onclick="changeText(this)">Italic</button><button class="btn btn-default"
+                                                  id="3" id2="textUpdate" onclick="changeText(this)">Quote</button><button class="btn btn-default" id="4" id2="textUpdate" onclick="changeText(this)">Link</button>
+                                                <button class="btn btn-default" id="5" id2="textUpdate" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" id2="textUpdate" onclick="changeText(this)">Image</button>
+                                                <button
+                                                  class="btn btn-default" id="13" id2="textUpdate" onclick="changeText(this)">Image with Link</button>
+                                                  <div class="btn-group">
+                                                    <button type="button" class="btn btn-default">Text Size</button>
+                                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                                                    <ul class="dropdown-menu">
+                                                      <li><a id="7" id2="textUpdate" onclick="changeText(this)">H1 Largest</a></li>
+                                                      <li><a id="8" id2="textUpdate" onclick="changeText(this)">H2</a></li>
+                                                      <li><a id="9" id2="textUpdate" onclick="changeText(this)">H3</a></li>
+                                                      <li><a id="10" id2="textUpdate" onclick="changeText(this)">H4</a></li>
+                                                      <li><a id="11" id2="textUpdate" onclick="changeText(this)">H5</a></li>
+                                                      <li><a id="12" id2="textUpdate" onclick="changeText(this)">H6 Smallest</a></li>
+                                                    </ul>
+                                                  </div>
+
+
+                                              </div>
+
+
+                                            </div>
+                                       
+
+                                          <form action="/forums/<%=@forum.url%>/create_topic" method="post" class="OB">
+
+                                            Create Post Title: <input type="text" name="title" class="form-control OB" required> <br> Content: <textarea name="body" id="textUpdate" class="form-control" min="5" max="5000" rows="15" required>  </textarea>
+                                           <%if session? %><% if @user.staff %><br> Annoucement: <input type="checkbox" name="announcements" value="true"> Sticky: <input type="checkbox" name="sticky" value="true"> <% end %><% end %>
+                                       
+                                               <input type="submit" class="btn btn-primary btn-block navbar-heading" value="Post">
+                                          </form>
+
+                                        </div>
+                                      
+                                      </div>
+                                    </div>
+                                  </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--Row-->

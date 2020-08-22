@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Budokai-Online</title>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="description" content="Budokai-Online an online free-to-play Dragon Ball Z Game. Fight against other players around the world to determine who is truely the fighter!" />
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/custom2.css" rel="stylesheet" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet" rel="stylesheet">
+  <link href="/library/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="hold-transition">
+  <div class="container cleanblack2">
+    <div class="row cleanblack2">
+      <nav class="navbar navbar-custom noround">
+        <div class="container-fluid navimg">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+            <a class="navbar-brand navimg" href="/user/<%=@user.username%>">
+        <img alt="Brand" class="img-responsive img-message img-circle pull-left up" src="<%=@user.avater%>">
+  
+      </a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+
+            <ul class="nav nav-justified  OB">
+              <li class="navimg">
+                <a class="nav-color" href="/settings">
+                  <div class="OB"> Control Panel</div>
+                </a>
+              </li>
+              <li class="navimg">
+                <a class="nav-color" href="/messages">
+                  <div class="OB"> Private Messages <span class="badge2"><%=@user.messages.count(:read => false)%></span></div>
+                </a>
+              </li>
+              <li class="navimg">
+                <a class="nav-color" href="/friends">
+                  <div class="OB"> Friends <span class="badge2"><%=@user.friendships.all(:status => "friends").target.count(:updated_at.gt =>  30.minutes.ago)%></span></div>
+                </a>
+              </li>
+              <li class="navimg"><a class="nav-color" href="/forums">Forum Index</a></li>
+              <li class="navimg"><a class="nav-color" href="/">Main Site</a></li>
+              <li class="navimg"><a class="nav-color" href="/arena">Arena</a></li>
+              <li class="navimg"><a class="nav-color" href="/logout">Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    </nav>
+  </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="col-lg-6">
+      <ul class="list-group fixed0 roundleft roundright OB">
+        <li class="list-group-item-forum navbar-custom-activity text-center"> NEW TOPICS</li>
+        <% @newT.each do |t| %>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-xs-2">
+                <img src="<%=t.user.avater%>" class="img-circle img-message">
+              </div>
+              <div class="col-xs-10">
+                <span class="label label-warning pull-right  TW fixed4"> <%=t.created_at.strftime("%m/%d/%Y at %I:%M%p")%> </span><b class="textpost OB">Topic: <a href="/forums/<%=t.url%><%=t.id%>"><b class="urlover">
+                      <%=t.title[0,25]%>
+                    </a></b></b><br>
+
+                <b class="textuser OB">Created By <a href="/user/<%=t.author%>"><b class="urlover"><%=t.author%></a></b></b>
+              </div>
+            </div>
+          </li>
+          <% end %>
+            <a href="/forums-popular" class="list-group-item text-center TW">View Most Active Topics Of All Time</a>
+      </ul>
+    </div>
+
+    <div class="col-lg-6">
+      <ul class="list-group fixed0 roundleft roundright">
+        <li class="list-group-item-forum navbar-custom-posts text-center"> <b class="OB">LATEST DISCUSSION</b></li>
+        <% @newC.each do |c| %>
+          <li class="list-group-item">
+            <div class="row ">
+              <div class="col-xs-2">
+                <img src="<%=c.user.avater%>" class="img-circle img-message">
+              </div>
+              <div class="col-xs-10">
+                <span class="label label-warning pull-right TW fixed4"> <%=c.created_at.strftime("%m/%d/%Y at %I:%M%p")%> </span><b class="textpost OB">Post: <a href="<%=c.url%>"><b class="urlover">
+                          <%=c.body[0,25]%>....</a></b></b><br>
+                <b class="textuser OB">Last Post By <a href="/user/<%=c.author%>"><b class="urlover"><%=c.author%></a></b></b>
+              </div>
+            </div>
+            <% end %>
+          </li>
+          <a href="/forums-topic" class="list-group-item text-center TW">View Top 15 Current Topics </a>
+      </ul>
+    </div>
+
+
+
+
+
+  </div>
+  <%=yield%>
+    <footer id="footer " class="navbar-custom nomargin">
+      <div class="subP nomargin">
+        <div class="container nomargin">
+          <div class="row nomargin">
+            <div class="col-md-6 nomargin">
+              <i class="fa fa-fw fa-copyright"></i> <b class="OB white">BUDOKAI ONLINE 2016</b></div>
+            <div class="col-md-6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!---Bottom container-->
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="/js/jq.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/tagsort.min.js"></script>
+    <script src="/js/validation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<div class="container">
+    <div class="row forum-fix">
+        <div class="col-lg-12">
+            <% if flash[:success] %>
+                <div class="alert alert-success fade in">
+                    <%= flash[:success] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                <% elsif flash[:error] %>
+                    <% if flash[:error].class == Array %>
+                        <% flash[:error].each do |e| %>
+                            <div class="alert alert-danger fade in">
+                                <%=e.to_s %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                            <% end %>
+                                <% else %>
+                                    <div class="alert alert-danger fade in">
+                                        <%= flash[:error] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                                    <% end %>
+                                        <% elsif flash[:info] %>
+                                            <div class="alert alert-info fade in">
+                                                <%= flash[:info] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                                            <% end %>
+                                                <% if @category %>
+                                                    <% if @user.staff %>
+                                                        <% @category.all(:staff => true).each do |c| %>
+
+
+                                                            <table class="table table-responsive">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="OB">
+                                                                            <%=c.name%>
+                                                                        </th>
+                                                                        <th class="hidden-xs OB">Topics</th>
+                                                                        <th class="hidden-xs OB">Posts</th>
+                                                                        <th class="OB">Activity</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <% c.forums.each do |f| %>
+                                                                        <tr>
+                                                                            <td class="OB">
+
+                                                                                <% if f.updated_at < 30.minutes.ago  %><img src="/images/forum/Active_Topic.png" class="img-responsive hidden-xs ftitle">
+                                                                                    <a href="/forums/<%=f.url%>" class="product-title">
+                                                                                        <% else %>
+                                                                                            <img src="/images/forum/unActive_Topic.png" class="img-responsive hidden-xs ftitle">
+                                                                                            <a href="/forums/<%=f.url%>" class="product-title">
+                                                                                                <% end %>
+                                                                                                    <%=f.title%>
+
+                                                                                            </a>
+                                                                                            <br>
+                                                                                            <small><%=f.body%></small>
+                                                                            </td>
+                                                                            <td class="hidden-xs text-center2 OB">
+                                                                                <%=f.topics%>
+                                                                            </td>
+                                                                            <td class="hidden-xs text-center2 OB">
+                                                                                <%=f.post_count%>
+                                                                            </td>
+                                                                            <td><b class="OB">By <a href="/user/<%=f.updated_by%>"><b class="urlover2"><%=f.updated_by%></a></b></b><br> <small class="grey"><%=f.created_at.strftime("%m/%d/%Y at %I:%M%p")%></small></td>
+                                                                            <!--<td><b class="">By <a href="/user/<%=f.author%>"><%=f.author%></a></b><br> <small class="grey"><%=f.created_at.strftime("%m/%d/%Y at %I:%M%p")%></small></td>-->
+                                                                        </tr>
+                                                                        <% end %>
+                                                                </tbody>
+                                                            </table>
+                                                            <% end %>
+                                                                <% end %>
+                                                                    <% @category.all(:staff => false).each do |c| %>
+
+
+                                                                        <table class="table table-responsive">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th class="OB">
+                                                                                        <%=c.name%>
+                                                                                    </th>
+                                                                                    <th class="hidden-xs OB">Topics</th>
+                                                                                    <th class="hidden-xs OB">Posts</th>
+                                                                                    <th class="OB">Activity</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+
+                                                                                <% c.forums.each do |f| %>
+                                                                                    <tr>
+                                                                                        <td class="OB">
+                                                                                            <% if f.updated_at > 30.minutes.ago  %><img src="/images/forum/Active_Topic.png" class="img-responsive hidden-xs ftitle">
+                                                                                                <a href="/forums/<%=f.url%>" class="product-title">
+                                                                                                    <% else %>
+                                                                                                        <img src="/images/forum/unActive_Topic.png" class="img-responsive hidden-xs ftitle">
+                                                                                                        <a href="/forums/<%=f.url%>" class="product-title">
+                                                                                                            <% end %>
+                                                                                                                <%=f.title%>
+
+                                                                                                        </a>
+                                                                                                        <br>
+                                                                                                        <small><%=f.body%></small>
+                                                                                        </td>
+                                                                                        <td class="hidden-xs text-center2 OB">
+                                                                                            <%=f.topics%>
+                                                                                        </td>
+                                                                                        <td class="hidden-xs text-center2 OB">
+                                                                                            <%=f.post_count%>
+                                                                                        </td>
+                                                                                        <td class="text-center2 OB"><b>By <a href="/user/<%=f.updated_by%>"><b class="urlover2"><%=f.updated_by%></a></b></b><br> <small class="grey"><%=f.created_at.strftime("%m/%d/%Y at %I:%M%p")%></small></td>
+                                                                                        <!--<td><b class="">By <a href="/user/<%=f.author%>"><%=f.author%></a></b><br> <small class="grey"><%=f.created_at.strftime("%m/%d/%Y at %I:%M%p")%></small></td>-->
+                                                                                    </tr>
+                                                                                    <% end %>
+                                                                            </tbody>
+                                                                        </table>
+                                                                        <% end %>
+                                                                            <% end %>
+
+
+
+        </div>
+
+ 
+       
+        <div class="col-lg-12">
+            
+            <div class="panel panel-default">
+  <div class="panel-heading text-center">Users Online: <%=@Online.count%></div>
+  <div class="panel-body">
+     <div class="col-lg-3"><div class="testing">
+                    <span class="Webmaster"><b>Webmasters</b></span>&nbsp;<span class="Admin"><b>Admins</b></span>&nbsp;<span class="Quest"><b>Quest Team</b></span>
+                    <span class="Balance"><b>Balance Team</b></span>&nbsp;<span class="Community"><b>Community Team</b>
+             </span>&nbsp;<span class="Member"><b>Members</b></span>
+
+                </div></div>
+     <div class="col-lg-9">  <div class="testing">
+                <% if @Online %>
+                    <% @Online.all.each do |o| %>
+
+                        <a href="/user/<%=o.username%>"><span class="<%=o.group%>"><b><%=o.username%></b></span></a>
+                        <% end %>
+                            <% end %>
+            </div></div>
+  </div>
+</div>
+ </div>
+</div>
+     </div>      
+            
+
+<!--Row-->
+
+
+
+-------------------------------------
+  <div class="mainheading clearfix">
+                            <h2 class="OB heading-fixed">Latest Discussions</h2>
+                        </div>
+
+                        <div class="topicrow forumbox2 " style="margin: 0px; border:black;">
+                            <div class="rowcreater hidden-xs">
+                                <a href="/user/INPUT USER HERE">
+                                    <img src="http://placehold.it/75x75">
+                                </a>
+                            </div>
+
+                            <div class="rowdetails">
+                                <h3>
+                <a class="OB custcolor topicname" href="#">Random Top Title Here</a>
+            </h3>
+                                <p class="category OB">Category: Random Category Name Here</p>
+                                <div class="tagsinput clearfix">
+                                    <span class="tag OB"><span><a href="#">This is a tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">This is Another Tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">Final Tag</a></span></span>
+                                </div>
+
+                                <div class="topicrowrightinfo">
+                                    <a href="#">
+                                        <img src="http://placehold.it/25x25" class="latestby OB" alt="{UPDATED BY}">
+                                    </a>
+                                    <span class="OB custcolor">Last post by
+
+                <a class="OB" href="#">UsernameHere</a> 
+                XXX hours ago.</span>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+<div class="topicrow forumbox2">
+                            <div class="rowcreater hidden-xs">
+                                <a href="/user/INPUT USER HERE">
+                                    <img src="http://placehold.it/75x75">
+                                </a>
+                            </div>
+
+                            <div class="rowdetails" >
+                                <h3>
+                <a class="OB custcolor topicname " href="#">Random Top Title Here</a>
+            </h3>
+                                <p class="category OB">Category: Random Category Name Here</p>
+                                <div class="tagsinput clearfix">
+                                    <span class="tag OB"><span><a href="#">This is a tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">This is Another Tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">Final Tag</a></span></span>
+                                </div>
+
+                                <div class="topicrowrightinfo">
+                                    <a href="#">
+                                        <img src="http://placehold.it/25x25" class="latestby OB" alt="{UPDATED BY}">
+                                    </a>
+                                    <span class="OB custcolor">Last post by
+
+                <a class="OB" href="#">UsernameHere</a> 
+                XXX hours ago.</span>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <div class="topicrow forumbox2">
+                            <div class="rowcreater hidden-xs">
+                                <a href="/user/INPUT USER HERE">
+                                    <img src="http://placehold.it/75x75">
+                                </a>
+                            </div>
+
+                            <div class="rowdetails">
+                                <h3>
+                <a class="OB custcolor topicname" href="#">Random Top Title Here</a>
+            </h3>
+                                <p class="category OB">Category: Random Category Name Here</p>
+                                <div class="tagsinput clearfix">
+                                    <span class="tag OB"><span><a href="#">This is a tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">This is Another Tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">Final Tag</a></span></span>
+                                </div>
+
+                                <div class="topicrowrightinfo">
+                                    <a href="#">
+                                        <img src="http://placehold.it/25x25" class="latestby OB" alt="{UPDATED BY}">
+                                    </a>
+                                    <span class="OB custcolor">Last post by
+
+                <a class="OB" href="#">UsernameHere</a> 
+                XXX hours ago.</span>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <div class="topicrow forumbox2">
+                            <div class="rowcreater hidden-xs">
+                                <a href="/user/INPUT USER HERE">
+                                    <img src="http://placehold.it/75x75">
+                                </a>
+                            </div>
+
+                            <div class="rowdetails">
+                                <h3>
+                <a class="OB custcolor topicname" href="#">Random Top Title Here</a>
+            </h3>
+                                <p class="category OB">Category: Random Category Name Here</p>
+                                <div class="tagsinput clearfix">
+                                    <span class="tag OB"><span><a href="#">This is a tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">This is Another Tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">Final Tag</a></span></span>
+                                </div>
+
+                                <div class="topicrowrightinfo">
+                                    <a href="#">
+                                        <img src="http://placehold.it/25x25" class="latestby OB" alt="{UPDATED BY}">
+                                    </a>
+                                    <span class="OB custcolor">Last post by
+
+                <a class="OB" href="#">UsernameHere</a> 
+                XXX hours ago.</span>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <div class="topicrow forumbox2">
+                            <div class="rowcreater hidden-xs">
+                                <a href="/user/INPUT USER HERE">
+                                    <img src="http://placehold.it/75x75">
+                                </a>
+                            </div>
+
+                            <div class="rowdetails">
+                                <h3>
+                <a class="OB custcolor topicname" href="#">Random Top Title Here</a>
+            </h3>
+                                <p class="category OB">Category: Random Category Name Here</p>
+                                <div class="tagsinput clearfix">
+                                    <span class="tag OB"><span><a href="#">This is a tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">This is Another Tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">Final Tag</a></span></span>
+                                </div>
+
+                                <div class="topicrowrightinfo">
+                                    <a href="#">
+                                        <img src="http://placehold.it/25x25" class="latestby OB" alt="{UPDATED BY}">
+                                    </a>
+                                    <span class="OB custcolor">Last post by
+
+                <a class="OB" href="#">UsernameHere</a> 
+                XXX hours ago.</span>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <div class="topicrow forumbox2">
+                            <div class="rowcreater hidden-xs">
+                                <a href="/user/INPUT USER HERE">
+                                    <img src="http://placehold.it/75x75">
+                                </a>
+                            </div>
+
+                            <div class="rowdetails">
+                                <h3>
+                <a class="OB custcolor topicname" href="#">Random Top Title Here</a>
+            </h3>
+                                <p class="category OB">Category: Random Category Name Here</p>
+                                <div class="tagsinput clearfix">
+                                    <span class="tag OB"><span><a href="#">This is a tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">This is Another Tag</a></span></span>
+                                    <span class="tag OB"><span><a href="#">Final Tag</a></span></span>
+                                </div>
+
+                                <div class="topicrowrightinfo">
+                                    <a href="#">
+                                        <img src="http://placehold.it/25x25" class="latestby OB" alt="{UPDATED BY}">
+                                    </a>
+                                    <span class="OB custcolor">Last post by
+
+                <a class="OB" href="#">UsernameHere</a> 
+                XXX hours ago.</span>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+-------------------------

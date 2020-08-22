@@ -1,0 +1,77 @@
+  <div class="navbar-orange privatemessages " >
+      
+ 
+ <% if @posts %>
+      <% @count = 1%>
+      
+          <div class="panel noround " style="margin: 0px; border:black; clear:both;"  >
+           <div class="panel-heading noround navbar-orange ">
+             <h2 class="newsText">Recent News</h2>
+             </div>
+             <% @posts.each do |post| %>
+               <% @count += 1 %>
+      
+             <div class="panel-body cb">
+               
+              <div class="col-lg-3">
+                <img  src="<%=post.image%>" class="img-responsive">
+              </div>
+              <div class="col-lg-9 marginup">
+               <h4 class="aero"><%=post.title%> </h4>
+             <div class="Gil">
+             <%= RDiscount.new(post.body, :smart).to_html %>
+             <span class="badge2">
+           <%=post.created_at.strftime("%m/%d/%Y at %I:%M%p")%>
+           </span>
+             
+             </div>
+              
+              </div>
+          
+            </div>
+          <% if @posts.count != @count - 1 %>
+            <hr>
+          <% end %>
+          
+        <% end%>
+               <% end%>
+</div>
+
+
+ 
+ 
+
+  
+
+<!--Row-->
+
+     
+    <div class="modal fade" tabindex="-1" role="dialog" id="screenshot">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    
+      <div class="modal-body modal-bg">
+          <button class="button1 btn-block">Screenshot </button>
+          <br>
+        <img src="" class="img-responsive img-thumbnail" id="changeScreenshot">
+      </div>
+  
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="video">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    
+      <div class="modal-body modal-bg">
+          <button class="button1 btn-block">Video</button>
+          <br>
+        <p id="changeVideo">One fine body&hellip;</p>
+      </div>
+  
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    
+    

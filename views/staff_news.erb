@@ -1,0 +1,31 @@
+<div id="" class="first"></div>
+<div class="panel-group" id="accordion">
+  <div class="panel navbar-custom noround ">
+  <div class="panel-heading white fa fa-angle-double-right">
+    Latest News
+  </div>
+</div>
+
+ <%=will_paginate @posts, renderer: BootstrapPagination::Sinatra %>
+<% if @posts %> 
+             
+  <% @posts.each do |post| %>
+
+   
+  <div class="panel panel-default">
+    <div class="panel-body cb">
+                                            <form action="/admin-only/news/<%=post.id%>" method="post">
+
+                                            Create Post Title: <input type="text" value="<%=post.title%>" name="title" class="form-control" required> <br> Content: <textarea name="body" id="textUpdate" class="form-control" min="5" max="5000" rows="15"  required><%=post.body%>  </textarea>
+                                            <br>
+                                            <input type="submit" class="btn btn-success">
+                                            </form>
+                                            <br><br>
+                                      </div>
+                                      </div>
+                                          
+
+  
+
+<% end%>
+<% end%>

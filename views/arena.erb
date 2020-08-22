@@ -1,0 +1,138 @@
+<%# This is Main Menu Code %>
+
+  </div>
+  <!--End of Column-->
+  
+<div class="previous" id="<%=@user.id%>"></div>
+  <div id="endgame" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-body resultscroll">
+          <h2 id="title" class="modal-title cb text-center resulttext"></h2>
+          <img src="" id="result" class=" center-block img-rounded img-responsive hidden-xs">
+          <br>
+        
+            <div class="panel-body shadow2">
+              <img src="/assets/zGu.jpg" id="c1e" class="img-thumbnail img-message ftitle">
+              <div class="progress">
+                <div id="pb-1" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                  <span id="pb-text1" class="text-center"> 60%</span>
+                </div>
+              </div>
+              <div id="info1" class="grey"></div>
+            </div>
+         
+          
+            <div class="panel-body shadow2">
+              <img src="/assets/zGu.jpg" id="c2e" class="img-thumbnail img-message ftitle">
+              <div class="progress">
+                <div id="pb-2" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                  <span id="pb-text2" class="text-center"> 60%</span>
+                </div>
+              </div>
+              <div id="info2" class="grey"></div>
+            </div>
+          
+        
+          
+            <div class="panel-body shadow2">
+              <img src="/assets/zGu.jpg" id="c3e" class="img-thumbnail img-message ftitle">
+              <div class="progress">
+                <div id="pb-3" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                  <span id="pb-text3" class="text-center"> 60%</span>
+                </div>
+              </div>
+              <div id="info3" class="grey"></div>
+            </div>
+      
+       
+       
+        
+            <div class="panel-body shadow2">
+    
+            <img src="/assets/zGu.jpg" id="c4e" class="img-thumbnail img-message ftitle">
+            <div class="progress">
+                <div id="pb-4" class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                  <span id="pb-text4" class="text-center"> 60%</span>
+                </div>
+              </div>
+      <div id="info4" class="grey"></div>
+            </div>
+          </div>
+        
+        
+        
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal autoplay-->
+
+  <div id="items" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+      <!-- Modal content-->
+      <div class="modal-content modal-small">
+        <div class="modal-body text-center">
+          
+<div class="shadow2 panel-body" ><h4 class="modal-title text-center white">Item Selection</h4></div>
+          <div>
+            
+          </div>
+       
+          <div class="shadow2 panel-body white" >
+            <img src="/assets/gold_capsule.png">
+            <br>
+          <select id="itemlist" class="form-control ">
+   
+</select>
+          <hr>
+          <div id="itemDescription">
+          </div>
+          <hr>
+          <small id="itemInfo" class="wspace"> </small>
+          <button type="button" class="button1 btn-block" onclick="itemChoice();">Save</button>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+
+  <div class="bootstrap snippet">
+    <div class="row">
+      <div id="game" class="col-md-12 ">
+     <div class="container canvasTop">
+    
+       <canvas id="myCanvas"> </canvas>
+     </div>
+       
+        <canvas id="info" class="hidden" > </canvas>
+       
+      </div>
+
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+      </div>
+    
+      <div class="container hidden" id="music">
+    <div class="panel-body shadow2 ">
+  <div class="panel-body "><div class="col-md-4 " id="musicstatus">Paused</div><a href="#" class="col-md-2 colfa fa fa-backward fa-2x" onclick="swap(5); return false;"></a> <a href="#" class="fa fa fa-forward fa-2x col-md-3" onclick="swap(4); return false;"></a><div class="col-md-3 " id="musictitle">Friedrich Habetler - Challengers (DBZ Budokai )</div></div>
+   <div class="panel-body"> <audio class="col-xs-12" id="play" controls><source id="current_audio"  src="/assets/music1.mp3" type="audio/mpeg">Your browser does not support the audio tag.</audio>
+                </div>
+                <div class="track">
+     <div class="panel-body"><a href="#" onclick="swap(1); return false;"><small class="pull-left">1.Friedrich Habetler - Challengers (DBZ Budokai )</small><small class="pull-right">3:31</small></a> </div>
+      <div class="panel-body"><a href="#" onclick="swap(2); return false;"><small class="pull-left">2.94stones - Gogeta Theme</small><small class="pull-right">2:41</small> </a></div> 
+       <div class="panel-body"><a href="#" onclick="swap(3); return false;"><small class="pull-left">3.94stones - Heroic Trunks</small><small class="pull-right">3:18</small> </a></div>
+       </div>
+        </div>
+        
+       

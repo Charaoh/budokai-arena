@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+<% if @list %>
+
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th class="OB">Thread</th>
+                                        <th class="hidden-xs OB">Views</th>
+                                        <th class="hidden-xs OB">Replies</th>
+                                        <th class="OB">Last Activity</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <% @list.each do |f| %>
+                                        <tr>
+                                          <td class="OB"> <% if f.locked %><img src="/images/forum/closed_topic.png" class="img-responsive ftitle hidden-xs">   <% else %> <img src="/images/forum/topic.png" class="img-responsive ftitle hidden-xs"> <% end%>
+                                            <a href="/forums/<%=f.url%>/<%=f.id%>" class="product-title">
+                                              <%=f.title%>
+                                               
+                                            </a><br><b class="OB">By
+                                            <a href="/user/<%=f.author%>"><b class="urlover2">
+                                      <%=f.author%></a>
+                                    </b>
+                                          </td>
+
+                                          <td class="hidden-xs text-center2">
+                                            <%= f.views%>
+                                          </td>
+                                          <td class="hidden-xs text-center2">
+                                            <%= f.comments %>
+                                          </td>
+                                          <td class="OB text-center2"><small><%=f.created_at.strftime("%m/%d/%Y at %I:%M%p")%></small>
+                                            <br> <b class="OB">By
+                                            <a href="/user/<%=f.updated_by%>"><b class="urlover2">
+                                      <%=f.updated_by%></a>
+                                    </b>
+                                          </td>
+                                        </tr>
+                                        <% end %>
+                                        <% else %>
+                                        
+                                        <div class="text-center OB fixed0" >No Posts At The Moment</div>
+
+                                          <% end %>
+
+                                    </tbody>
+                                  </table>
+                                </div>
+                                </div>
+                                </div>

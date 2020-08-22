@@ -1,0 +1,272 @@
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <meta name="description" content="">-->
+<!--    <meta name="author" content="">-->
+    <title> | Budokai-Arena</title>
+    <script src="/js/jquery-1.11.3.js"></script>
+     Bootstrap Core CSS 
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+     Custom CSS 
+    <link href="/css/magic.css" rel="stylesheet">
+     Custom Fonts 
+    <link href="/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries 
+     WARNING: Respond.js doesn't work if you view the page via file:// 
+    [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .jumbotron
+      {
+      background-image: url("/images/budokaiArenaBanner1.jpg");
+      color:black; 
+      background-repeat: no-repeat;
+      }
+      .deleteImage
+      {
+      width: 32px;
+      height: 32px;
+      background-image: url("/images/delete.png");
+      background-repeat: no-repeat;
+      }
+      .color{
+      background-color: #FFCC00;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="wrapper">
+       Navigation 
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+         Brand and toggle get grouped for better mobile display 
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Budokai-Arena</a>
+        </div>
+        
+         Top Menu Items 
+        <ul class="nav navbar-right top-nav">
+          <% if session? == false %>
+            <li><a class="fa fa-sign-in" href="#" data-toggle="modal" data-target="#login"> Login</a></li>
+            <li><a class="fa fa-level-up" href="#" data-toggle="modal" data-target="#SignUp"> Signup</a></li>
+          <% end %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gamepad"> Game Features</i> <b class="caret"></b></a>
+            <ul class="dropdown-menu alert-dropdown">
+              <li>
+                <a href="/How_to_play"><i class="fa fa-question"></i> How To Play</a>
+              </li>
+              <li>
+                <a href="/Quest"><i class="fa fa-unlock-alt"></i> Quest</a>
+              </li>
+              <li>
+                <a href="/ladders"><i class="fa fa-tasks"></i> Ladder</a>
+              </li>
+              <li>
+                <a href="/characters"><i class="fa fa-users"></i> Characters</a>
+              </li>
+              <li>
+                <a href="/skills"><i class="fa fa-exchange"></i> Skills</a>
+              </li>
+              <li>
+                <a href="/tournaments"><i class="fa fa-trophy"></i> Tournaments</a>
+              </li>
+            </ul>
+          </li>
+          
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-sitemap"> Site Menu</i> <b class="caret"></b></a>
+            <ul class="dropdown-menu alert-dropdown">
+              <li>
+                <a href="/news"><i class="fa fa-fw fa-user"></i> News</a>
+              </li>
+              <li>
+                <a href="/forums"><i class="fa fa-forumbee"></i> Forum</a>
+              </li>
+              <li>
+                <a href="/general_info"><i class="fa fa-fw fa-gear"></i> General Info</a>
+              </li>
+              <li>
+                <a href="/users_online"><i class="fa fa-users"></i> User Online</a>
+              </li>
+              <li>
+                <a href="/options"><i class="fa fa-fw fa-gear"></i> Polls</a>
+              </li>
+              <li>
+                <a href="/sitemap"><i class="fa fa-sitemap"></i> Sitemap</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"> Support</i> <b class="caret"></b></a>
+            <ul class="dropdown-menu alert-dropdown">
+              <li>
+                <a href="/faq"><i class="fa fa-question-circle"></i> FAQ</a>
+              </li>
+              <li>
+                <a href="/general_feedback"><i class="fa fa-comment"></i> General Feedback</a>
+              </li>
+              <li>
+                <a href="/staff"><i class="fa fa-users"></i> Staff</a>
+              </li>
+              <li>
+                <a href="/how_to_site"><i class="fa fa-question"></i> How Use Site Features</a>
+              </li>
+            </ul>
+          </li>
+          
+          <% if session? == true %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"> <%= session[:username] %></i> <b class="caret"></b></a>
+              <ul class="dropdown-menu alert-dropdown">
+                <li>
+                  <a href="/profile"><i class="fa fa-fw fa-user"></i> Profile</a>
+                </li>
+                <li>
+                  <a href="/messages"><i class="fa fa-fw fa-envelope"></i>Inbox <span class="badge alert-info">  </span></a>
+                </li>
+                <li>
+                  <a href="/options"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                </li>
+                <li>
+                  <a href="/friends"><i class="fa fa-user-plus"></i> Friends List <span class="badge alert-info"> online</span></a>
+                </li>
+                <li><a class="fa fa-folder" href="/options"> Options</a></li>
+                <li><a class="fa fa-exchange" href="/reset_password"> Change Password</a></li>
+                <li>
+                  <a href="/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                </li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+         /.navbar-collapse 
+      </nav>
+      
+      
+      <div id="page-wrapper">
+        <div class="container-fluid r">
+          
+           Page Heading 
+          <div class="row">
+            <div class="col-xs-12">
+              <div class=" jumbotron col-lg-12 border pull-right img-responsive">
+                <a href="/arena" class="">
+                <img class="pull-right img-responsive" src="/images/enter_arena.png" alt="Enter Game">
+                </a>
+              </div>
+            </div>
+
+
+            <div class="col-xs-10 col-md-offset-1">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"> </i></h3>
+                </div>
+                <div class="panel-body">
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="col-xs-12">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i>Legal</h3>
+                </div>
+                <div class="panel-body">
+                  <p>Budokai-Arena.com is a fansite based on the Dragonball Anime and Manga series. The holders of the copyrighted and/or trademarked material appearing on this site are as follows: 2003 BIRD STUDIO/ SHUEISHA, TOEI ANIMATION. Licensed by FUNimation® Productions, Ltd. All Rights Reserved. Dragon Ball Z and all logos, character names and distinctive likenesses thereof are trademarks of TOEI ANIMATION. </p>
+                </div>
+              </div>
+            </div>
+            
+            
+             Login -
+            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Login</h4>
+                  </div>
+                  <div class="modal-body">
+                    <% if flash[:error] %>
+                    <div class="alert alert-danger" role="alert"><%= flash[:error] %></div>
+                    <% end %>
+                    <form action="/login" method="post">
+                      Username: <input type="text" name="username" class="form-control" required>
+                      Password: <input type="password" name="password" class="form-control" required>
+                      <br>
+                      <input type="submit" class="btn btn-primary col-lg-12"><br>
+                      <a href="/forgot_password">Forgot password?</a>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+             Sign Up -
+            <div class="modal fade" id="SignUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+                  </div>
+                  <div class="modal-body">
+                    <% if flash[:error] %>
+                      <div class="alert alert-danger" role="alert"><%= flash[:error] %></div>
+                    <% end %>
+                    <div class="panel panel-info ">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Signup</h3>
+                      </div>
+                      <div class="panel-body">
+                        <form action="/signup" method="post" id="signup">
+                          <div class="form-group black ">
+                            Email: <input type="email" name="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                          </div>
+                          <div class="form-group ">
+                            Username: (Only a-z,A-Z,0-9,-,_ allowed)* <input type="text" name="username" class="form-control" pattern="[a-zA-Z0-9-_-]+" title="Six or more characters, No special characters" minlength="2" maxlength="20" required>
+                          </div>
+                          <div class="form-group ">
+                            Password: <input type="password" name="password" class="form-control" required>
+                          </div>
+                          <div class="form-group ">
+                            By signing up, you agree to the Terms of Use and Privacy Policy.
+                          </div>
+                          <input type="submit" class="btn btn-primary">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+           /.container-fluid 
+        </div>
+         /#page-wrapper 
+      </div>
+       /#wrapper 
+    </div>
+     Bootstrap Core JavaScript 
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

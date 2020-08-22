@@ -1,0 +1,410 @@
+
+</div>
+<div class="panel  noround">
+    <div class="panel-heading navbar-heading noround text-center TW " data-toggle="collapse" href="#collapse1" style="cursor:pointer;">
+                                    Staff Control Panel
+
+                                  </div>
+                                  
+                                      <div class="navbar-inverse btn-lg  TW noround white panel-collapse collapse" id="collapse1" >
+                                             <% if session? %>
+                              <% if @user.staff %>
+                            
+                                  <div class="panel-body">
+                                    <label class="fixed3">Quick Moderation Tools</label>
+                                    <form method="post" action="/forums/<%=@forumpost.url%><%=@forumpost.id%>/staff/topic" id="f1">
+                                      <select name="quick" class="form-control" id2="f1" onchange="onSelectChange(this);">
+                             <option value="">Choose the option you want.</option>
+                             <option value="Lock">Lock/Unlock Topic</option>
+                             <option value="Delete">Delete Topic</option>
+                             <option value="Sticky">Sticky Topic</option>
+                             <option value="Annoucement">Annoucement Topic</option>
+                             </select>
+                                    </form>
+                                    <br>
+                                    <label class="fixed3">Delete Post (Enter Post Number)</label>  
+                                    <form method="post" action="/forums/<%=@forumpost.url%><%=@forumpost.id%>/staff/post" >
+                                      <input type="text" name="post" class="form-control">
+                                      <input type="submit" class="btn btn-block button1">
+                                      <br>
+                                     
+                                    </form>
+<br><br>
+                                    <a href="/forums/staff/move/<%=@forumpost.id %>"><button class="btn button1 btn-block">Move Post </button> </a>
+                                    
+                               
+
+                                </div>
+                                <% end %>
+                                <% end %>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          <br>
+                                          <ol class="breadcrumb navbar-inverse" style="background-color:#222;">
+  <li><a href="/forums">Formpage</a></li>
+  <li><a href="/forums/category/<%= @forumpost.incategory %>"><%= @forumpost.incategory %></a></li>
+  <li><a href="/forums/<%= @forumpost.forum.url %>"><%= @forumpost.inforum %></a></li>
+  <li><a href="/forums/<%= @forumpost.inforum %>/<%= @forumpost.id %>"><%=@forumpost.title %></a></li>
+</ol>  <%=will_paginate @fc, renderer: BootstrapPagination::Sinatra %>
+                                                <% if @forumpost.locked %>
+                        <div class="panel navbar-heading noround ">
+                          <div class="panel-heading TW">
+                            This topic is locked <img src="/images/forum/lock.png" class="img-responsive pull-right">
+                          </div>
+                        </div>
+                        <%end %>
+                        
+                                         
+<div class="panel  noround">
+                                      <div class="navbar-heading btn-lg  TW noround text-center">
+                                          Title:<%=@forumpost.title %>
+                                          </div>
+                                          <div class="panel-body navbar-inverse">
+                                            <div class="testing white TW">
+                                               Currently Viewing:
+                <% if @Online %>
+                    <% @Online.all.each do |o| %>
+
+                        <a href="/user/<%=o.username%>"><span class="<%=o.group%> TW"><b><%=o.username%></b></span></a>
+                        <% end %>
+                            <% end %>
+                            
+                            </div>
+                                          </div>
+                                          </div>
+                                        
+
+<div class="panel  noround">
+                                      <div class="navbar-heading btn-lg  TW noround ">
+                        
+                                        <small class=""> Posted On: <%=@forumpost.created_at.strftime("%m/%d/%Y at %I:%M%p")%> </small><b class="TW changeb pull-right"></b> 
+                                      </div>
+                                      <div class="panel-body forum_comments navbar-inverse">
+                                        <div class="row-eq-height">
+                                          <div class="col-xs-12 col-sm-3 fixed4">
+                                              <br>
+                                            <a class="TW center-block text-center2 title " href="/user/<%=@forumpost.author%>">
+                                             <%=@forumpost.author%>
+                                            </a><br>
+                                            <img src="<%=@forumpost.user.avater%>" class="img-responsive center-block  fimage">
+                                            
+                                            <hr class="hrclean">
+                                            <div class="text-center">
+                                              <span class="testing <%=@forumpost.user.group%>">
+                                                <%=@forumpost.user.group%>
+                                            </span>   
+                                            </div>
+                                           
+                                            
+                                              <div class="forum_comments TW smalltext text-center ">Posts:
+                                             <%=@forumpost.user.post_count%>
+                                            </div>
+                                        
+                                            
+                                          
+                                           
+                                              <div class=" forum_comments TW smalltext text-center">Joined On:
+                                              <%=@forumpost.created_at.strftime("%m/%d/%Y")%>
+                                            </div>
+                                            
+                                             <br>
+                                                   <div class="text-center ">  
+                                              <% if session? %><% if @user.staff || @user.username == @forumpost.author%> <button class="btn btn-mod pad" id="<%=@forumpost.title%>" id3="<%=@forumpost.body%>" id4="2" onclick="updateTextConverter(this);" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fa  fa-pencil"></i></button>
+                                          <% end %><% end %>
+              <% if session? %>  <button class="btn btn-mod pad hidden-xs" id="<%=@forumpost.author%>" id4="6" onclick="updateTextConverter(this);" data-toggle="tooltip" data-placement="bottom" title="PM"><i class="fa fa-envelope"></i></button>
+              <button onclick="updateTextConverter(this);" class="btn btn-mod pad "
+                                              id="<%=@forumpost.author%>" id2="<%=@forumpost.body%>" id4="3" class="fa-comment-o" data-toggle="tooltip" data-placement="bottom" title="Quote"><i class=" fa fa-comment-o"></i></button> <% end %>
+                                            </div>
+                                            <br>
+                                             <br>
+                                        
+
+
+                                          </div>
+                                          <div class="col-xs-12 col-sm-9 img-check forum_comments">
+
+                                            <%= RDiscount.new(@forumpost.body, :smart, :filter_html).to_html %>
+                                              <hr class="hrclean">
+                                              <%= RDiscount.new(@forumpost.user.signature, :smart, :filter_html).to_html %>
+
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                      <!-- /.box-body -->
+
+                                    </div>
+                                    <!-- /.box -->
+                                    
+
+ <% if @fc %>
+        <% @fc.each do |cm| %>
+<div class="panel  noround">
+                                      <div class="navbar-heading btn-lg  TW noround ">
+                                        
+                                        <small class=""> Posted On: <%=cm.created_at.strftime("%m/%d/%Y at %I:%M%p")%> </small><b class="TW changeb pull-right"> #<%=cm.current%></b> 
+                                       </div>
+                                      <div class="panel-body forum_comments navbar-inverse">
+                                        <div class="row-eq-height ">
+                                          <div class="col-xs-12 col-sm-3 fixed4">
+                                              <br>
+                                            <a class="TW center-block text-center2 title " href="/user/<%=cm.author%>">
+                                             <%=cm.author%>
+                                            </a><br>
+                                            <img src="<%=cm.user.avater%>" class="img-responsive center-block  fimage">
+                                            
+                                            <hr class="hrclean">
+                                            <div class="text-center">
+                                              <span class="testing <%=cm.user.group%>">
+                                                <%=cm.user.group%>
+                                                
+                                            </span>   
+                                            </div>
+                                           
+                                            
+                                              <div class="forum_comments TW smalltext text-center ">Posts:
+                                             <%=cm.user.post_count%>
+                                            </div>
+                                        
+                                            
+                                          
+                                           
+                                              <div class=" forum_comments TW smalltext text-center">Joined On:
+                                              <%=cm.created_at.strftime("%m/%d/%Y")%>
+                                            </div>
+                                            
+                                              <br>
+                                              <div class="text-center ">  
+                                             <% if session? %><% if @user.staff || @user.username == cm.author%> <button class="btn btn-mod pad" id2="<%=cm.id%>" id3="<%=cm.body%>" id4="4" onclick="updateTextConverter(this);" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fa  fa-pencil" ></i></button>
+                                          <% end %><% end %>
+                                          
+                                          <% if session? %>  <button class="btn btn-mod pad hidden-xs" id="<%=cm.author%>" id4="6" onclick="updateTextConverter(this);" data-toggle="tooltip" data-placement="bottom" title="PM"><i class="fa fa-envelope" ></i></button> <button onclick="updateTextConverter(this);" class="btn btn-mod pad "
+                                              id="<%=cm.author%>" id2="<%=cm.body%>" id4="3" data-toggle="tooltip" data-placement="bottom" title="Quote"><i class=" fa fa-comment-o" ></i></button>
+                                              
+                                          <% end %>
+                                          </div>
+                                            <br>
+                                              <br>
+                                        
+
+
+                                          </div>
+                                          <div class="col-xs-12 col-sm-9 img-check forum_comments">
+
+                                            <%= RDiscount.new(cm.body, :smart, :filter_html).to_html %>
+                                              <hr class="hrclean">
+                                              <%= RDiscount.new(cm.user.signature, :smart, :filter_html).to_html %>
+
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                      <!-- /.box-body -->
+
+                                    </div>
+     <% end %>
+               <% end %>
+                <% if !@forumpost.locked && session? %>
+       <div class="panel noround">
+           <div class="panel-heading navbar-heading noround">
+                   <img src='/images/smileys/s1.png' id="1" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s5.png' id="5" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" id2="1" onclick='smiley(this);'
+                                                  /><img src='/images/smileys/s8.png' id="8" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s9.png' id="9" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s12.png' id="12" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s13.png' id="13" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s16.png' id="16" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s17.png' id="17" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s20.png' id="20" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s21.png' id="21" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s24.png' id="24" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s25.png' id="25" id2="1" onclick='smiley(this);' />
+           </div>
+   
+           <div class="panel-body navbar-heading ">
+                <div class="btn-group center-block" role="group" aria-label="...">
+                                                    <button class="btn btn-default" id="1" id2="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" id2="1" onclick="changeText(this)">Italic</button><button class="btn btn-default"
+                                                      id="3" id2="1" onclick="changeText(this)">Quote</button><button class="btn btn-default" id="4" id2="1" onclick="changeText(this)">Link</button>
+                                                    <button class="btn btn-default" id="5" id2="1" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" id2="1" onclick="changeText(this)">Image</button><button class="btn btn-default"
+                                                      id="13" id2="1" onclick="changeText(this)">Image with Link</button>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default">Text Size</button>
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li><a id="7" id2="1" onclick="changeText(this)">H1 Largest</a></li>
+                                                        <li><a id="8" id2="1" onclick="changeText(this)">H2</a></li>
+                                                        <li><a id="9" id2="1" onclick="changeText(this)">H3</a></li>
+                                                        <li><a id="10" id2="1" onclick="changeText(this)">H4</a></li>
+                                                        <li><a id="11" id2="1" onclick="changeText(this)">H5</a></li>
+                                                        <li><a id="12" id2="1" onclick="changeText(this)">H6 Smallest</a></li>
+                                                      </ul>
+                                                    </div>
+
+
+                                                  </div>
+
+               </div>
+              
+    <div class="panel-body navbar-inverse">
+    <form id="mobileform" action="" method="post">
+
+                                                <input type="hidden" name="title" id="moblietitle">
+                                                <input type="hidden" id="newlocation" name="location" value="">
+
+                                                <input type="hidden" name="_method" id="moblieput"> <b class="OB white">Reply to topic</b> <textarea name="body" id="textUpdate" min="5" max="5000" rows="15" class="form-control noround OB" required>  </textarea>
+                                                <br>
+                                                <input type="submit" class="btn navbar-heading col-xs-12 OB" value="Post"><br><br>
+                                                
+                                              </form>
+                                              <button class="button1 btn-block" onclick="previewShow();">Preview</button>
+                                              
+    </div></div>
+    
+    <div class="panel  noround">
+                                      <div class="navbar-heading btn-lg  TW noround ">
+                        
+                                        <small class=""> Preview </small><b class="TW changeb pull-right"></b> 
+                                      </div>
+                                      <div class="panel-body forum_comments navbar-inverse">
+                                        <div class="row-eq-height ">
+                                          <div class="col-xs-12 col-sm-3 fixed4">
+                                              <br>
+                                            <a class="TW center-block text-center2 title " href="/user/<%=@user.username%>">
+                                             <%=@user.username%>
+                                            </a><br>
+                                            <img src="<%=@user.avater%>" class="img-responsive center-block  fimage">
+                                            
+                                            <hr>
+                                            <div class="text-center">
+                                              <span class="testing <%=@user.group%>">
+                                                <%=@user.group%>
+                                            </span>   
+                                            </div>
+                                           
+                                            
+                                              <div class="forum_comments TW smalltext text-center ">Posts:
+                                             <%=@user.post_count%>
+                                            </div>
+                                        
+                                            
+                                          
+                                           
+                                              <div class=" forum_comments TW smalltext text-center">Joined On:
+                                              <%=@user.created_at.strftime("%m/%d/%Y")%>
+                                            </div>
+                                            
+                                             <br>
+                                             
+                                            <br>
+                                             <br>
+                                        
+
+
+                                          </div>
+                                          <div class="col-xs-12 col-sm-9 img-check forum_comments TW">
+
+                                            <div id="planetDescError" class="TW"></div>
+                                              <hr>
+                                              <%= RDiscount.new(@user.signature, :smart, :filter_html).to_html %>
+
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                      <!-- /.box-body -->
+
+                                    </div>
+                                    <!-- /.box -->
+
+<% end %>   
+
+
+
+
+
+
+
+    <script>
+      document.getElementById("newlocation").value = window.location.pathname + window.location.search;
+    </script>
+    
+   <div class="modal fade" id="edit_reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-bg">
+          
+          <div class="modal-body">
+              <button class="button1 btn-block newText">New Message</button>
+              <br>
+            <!--<div class="alert alert-danger" role="alert">Uses spaces!</div>-->
+
+            <div class="shadow2">
+              <div class="panel-body">
+                <img src='/images/smileys/s1.png' id="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" onclick='smiley(this);' /><img src='/images/smileys/s4.png'
+                  id="4" onclick='smiley(this);' />
+                <img src='/images/smileys/s5.png' id="5" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" onclick='smiley(this);' /><img src='/images/smileys/s8.png'
+                  id="8" onclick='smiley(this);' />
+                <img src='/images/smileys/s9.png' id="9" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" onclick='smiley(this);' /><img src='/images/smileys/s12.png'
+                  id="12" onclick='smiley(this);' />
+                <img src='/images/smileys/s13.png' id="13" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" onclick='smiley(this);' /><img src='/images/smileys/s16.png'
+                  id="16" onclick='smiley(this);' />
+                <img src='/images/smileys/s17.png' id="17" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" onclick='smiley(this);' /><img src='/images/smileys/s20.png'
+                  id="20" onclick='smiley(this);' />
+                <img src='/images/smileys/s21.png' id="21" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" onclick='smiley(this);' /><img src='/images/smileys/s24.png'
+                  id="24" onclick='smiley(this);' />
+                <img src='/images/smileys/s25.png' id="25" onclick='smiley(this);' />
+              </div>
+         
+
+
+            
+              <div class="panel-body">
+                <div class="btn-group " role="group" aria-label="...">
+                  <button class="btn btn-default" id="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" onclick="changeText(this)">Quote</button>
+                  <button class="btn btn-default" id="4" onclick="changeText(this)">Link</button>
+                  <button class="btn btn-default" id="5" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" onclick="changeText(this)">Image</button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default">Text Size</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                    <ul class="dropdown-menu">
+                      <li><a id="7" onclick="changeText(this)">H1 Largest</a></li>
+                      <li><a id="8" onclick="changeText(this)">H2</a></li>
+                      <li><a id="9" onclick="changeText(this)">H3</a></li>
+                      <li><a id="10" onclick="changeText(this)">H4</a></li>
+                      <li><a id="11" onclick="changeText(this)">H5</a></li>
+                      <li><a id="12" onclick="changeText(this)">H6 Smallest</a></li>
+                    </ul>
+                  </div>
+
+
+                </div>
+
+
+              
+            </div>
+            <form id="form" action="/news" method="post" id="new_message_form">
+              <input type="hidden" id="user" name="send_to">
+              <input type="hidden" id="put" name="_method" value="">
+              <input type="hidden" id="location" name="location">
+              <input type="hidden" id="previous" name="previous" class="form-control">
+              <div id="titleHold" class="TW"> Title: <input type="text" id="title" name="title" class="form-control" required> </div><br> <b class="TW">Body:</b> <textarea id="textUpdate" name="body" class="form-control" placeholder="Your message text goes here" rows="10" required></textarea> <br>
+<input type="submit" class="button1 btn-block" value="Send">
+
+          </div>  </form>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</div>
+
+<!--Row-->

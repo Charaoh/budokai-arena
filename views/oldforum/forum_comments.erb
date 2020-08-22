@@ -1,0 +1,324 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <% if flash[:success] %>
+        <div class="alert alert-success fade in">
+          <%= flash[:success] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+        <% elsif flash[:error] %>
+          <% if flash[:error].class == Array %>
+            <% flash[:error].each do |e| %>
+              <div class="alert alert-danger fade in">
+                <%=e.to_s %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+              <% end %>
+                <% else %>
+                  <div class="alert alert-danger fade in">
+                    <%= flash[:error] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                  <% end %>
+                    <% elsif flash[:info] %>
+                      <div class="alert alert-info fade in">
+                        <%= flash[:info] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                      <% end %>
+                        <% if @forumpost %>
+                        
+
+                          <nav>
+                            <ol class="cd-multi-steps text-center fixed2">
+                              <li class="visited">
+                                <a href="/forums">
+                                  <%=@forumpost.incategory%>
+                                </a>
+                              </li>
+                              <li class="visited">
+                                <a href="/forums/<%=@forumpost.url[0..-2]%>">
+                                  <%=@forumpost.inforum%>
+                                </a>
+                              </li>
+                              <li class="current"><em><a class="cd-fixed" href="#">
+                                  <%=@forumpost.title[0..50]%>
+                                </a></em></li>
+                              <li><em><%=@forumpost.title%></em></li>
+                            </ol>
+                            </nav>
+                              
+                              <% if @forumpost.locked %>
+                        <div class="panel panel-default">
+                          <div class="panel-heading ">
+                            This topic is locked <img src="/images/forum/lock.png" class="img-responsive pull-right">
+                          </div>
+                        </div>
+                        <% end %>
+                              <% if @user.staff %>
+                                <!--<div class="panel panel-default noround">
+                                  <div class="panel-heading navbar-custom noround text-center">
+                                    Staff Control Panel
+
+                                  </div>
+                                  <div class="panel-body">
+                                    <label class="fixed3">Quick Moderation Tools</label>
+                                    <form method="post" action="/forums/<%=@forumpost.url%><%=@forumpost.id%>/staff/topic" id="f1">
+                                      <select name="quick" class="form-control" id2="f1" onchange="onSelectChange(this);">
+                             <option value="">Choose the option you want.</option>
+                             <option value="Lock">Lock/Unlock Topic</option>
+                             <option value="Delete">Delete Topic</option>
+                             <option value="Sticky">Sticky Topic</option>
+                             <option value="Annoucement">Annoucement Topic</option>
+                             </select>
+                                    </form>
+                                    <br>
+                                    <label class="fixed3">Delete Post (Enter Post Number)</label>
+                                    <form method="post" action="/forums/<%=@forumpost.url%><%=@forumpost.id%>/staff/post" >
+                                      <input type="text" name="post" class="form-control">
+                                      <br>
+                                      <input type="submit" class="btn btn-success fixed3">
+                                    </form>
+
+                                    <label class="fixed3">Move Post (Enter Forum ID)</label>
+                                    <form method="post" action="/forums/<%=@forumpost.url%><%=@forumpost.id%>/staff/move" >
+                                    <input type="text" name="move" class="form-control"><br>
+                                    <input type="submit" class="btn btn-success fixed3">
+                                    </form>
+                                  </div>
+
+
+                                </div>-->
+                                <% end %>
+
+                                  <%=will_paginate @fc, renderer: BootstrapPagination::Sinatra %>
+                                    <div class="panel panel-default noround">
+                                      <div class="panel-heading navbar-custom noround ">
+                                        <span class="OB"> Posted On: <%=@forumpost.created_at.strftime("%m/%d/%Y at %I:%M%p")%> </span> &nbsp;<b class="OB pull-right changeb"><div class="visible-xs"><br></div>Title: <%=@forumpost.title%></b>
+                                        <% if @user.staff || @user.username == @forumpost.author%> <button class="btn btn-mod pad" id="<%=@forumpost.title%>" id3="<%=@forumpost.body%>" id4="2" onclick="updateTextConverter(this);">Edit</button>
+                                          <% end %>
+                                            <button class="btn btn-mod pad hidden-xs" id="<%=@forumpost.author%>" id4="6" onclick="updateTextConverter(this);">PM</button> <button onclick="updateTextConverter(this);" class="btn btn-mod pad "
+                                              id="<%=@forumpost.author%>" id2="<%=@forumpost.body%>" id4="3">Quote</button></div>
+                                      <div class="panel-body">
+                                        <div class="row ">
+                                          <div class="col-xs-12 col-sm-2 fixed4">
+                                            <a class="fimage OB center-block text-center2" href="/user/<%=@forumpost.author%>">
+                                              <span class="<%=@forumpost.user.group%> "> <%=@forumpost.author%></span>
+                                            </a><br>
+                                            <img src="<%=@forumpost.user.avater%>" class="img-responsive center-block img-thumbnail fimage">
+                                            
+                                            <div class="ftext fimage OB text-center2">Posts:
+                                              <%=@forumpost.user.post_count%>
+                                            </div>
+                                            <div class="ftext fimage OB text-center2">Rank:
+                                              <%=@forumpost.user.forum_rank%>
+                                            </div>
+                                            <div class="ftext fimage OB text-center2">Joined On:
+                                              <%=@forumpost.created_at.strftime("%m/%d/%Y")%>
+                                            </div>
+
+
+                                          </div>
+                                          <div class="col-xs-12 col-sm-9 img-check">
+
+                                            <%= RDiscount.new(@forumpost.body, :smart, :filter_html).to_html %>
+                                              <hr>
+                                              <%= RDiscount.new(@forumpost.user.signature, :smart, :filter_html).to_html %>
+
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                      <!-- /.box-body -->
+
+                                    </div>
+                                    <!-- /.box -->
+
+                                    <% end %>
+
+                                      <% @fc.each do |f| %>
+
+                                        <div class="panel panel-default noround">
+                                          <div class="panel-heading navbar-custom navimg noround "><b class="OB"> Posted On: <%=f.created_at.strftime("%m/%d/%Y at %I:%M%p")%></b><span class="label label-default pull-right"> #<%=f.current%></span>
+                                            <% if @user.username == f.author || @user.staff %> <button class="btn btn-mod pad" id2="<%=f.id%>" id3="<%=f.body%>" id4="4" onclick="updateTextConverter(this);">Edit</button>
+                                              <% end %>
+                                                <button class="btn btn-mod pad hidden-xs" id="<%=f.author%>" id4="6" onclick="updateTextConverter(this);">PM</button> <button onclick="updateTextConverter(this);" class="btn btn-mod pad" id="<%=f.author%>"
+                                                  id2="<%=f.body%>" id4="3">Quote</button>
+                                          </div>
+                                          <div class="panel-body">
+                                            <div class="row ">
+                                              <div class="col-lg-2">
+                                                 <a class="fimage OB center-block text-center" href="/user/<%=f.author%>">
+                                              <span class="<%=f.user.group%> "> <%=f.author%></span>
+                                            </a><br>
+                                                <img src="<%=f.user.avater%>" class="img-responsive img-thumbnail center-block fimage">
+                                                
+                                                <div class="ftext fimage OB text-center2">Posts:
+                                                  <%=f.user.post_count%>
+                                                </div>
+                                                <div class="ftext fimage OB text-center2">Rank:
+                                                  <%=f.user.forum_rank%>
+                                                </div>
+                                                <div class="ftext fimage OB text-center2">Joined:
+                                                  <%=f.created_at.strftime("%m/%d/%Y")%>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-10 img-check comment">
+                                                <%= RDiscount.new(f.body, :smart, :filter_html).to_html %>
+                                                  <hr>
+                                                  <%= RDiscount.new(f.user.signature, :smart, :filter_html).to_html %>
+
+                                              </div>
+                                            </div>
+
+                                          </div>
+                                          <!-- /.box-body -->
+
+                                        </div>
+                                        <!-- /.box -->
+                                        <% end %>
+
+<% if !@forumpost.locked %>
+                                          <div class="panel panel-default noround ">
+                                            <div class="panel-heading navbar-custom noround white"><b class="OB">Comment: </b></div>
+                                            <div class="panel-body cb">
+                                              <!--<div class="alert alert-danger" role="alert">Uses spaces!</div>-->
+
+                                              <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                  <img src='/images/smileys/s1.png' id="1" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s5.png' id="5" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" id2="1" onclick='smiley(this);'
+                                                  /><img src='/images/smileys/s8.png' id="8" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s9.png' id="9" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s12.png' id="12" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s13.png' id="13" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s16.png' id="16" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s17.png' id="17" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s20.png' id="20" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s21.png' id="21" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" id2="1"
+                                                    onclick='smiley(this);' /><img src='/images/smileys/s24.png' id="24" id2="1" onclick='smiley(this);' />
+                                                  <img src='/images/smileys/s25.png' id="25" id2="1" onclick='smiley(this);' />
+                                                </div>
+                                              </div>
+
+
+                                              <div class="panel panel-default">
+                                                <div class="panel-body ">
+                                                  <div class="btn-group " role="group" aria-label="...">
+                                                    <button class="btn btn-default" id="1" id2="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" id2="1" onclick="changeText(this)">Italic</button><button class="btn btn-default"
+                                                      id="3" id2="1" onclick="changeText(this)">Quote</button><button class="btn btn-default" id="4" id2="1" onclick="changeText(this)">Link</button>
+                                                    <button class="btn btn-default" id="5" id2="1" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" id2="1" onclick="changeText(this)">Image</button><button class="btn btn-default"
+                                                      id="13" id2="1" onclick="changeText(this)">Image with Link</button>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default">Text Size</button>
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li><a id="7" id2="1" onclick="changeText(this)">H1 Largest</a></li>
+                                                        <li><a id="8" id2="1" onclick="changeText(this)">H2</a></li>
+                                                        <li><a id="9" id2="1" onclick="changeText(this)">H3</a></li>
+                                                        <li><a id="10" id2="1" onclick="changeText(this)">H4</a></li>
+                                                        <li><a id="11" id2="1" onclick="changeText(this)">H5</a></li>
+                                                        <li><a id="12" id2="1" onclick="changeText(this)">H6 Smallest</a></li>
+                                                      </ul>
+                                                    </div>
+
+
+                                                  </div>
+
+
+                                                </div>
+                                              </div>
+                                              <form id="mobileform" action="" method="post">
+
+                                                <input type="hidden" name="title" id="moblietitle">
+                                                <input type="hidden" id="newlocation" name="location" value="">
+
+                                                <input type="hidden" name="_method" id="moblieput"> <b class="OB">Body</b> <textarea name="body" id="textUpdate" min="5" max="5000" rows="15" class="form-control" required>  </textarea>
+                                                <br>
+                                                <input type="submit" class="btn btn-primary col-lg-12" value="Post"><br>
+                                              </form>
+                                            </div>
+                                          </div>
+    </div>
+    <script>
+      document.getElementById("newlocation").value = window.location.pathname + window.location.search;
+    </script>
+<% end %>
+</div>
+    <!-- New Message --->
+    <div class="modal fade" id="edit_reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title newText" id="myModalLabel">New Message</h4>
+          </div>
+          <div class="modal-body">
+            <!--<div class="alert alert-danger" role="alert">Uses spaces!</div>-->
+
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <img src='/images/smileys/s1.png' id="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" onclick='smiley(this);' /><img src='/images/smileys/s4.png'
+                  id="4" onclick='smiley(this);' />
+                <img src='/images/smileys/s5.png' id="5" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" onclick='smiley(this);' /><img src='/images/smileys/s8.png'
+                  id="8" onclick='smiley(this);' />
+                <img src='/images/smileys/s9.png' id="9" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" onclick='smiley(this);' /><img src='/images/smileys/s12.png'
+                  id="12" onclick='smiley(this);' />
+                <img src='/images/smileys/s13.png' id="13" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" onclick='smiley(this);' /><img src='/images/smileys/s16.png'
+                  id="16" onclick='smiley(this);' />
+                <img src='/images/smileys/s17.png' id="17" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" onclick='smiley(this);' /><img src='/images/smileys/s20.png'
+                  id="20" onclick='smiley(this);' />
+                <img src='/images/smileys/s21.png' id="21" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" onclick='smiley(this);' /><img src='/images/smileys/s24.png'
+                  id="24" onclick='smiley(this);' />
+                <img src='/images/smileys/s25.png' id="25" onclick='smiley(this);' />
+              </div>
+            </div>
+
+
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="btn-group " role="group" aria-label="...">
+                  <button class="btn btn-default" id="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" onclick="changeText(this)">Quote</button>
+                  <button class="btn btn-default" id="4" onclick="changeText(this)">Link</button>
+                  <button class="btn btn-default" id="5" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" onclick="changeText(this)">Image</button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default">Text Size</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                    <ul class="dropdown-menu">
+                      <li><a id="7" onclick="changeText(this)">H1 Largest</a></li>
+                      <li><a id="8" onclick="changeText(this)">H2</a></li>
+                      <li><a id="9" onclick="changeText(this)">H3</a></li>
+                      <li><a id="10" onclick="changeText(this)">H4</a></li>
+                      <li><a id="11" onclick="changeText(this)">H5</a></li>
+                      <li><a id="12" onclick="changeText(this)">H6 Smallest</a></li>
+                    </ul>
+                  </div>
+
+
+                </div>
+
+
+              </div>
+            </div>
+            <form id="form" action="/news" method="post" id="new_message_form">
+              <input type="hidden" id="user" name="send_to">
+              <input type="hidden" id="put" name="_method" value="">
+              <input type="hidden" id="location" name="location">
+              <input type="hidden" id="previous" name="previous" class="form-control">
+              <div id="titleHold"> Title: <input type="text" id="title" name="title" class="form-control" required> </div><br> <b class="OB">Body:</b> <textarea id="textUpdate" name="body" class="form-control" placeholder="Your message text goes here" rows="10" required></textarea> <br>
+
+          </div>
+          <div class="modal-footer">
+
+
+            <input type="submit" class="btn btn-primary pull-left span-right" value="Send">
+            </form><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+</div>
+

@@ -1,0 +1,153 @@
+
+
+      <% if flash[:success] %>
+        <div class="alert alert-success fade in">
+          <%= flash[:success] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+        <% elsif flash[:error] %>
+          <% if flash[:error].class == Array %>
+            <% flash[:error].each do |e| %>
+              <div class="alert alert-danger fade in">
+                <%=e.to_s %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+              <% end %>
+                <% else %>
+                  <div class="alert alert-danger fade in">
+                    <%= flash[:error] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                  <% end %>
+                    <% elsif flash[:info] %>
+                      <div class="alert alert-info fade in">
+                        <%= flash[:info] %><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>
+                      <% end %>
+                        <div class="panel norund navbar-heading noround text-center TW ">
+                          <div class="panel-body">
+                            
+                            <%=will_paginate @category , renderer: BootstrapPagination::Sinatra %>
+                            <form action="/forums/create" method="post">
+
+                              Create Category: <input type="text" name="name" class="form-control" required> <br> Staff Only?: <select name="staff" class="form-control">
+  <option value="false">No</option>
+  <option value="true">Yes</option>
+ 
+</select> <br>
+Order:  <input type="text" name="order" class="form-control" required> 
+<br>
+                              <input type="submit" class="btn btn-primary col-lg-12" value="Post"><br>
+                            </form>
+
+                          </div>
+                        </div>
+
+                        <% if @category %>
+
+                          <% @category.each do |c| %>
+
+
+                            <div class="panel noround">
+                              <div class="panel-heading navbar-heading noround text-center TW  ">
+                                <h3 class="panel-title">Category: <%=c.name%> <form action="/create/category" method="post"> <input type="hidden" name="id" value="<%=c.id%>" ><input type="submit"  class="btn  btn-mod pull-right" value="Delete">   </form>
+                                <button class="btn  btn-mod pull-right" id="<%=c.id%>" data-id2="<%=c.name%>" data-id3="<%=c.rank%>" data-id4="<%=c.staff%>" onclick="editCategory(this);">Edit</button> </h3> 
+                              </div>
+                              <div class="panel-body white OB">
+
+
+
+                               
+<form action="/forums/<%=c.id%>/create" method="post">
+                                  Create Forum: <input type="text" name="title" class="form-control" required> <br> Url: <input type="text" name="url" class="form-control" required> 
+                                  Description: <input type="text" name="body" class="form-control" required>
+                                  Order:  <input type="text" name="order" class="form-control" required> 
+                                  Staff Only:  <select name="staff" value="<%=c.staff%>" class="form-control">
+  <option value="false">No</option>
+  <option value="true">Yes</option>
+ 
+</select>
+                                  <br>
+                                  <input type="submit" class="btn btn-primary col-lg-12" value="Post"><br>
+                                </form>
+
+                              </div>
+
+                            </div>
+
+
+
+                            <% end %>
+                              <% end %>
+                              
+                              <%=will_paginate @forum , renderer: BootstrapPagination::Sinatra %>
+                              
+                              <% if @forum %>
+
+                          <% @forum.each do |f| %>
+
+
+                            <div class="panel noround">
+                              <div class="panel-heading navbar-heading noround text-center TW ">
+                                <h3 class="panel-title">Forum: <%=f.title%> <form action="/forum/delete/<%=f.id%>" method="post"> <input type="submit"  class="btn btn-mod pull-right" value="Delete">   </form>
+                                 </h3> 
+                              </div>
+                              <div class="panel-body white OB">
+
+
+
+                               
+<form action="/create/forum/<%= f.id %>" method="post">
+                                  Create Forum: <input type="text" name="title" class="form-control" value="<%=f.title %>"required> <br> Url: <input type="text" name="url" class="form-control" value="<%=f.url%>" required> 
+                                  Description: <input type="text" name="body" class="form-control" value="<%=f.body%>" required>
+                                  Order:  <input type="text" name="order" class="form-control" value="<%=f.rank %>"required> 
+ 
+                                  <br>
+                                  <input type="submit" class="btn btn-primary col-lg-12" value="Post"><br>
+                                </form>
+
+                              </div>
+
+                            </div>
+
+
+
+                            <% end %>
+                              <% end %>
+                              
+                              
+
+
+    </div>
+  </div>
+</div>
+
+ <!-- Create_list -->
+                                  <div class="modal fade" id="Edit-Category" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                          <h4 class="modal-title" id="myModalLabel">Create Forum Post</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                         <form action="/create/category/edit" method="post">
+                              <input type="hidden" name="id" id="id" value="">
+                              Edit Category Name <input type="text" name="name" id="changename" class="form-control" required> <br> Staff Only?: <select name="staff" class="form-control" id="changestaff">
+                              <option value="false">No</option>
+                              <option value="true">Yes</option>
+  
+                              </select>Order:  <input type="text" name="order" id="changeorder" class="form-control" required>  <br>
+                              
+
+
+
+                                            
+                                          </div>
+
+                                          
+
+                                      
+                                        <div class="modal-footer">
+                                        <input type="submit" class="btn btn-primary col-lg-9" value="Post"></form>  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+</div>
+
+ <script src="/js/admin.js"></script>

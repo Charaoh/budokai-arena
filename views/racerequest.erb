@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Request List</div>
+
+  <div class="panel-body cb">
+    Number of Requests:
+    <%= @invites.count %>
+      <hr>
+
+      <table class="table table-responsive ">
+        <thead>
+          <tr>
+            <th class="hidden-xs">Avatar</th>
+            <th>Planet</th>
+            <th>Accept</th>
+            <th>Decline</th>
+            <th class="hidden-xs">Message</th>
+          </tr>
+        </thead>
+
+        <% if @invites %>
+          <% @invites.each do |invite| %>
+
+            <tr>
+              <td class="hidden-xs"><img alt="avater" class="img-message img-circle" src="<%=invite.planet.avater %>"> </td>
+              <td>
+                <a class="fixed" href='/planet/profile/<%= invite.planet.name %>'>
+                  <%= invite.planet.name %>
+                </a>
+              </td>
+              <td>
+                <form action="/planet/request/accept/<%= invite.planet.id %>" method="post"> <input type="submit" class="btn btn-default " value=" Accept"> </form>
+              </td>
+              <td>
+                <form action="/planet/request/decline/<%= invite.planet.id %>" method="post"> <input type="submit" class="btn btn-default " value="Decline"> </form>
+              </td>
+
+
+
+
+              <td class="hidden-xs">
+                <a class="label label-primary  fa fa-envelope" href="#" id="<%= invite.planet.name %>" id4="6" title="Message" OnClick="updateTextConverter(this);"> </a>
+              </td>
+
+            </tr>
+            <% end %>
+              <% end %>
+      </table>
+
+
+  </div>
+</div>

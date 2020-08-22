@@ -1,0 +1,70 @@
+/* NOT REQUIRED */
+
+
+/* Just some example CSS */
+
+.tagsort-tags-container {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 10px;
+	padding: 14px 24px;
+	border: 0 none;
+	font-weight: 700;
+	letter-spacing: 1px;
+	background: #FF8C00;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin: 5px;
+	cursor: pointer;
+	box-shadow: 0 5px 0 0 #cc7000;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.tagsort-tags-container:hover {
+	border: 2px solid #000;
+	color: #FFF;
+	background-color: #000;
+	box-shadow: none;
+}
+
+.tagsort-active {
+	border: 2px solid black;
+	color: black;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.navbt {
+	display: inline-block;
+	color: #AAA;
+	font-size: 12px;
+	line-height: 10px;
+	padding: 14px 24px;
+	border: 0 none;
+	font-weight: 700;
+	letter-spacing: 1px;
+	background: #FF8C00;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin: 5px;
+	box-shadow: 0 5px 0 0 #cc7000;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.navbt:hover {
+	border: 2px solid #000;
+	color: #FFF;
+	background-color: #000;
+	box-shadow: none;
+}
+
+.navbt .active {
+	border: 2px solid black;
+	color: black;
+	background-color: transparent;
+	box-shadow: none;
+}

@@ -1,0 +1,71 @@
+
+<div class="panel noround ">
+    <div class="navbar-heading text-center btn-lg  OB noround " >
+      Move Topic To Forum
+    </div>
+</div>
+
+
+
+  
+   
+
+
+        
+    <div class="panel noround" style="margin: 0px; margin-bottom:0px;  border:black;">
+       <div class="panel-heading noround  navbar-inverse">
+        <div class="row custcolor">
+   
+            <div class="col-lg-1 "><img src="<%=@topic.user.avater%>" class="img-message img-circle"></div>
+            <div class="col-lg-7">
+                <a href="/forums/<%=@topic.url%><%=@topic.id%>" class="OB title"><%=@topic.title%></a><br><small> Last Post By <a href="/user/<%=@topic.author%>"><%=@topic.author%></a> in <a href="/forums/<%=@topic.forum.url%>"> <%=@topic.inforum%></a> at <%=@topic.created_at.strftime("%m/%d/%Y %I:%M%p")%> </small></div>
+            <div class="col-lg-2"><%=@topic.comments%>
+                <br> <small> Posts</small> </div>
+            <div class="col-lg-2"><%=@topic.views%>
+                <br> <small> Views</small> </div>
+       
+
+    </div>
+      </div>
+       <% if @forum  %>
+        <% @forum.each do |f| %>
+        
+        
+   <div class="panel-heading noround navbar-inverse">
+
+        <div class="row custcolor">
+            <div class="col-lg-2 OB title">
+              <%=f.title%>
+            </div>
+         
+            <div class="col-lg-8">
+                <a href="<%=f.url%>" class="OB title"><%=f.body[0,73]%></a><br></div>
+           
+        
+           <div class="col-lg-2">
+             <form id="form" action="/forums/staff/move/<%=f.id %>/<%=@topic.id%>" method="post" > <input type="submit" value="Move Here" class="navbar-heading">
+             
+             </form>
+            </div>
+            </div>
+              </div>
+             </div>
+ 
+     <% end %>
+               <% end %>
+
+       
+             </div>
+             </div>
+     
+           
+
+
+
+        
+
+  
+     
+        
+        
+

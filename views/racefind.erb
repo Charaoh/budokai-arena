@@ -1,0 +1,112 @@
+<%=will_paginate @planets, renderer: BootstrapPagination::Sinatra %> 
+<div class="panel cleanblack title">
+
+  <h3 class="panel-heading fa fa-user-times fa-2x"> Co-Leaders</h3>
+  <div class="panel-body">
+      <table class="table table-responsive ">
+   <thead>
+                    <tr>
+                      <th class="hidden-xs">Avater</th>
+                      <th>Name</th>
+                      <th>Rank</th>
+                      <th>Members</th>
+                      <th class="hidden-xs">Invite</th>
+                    </tr>
+                    </thead>
+                  
+                            <% if @planets %>
+        <%@planets.each do |p| %>         
+
+                    <tr>
+                      <td class="hidden-xs"><img alt="avater" class="img-message img-circle" src="<%=p.avater %>"> </td>
+                      <td><a class="fixed" href='/planet/profile/<%= p.name %>'> <%= p.name %></a></td>
+                      <td>
+                      <%= p.rank %>
+                      </td>
+                      
+                      
+                      <td class="hidden-xs"><%= p.members.count(:status => "Joined") %> / <%= p.members_limit %></td>
+                      <td><%=p.invite%></td>
+                    </tr>
+                     <% end %>
+                    <% end %> 
+                  </table>
+    </div>
+    </div>
+    
+    </div>
+    
+    <!-- New Message --->
+            <div class="modal fade" id="edit_reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title newText" id="myModalLabel">New message</h4>
+                  </div>
+                  <div class="modal-body">
+                     <div class="alert alert-danger" role="alert">Uses spaces!</div>
+      
+      <div class="panel panel-default">
+  <div class="panel-body">
+    <img src='/images/smileys/s1.png' id="1" id2="textUpdate" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" id2="textUpdate" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4" id2="textUpdate" id2="textUpdate" onclick='smiley(this);' />
+    <img src='/images/smileys/s5.png' id="5" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s8.png' id="8" id2="textUpdate" onclick='smiley(this);' />
+    <img src='/images/smileys/s9.png' id="9" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s12.png' id="12" id2="textUpdate" onclick='smiley(this);' />
+    <img src='/images/smileys/s13.png' id="13" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s16.png' id="16" id2="textUpdate" onclick='smiley(this);' />
+    <img src='/images/smileys/s17.png' id="17" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s20.png' id="20" id2="textUpdate"onclick='smiley(this);' />
+    <img src='/images/smileys/s21.png' id="21" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" id2="textUpdate" onclick='smiley(this);' /><img src='/images/smileys/s24.png' id="24" id2="textUpdate" onclick='smiley(this);' />
+    <img src='/images/smileys/s25.png' id="25" id2="textUpdate" onclick='smiley(this);' />
+  </div>
+</div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+    <div class="btn-group "  role="group" aria-label="...">
+   <button class="btn btn-default" id="1" id2="textUpdate" onclick="changeText(this)">Bold</button><button class="btn btn-default"  id="2" id2="textUpdate" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" id2="textUpdate"onclick="changeText(this)">Quote</button><button class="btn btn-default" id="4" id2="textUpdate"onclick="changeText(this)">Link</button>
+   <button class="btn btn-default" id="5" id2="textUpdate" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" id2="textUpdate" onclick="changeText(this)">Image</button><button class="btn btn-default" id="13" id2="textUpdate" onclick="changeText(this)">Image with Link</button>
+ <div class="btn-group">
+  <button type="button" class="btn btn-default">Text Size</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a  id="7" id2="textUpdate"onclick="changeText(this)">H1 Largest</a></li>
+    <li><a  id="8" id2="textUpdate" onclick="changeText(this)">H2</a></li>
+    <li><a  id="9" id2="textUpdate" onclick="changeText(this)">H3</a></li>
+    <li><a  id="10" id2="textUpdate" onclick="changeText(this)">H4</a></li>
+    <li><a  id="11" id2="textUpdate" onclick="changeText(this)">H5</a></li>
+    <li><a  id="12" id2="textUpdate" onclick="changeText(this)">H6 Smallest</a></li>
+  </ul>
+</div>
+
+
+</div>
+   
+ 
+  </div>
+  </div>
+
+                    <form id="form" action="/messages" method="post">
+                      <input type="hidden" name="location" class="form-control">
+                      <input type="hidden" value="" name="previous" class="form-control" >
+                      <div id="hideuser" >To user: <input type="text" id="user" name="send_to" value="" class="form-control"> <br></div> 
+                      <div id="titlehold" >Title: <input type="text" name="title" class="form-control" > <br></div> 
+                      Body: <textarea id="textUpdate" name="body" class="form-control" placeholder="Your message text goes here" rows="5" required></textarea> <br>
+                      
+                  </div>
+                  <div class="modal-footer">
+                    <input type="submit" class="btn btn-success pull-left" value="Send">
+                    </form><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+    
+
+  </div>
+  
+</div>
+          

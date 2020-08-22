@@ -1,0 +1,173 @@
+
+                 
+                 
+                   <div class="panel noround transparent" style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange panel-top">
+             <h2 class="OB text-center panel-text pageName2">Friend List</h2>
+       
+             </div>
+                   <div class="panel-body navbar-orange scrollList2">
+                          <% if @friendships.count != 0 %>
+                 <table class="table table-responsive ">
+        <thead>
+          <tr>
+            <th class="hidden-xs">Avatar</th>
+            <th>Username</th>
+            <th>Last Activity</th>
+            <th>Last Visited</th>
+            <th>Status</th>
+            <th class="hidden-xs">Remove</th>
+          </tr>
+        </thead>
+
+   
+
+          <% @friendships.each do |friendship| %>
+
+            <tr>
+              <td class="hidden-xs"><img alt="avater" class="img-message img-circle" src="<%=friendship.avater %>"> </td>
+              <td>
+                <a  href='/user/<%= friendship.username %>'>
+                  <%= friendship.username %>
+                </a>
+              </td>
+              <td>
+                <a  href="<%=friendship.last_page_link %>">
+                  <%=friendship.last_page_name %>
+                </a>
+              </td>
+              <td>
+                <%=friendship.updated_at.strftime("%D at %l:%M%p") %>
+              </td>
+
+              <td>
+                <% if friendship.updated_at >  30.minutes.ago %><span class="label label-success">  Online </span>
+                  <%else%><span class="label label-danger"> Offline</span>
+                    <%end%>
+                   
+
+
+              <td class="hidden-xs">
+                <form action="/friends/deny/<%= friendship.username %>" method="post"><input type="submit" class="button1 btn-xs" value="Remove"> </form>
+              </td>
+
+            </tr>
+            <% end %>
+            
+      </table>
+      <% else %>
+      You currently have no friends.
+        <% end %>
+    </div>
+
+  </div>
+
+             
+
+   
+    
+         <div class="panel noround transparent" style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange marginup5 panel-top ">
+             <h2 class="OB text-center panel-text pageName2">Friend Request</h2>
+            
+               </div>
+                  <div class="panel-body navbar-orange scrollList4">
+               <% if @incoming_requests.count != 0 %>
+             
+               <table class="table table-responsive text-center ">
+        <thead>
+          <tr>
+            <th>Avatar</th>
+            <th>Username</th>
+            <th>Accept</th>
+            <th>Decline</th>
+            <th>Message</th>
+       
+          </tr>
+        </thead>
+
+  
+         <tbody>
+      
+        <% @incoming_requests.each do |r| %>
+
+              <tr> 
+                <td><img alt="avater" class=" img-message img-circle pointer " src="<%=r.target.avater %>"></td>
+                
+           
+              <td>
+              <a  href="/user/<%=r.target.username %>">
+                <%=r.target.username %>
+              </a>
+  </td>
+   <td>
+    <form action="/friends/accept/<%= r.target.username %>" method="post"> <input type="hidden" name="_method" value="put"> <input type="submit" class="btn btn-primary btn-flat btn-xs" value="Accept"> </form>
+  </td>
+<td>
+    <form action="/friends/deny/<%= r.target.username %>" method="post"> <input type="hidden" name="_method" value="put">
+      <form action="/friends/deny/<%= r.target.username %>" method="post"><input type="submit" class="btn button1 btn-xs" value="Deny"> </form>
+  </td>
+<td class="hidden-xs">
+    <a class="label label-primary fa fa-envelope btn-sm" href="#" id="<%= r.target.username %>" id4="6" title="Message" OnClick="updateTextConverter(this);"> </a>
+  </td>
+
+
+
+              </tr>
+        
+ 
+  <% end %>
+ 
+    
+
+
+      </tbody>
+      </table>
+        <%else%>
+      You currently have no friends pending.
+         <%end%>
+               </div>
+    </div>
+    
+       
+    
+       <div class="panel noround transparent" style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange marginup5">
+             <h2 class="OB text-center panel-text pageName2">Add Friend</h2>
+            
+               </div>
+                <div class="panel-body navbar-orange">
+                <form action="/friends" method="post">
+      <input type="text" name="username" class="form-control" placeholder="Enter The User You Want To Add" required> <br>
+      <input type="submit" class="button1 col-xs-12" value="Add Friend"><br><br>
+    </form>
+               </div>
+    </div>
+              
+          
+              
+           </div>
+              
+
+      
+<!-- New Message --->
+<div class="modal fade" id="edit_reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title newText" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        <form action="/messages" method="post" id="new_message_form">
+          <input type="hidden" name="location" value="/friends" class="form-control"> To User: <input type="text" id="user" name="send_to" class="form-control" placeholder="Place Title Here" required> <br> Title: <input type="text" name="title" class="form-control"
+            required> <br> Body: <textarea name="body" form="new_message_form" class="form-control" placeholder="Your message text goes here" rows="5" required></textarea> <br>
+          <input type="submit" class="btn btn-primary col-lg-12" value="Send"><br>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

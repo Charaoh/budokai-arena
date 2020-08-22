@@ -1,0 +1,469 @@
+<div class="panel noround transparent" style="margin: 0px; border:black;">
+           <div class="panel-body noround navbar-orange  gameManuel ">
+               <h2 class="OB text-center panel-text pageName">Game Manual</h2>
+<div class="row">
+ <a style="cursor:pointer" onclick="gameManuel(1);" ><div class="col-lg-4 col-xs-6"><img src="/images/gamelogic.png" class="marginup3 img-responsive"></div></a>
+ <a style="cursor:pointer"  onclick="gameManuel(4);"><div class="col-lg-4 col-xs-6"><img src="/images/term.png" class="marginup3 img-responsive"></div></a>
+  <a style="cursor:pointer"  onclick="gameManuel(6);" ><div class="col-lg-4 col-xs-6"><img src="/images/skillTypes.png" class="marginup3 img-responsive"></div></a>
+    <a style="cursor:pointer"  onclick="gameManuel(3);"><div class="col-lg-4 col-xs-6"><img src="/images/skillconditions.png" class="marginup3 img-responsive"></div></a>
+     <a style="cursor:pointer"  onclick="gameManuel(5);" ><div class="col-lg-4 col-xs-6"><img src="/images/target.png" class="marginup3 img-responsive"></div></a>
+ <a style="cursor:pointer"  onclick="gameManuel(2);" ><div class="col-lg-4 col-xs-6"><img src="/images/experiencesystem.png" class="marginup3 img-responsive"></div></a>
+
+   
+   
+    
+</div>
+
+</div>
+</div>
+
+<div class="modal fade" id="gameManuel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content ">
+         
+            <div class="modal-body modal-bg">
+             <div class="panel noround " style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange ">
+             <h2 class="OB"  id="gameManuelName" ></h2>
+             </div>
+         
+             <div class="panel-body" id="gameManuelInfo">
+             
+              </div>
+              </div>
+                   
+               
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--
+<div class="panel noround " style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange ">
+             <h3 class="OB">Game Manual</h3>
+             </div>
+                
+             
+             <div class="panel-body">
+                 Welcome to Budokai-Online. You're visiting the game's manual where you can get some insight on how skills and effects work while also viewing sources for mastering the game. Read through the selections below and grasp a better understanding of the site. If you have additional questions regarding characters, items, or the manual in general, be sure to ask the community via the forum.
+
+                 </div>
+                 </div>
+                
+                 
+<div class="panel noround " style="margin: 0px; border:black;">
+   
+           <div class="panel-heading noround navbar-orange ">
+             <h3 class="OB">Game Logic  <a data-toggle="collapse" class="pull-right white fa fa-plus-square" onclick="change(this);return false;" href="#gamelogic" aria-expanded="true"></a></h3>
+             </div>
+      
+             <div class="panel-body panel-collapse collapse" id="gamelogic" aria-expanded="true">
+                  <section id="manual">
+                <h1 class="OB">Game Logic</h1>
+                <p class="pfixed TW">There are allot of things to learn before jumping into Budokai Online. Below you can check out the gameplay and get an in-depth understanding of what each area means.</p><br>
+                <section id="manual">
+                    <h3 class="TW">How it works?</h3>
+                    <p class="pfixed TW">The ingame is currently labeled with numbers. By hovering over these numbers with your mouse or pointing device, you will see a popup which explains what you're looking at.</p><br>
+                    <canvas id="myCanvas"> </canvas>
+                </section>
+                 </div>
+                 </div>
+                 
+
+<div class="panel noround " style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange ">
+             <h3 class="OB">Menu Interface <a data-toggle="collapse" class="pull-right white fa fa-plus-square" onclick="change(this);return false;" href="#menuInterface" aria-expanded="true"></a></h3>
+             </div>
+                
+             
+             <div class="panel-body panel-collapse collapse" id="menuInterface" aria-expanded="true">
+                   <section id="manual">
+                <h1 class="OB">Menu Interface</h1>
+                <p class="pfixed TW">The ingame menu is one of Budokai Online's key features. The menu is currently being revised for post alpha releases.</p><br>
+                <section id="manual">
+                    <h3 class="TW">How it works?</h3>
+                    <p class="pfixed TW">The menu is also labeled with numbers. By hovering over these numbers with your mouse or pointing device, you will see a popup which explains what you're looking at.</p><br>
+                    <canvas id="menu"> </canvas>
+                </section>
+                 </div>
+                 </div>
+               
+
+<div class="panel noround " style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange ">
+             <h3 class="OB">Experience System <a data-toggle="collapse" class="pull-right white fa fa-plus-square" onclick="change(this);return false;" href="#experienceSystem" aria-expanded="true"></a></h3>
+             </div>
+                
+             
+             <div class="panel-body panel-collapse collapse" id="experienceSystem" aria-expanded="true">
+                  <section id="manual">
+                    
+                <h1 class="OB">Experience System</h1>
+                <p class="pfixed TW">The experience system is a great way to set apart players and future characters. The best part about it is that you gain character and player experience just by playing the game. Gaining character experience allows players to build characters
+                    suited for their style of battle while player experience is used to display a user's prestiege within the game. </p><br>
+                <section id="manual">
+                    <h3 class="TW">Leaderboards</h3><br>
+                    <p class="pfixed UP TW">Like most competitive games Budokai Online also follows the path of the top overall players. Unfortunately there is only a battle section of the leaderboards. Additional sections coming soon!</p>
+                    <h3 class="TW">Grade Based Experience System</h3><br>
+                    <p class="pfixed UP TW">Our ranking system is grade based, with promotional series to advance to the next rank! For every win you can recieve 3 different values of experience depending on your opponent's ranking. 150xp, 250xp and 350xp. If you beat an opponent of higher ranking, you will recieve more experience. If you beat an opponent of lower rating, you gain less. If you face an opponent of same ranking you gain the middle value. </p><br>
+                    <div class="col-md-4">
+                        <p><u><strong>Character Level Guide</strong></u>
+                        </p>
+                        <p>Level 1->2 = 100 Exp</p>
+                        <p>Level 2->3 = 200 Exp</p>
+                        <p>Level 3->4 = 400 Exp</p>
+                        <p>Level 4->5 = 800 Exp</p>
+                        <p>Level 5->6 = 1600 Exp</p>
+                        <p>Level 6->7 = 3200 Exp</p>
+                        <p>Level 7->8 = 6400 Exp</p>
+                        <p>Level 8->9 = 12800 Exp</p>
+                    </div>
+
+                    <div class="col-md-8">
+                        <p><u><strong>Player Level Guide</strong></u>
+                        </p>
+                        <p>0-5000 Experience - D - Unable to lose experience at this rank.</p>
+                        <p>5001-10000 Experience - C - Lose 25% of the experience you could have gained </p>
+                        <p>**Promotional Series! Win your next ⅗  games to promote to the next rank.**</p>
+                         <p>After passing C Rank, you will then have to pass a 3 out of 5 game promotion series to advance to the next ranking. </p>
+                        <p>15000-20000 Experience - B - Lose 40% of the experience you could have gained. </p>
+                        <p>20001-30000 Experience - A - Lose 50% of what you would have gained.</p>
+                        <p>30001-40000 Experience - S - Lose 75% of what you would have gained.</p>
+                        <p>40001-50000 Experience - Z - Lose 100% of what you would have won rounded up.</p>
+                    </div>
+
+                </section>
+                 </div>
+                 </div>
+             
+               
+<div class="panel noround " style="margin: 0px; border:black;" >
+           <div class="panel-heading noround navbar-orange ">
+             <h3 class="OB">Damage Range & Terminology <a data-toggle="collapse" class="pull-right white fa fa-plus-square" onclick="change(this);return false;" href="#DTerminology" aria-expanded="true"></a></h3>
+             </div>
+                
+             <div class="panel-collapse collapse" id="DTerminology" aria-expanded="true" >
+            <div class="panel-body">
+                   <section id="manual">
+               
+        </div>
+        <div class="panel-body"><br>
+            <h3 class="TW">Damage Terminology</h3>
+            <div class="containerManual">
+                <p><u><strong>Affliction Damage</strong></u><br>Damaging effects that reduces the targets health over time. <span class="badge3">* Afflictions are not effected by stats.</span>
+                </p>
+            </div>
+            <div class="containerManual">
+                <p><u><strong>Damage</strong></u><br>The normal deduction of a characters HP.
+                </p>
+            </div>
+            <div class="containerManual">
+                <p><u><strong>Ki Damage</strong></u><br> Damaging effects that are directly affected by a characters <u>Kai</u> stat.
+                </p>
+            </div>
+            <div class="containerManual">
+                <p><u><strong>Penetrating Damage</strong></u><br>TBT!
+                </p>
+            </div>
+            <div class="containerManual">
+                <p><u><strong>Piercing Damage</strong></u><br> Damaging effects that are directly affected by both <u>Strength</u> and <u>Kai</u> stats. <span class="badge3">* Piercing Damage ignores the enemies defense stat.</span>
+                </p>
+            </div>
+            <div class="containerManual">
+                <p><u><strong>Strength Damage</strong></u><br> Damaging effects that are directly affected by a characters <u>Strength</u> stat.
+                </p>
+            </div>
+            </section>
+            </div>
+                 </div>
+                 </div>
+<div class="panel noround " style="margin: 0px; border:black;" >
+           <div class="panel-heading noround navbar-orange ">
+             <h3 class="OB">Game Terminology <a data-toggle="collapse" class="pull-right white fa fa-plus-square" onclick="change(this);return false;" href="#Terminology" aria-expanded="true"></a></h3>
+             </div>
+                
+             
+             <div class="panel-body panel-collapse collapse" id="Terminology" aria-expanded="true" >
+                  <section id="manual">
+                <h1 class="OB">Game Terminology</h1>
+                <p class="pfixed TW">Performing a skill and not knowing whats happening can be very upsetting, even more so when you see words and have no understanding of them. It is very important to know what these things are as well as the causes and effects behind them.
+                    Below is a list of various terms as well as a few examples to get the ball rolling.</p>
+                <div class="containerManual">
+                    <p><u><strong>Active</strong></u><br>When skills are active, their effects are currently being displayed through the game. <span class="badge3">* Active skills have varous effects which depends heavily on the duration it lasts.</span>
+                    </p>
+                    <p><button class="btn btn-manual" type="button" role="tab" data-toggle="collapse" data-target="#active" aria-expanded="false" aria-selected="true" tabindex="0">
+                        Skill Example</button></p>
+                    <div class="collapse" id="active">
+                        <div class="manual-pad" role="tabpanel" aria-hidden="false" style="display: block;"><u><strong>Kaio-ken</strong></u><br><span class="focus self">Self</span> Alter <span class="skill">Kamehameha</span>, <span class="skill">Punishing Blow</span>, and <span class="skill">Amateur Spirit Bomb</span>. Increases Goku's
+                            strength, speed, and ki by 4 <span class="duration">each turn</span> but decreases his defense by 1 and his energy by 15. Re-use of this skill or energy hitting zero while active will remove its current effects.
+                        </div>
+                    </div>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Alter</strong></u><br>Altering is when a skill's original use has been changed in terms of damage or effect.
+                    </p>
+                    <p><button class="btn btn-manual" type="button" role="tab" data-toggle="collapse" data-target="#alter" aria-expanded="false" aria-selected="true" tabindex="0">
+                        Skill Example</button></p>
+                    <div class="collapse" id="alter">
+                        <div class="manual-pad" role="tabpanel" aria-hidden="false" style="display: block;">
+                            <p><u><strong>Kaio-ken</strong></u><br><span class="focus self">Self</span> Alter's <span class="skill">Kamehameha</span>, <span class="skill">Punishing Blow</span>, and <span class="skill">Amateur Spirit Bomb</span>. Increases
+                                Goku's strength, speed, and ki by 4 <span class="duration">each turn</span> but decreases his defense by 1 and his energy by 15. Re-use of this skill or energy hitting zero while active will remove its current effects.</p>
+                            <p><u><strong>Kamehameha</strong></u><br><span class="condition">Default</span> <span class="focus enemy">Enemy</span> Deals 15 damage to one enemy. <br><span class="condition">Altered</span> <span class="focus enemy">Enemy</span>                                Deals 20 damage to one enemy.
+                        </div>
+                    </div>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>BP</strong></u><br>Battle Points (Short for BP), are points used to control your characters. To keep the game balanced, each character requires a certain number of BP to perform a skill. <span class="badge3">* You gain BP every turn and all un-used BP rollsover to the following turn.</span>
+                    </p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Charge</strong></u><br>Charges are skills with effects that stacks upon use or effects that deplete after a specific number of stacks have been depleted. <span class="badge3">* Charges can target both friendly and enemy targets.</span>
+                    </p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Clashing</strong></u><br>Clashing is condition where one characters skill is altered by another characters stats.
+                    </p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Cooldown</strong></u><br>Cooldowns are time intervals between <span class="duration">turns</span> in which the selected skill can be used again. They range from <span class="duration">none</span> to <span class="duration">finite</span>;
+                        none means that the skill can be used an unlimited number of times during gameplay while finite skills permanently ends after their first time being used.
+                    </p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Debuff</strong></u><br>A debuff is any negative effect that is applied to a specific target. <span class="badge3">* Debuffs can be both friendly or non-friendly and targets all characters.</span>
+                    </p>
+                    <p><button class="btn btn-manual" type="button" role="tab" data-toggle="collapse" data-target="#debuff" aria-expanded="false" aria-selected="true" tabindex="0">
+                        Skill Example</button></p>
+                    <div class="collapse" id="debuff">
+                        <div class="manual-pad" role="tabpanel" aria-hidden="false" style="display: block;"><u><strong>Solar Flare</strong></u><br><span class="focus enemy">Enemy</span> Decreases the targets strength and defense by 5 points for <span class="duration">two turns.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Disable</strong></u><br>When a skill or specific type becomes disabled, the action will have no effect for the duration of the <span class="duration">turn(s).</span> <span class="badge3">* Disabled effects can last numerous turns. This applies to both friendly and enemy effects.</span>
+                    </p>
+                    <p><button class="btn btn-manual" type="button" role="tab" data-toggle="collapse" data-target="#disable" aria-expanded="false" aria-selected="true" tabindex="0">
+                        Skill Example</button></p>
+                    <div class="collapse" id="disable">
+                        <div class="manual-pad" role="tabpanel" aria-hidden="false" style="display: block;"><u><strong>Rushing Assault</strong></u><br><span class="focus enemy">Enemy</span> Temporary increases Kid Gohan's speed by 5 then deals 15 damage to one enemy. Kid Gohan's defensive skills will be disabled the <span class="duration">following turn.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>EP</strong></u><br>Energy Power (Short for EP), is a characters energy level. Majority of the games skills uses energy and without enough energy a character cannot perform a certain skill.</p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Focus</strong></u><br>A skills focus is the initial target the skill is being redirected towards, whether it is an enemy or an ally. To view more about target focusing, visit the <a class="fixed5" href="#targetsfocus"><strong>Targets & Focuses</strong></a>                        section.</p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>(G)</strong></u><br>A shorter term for Dragon Ball GT.</p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Invisible</strong></u><br>Skills that are invisible have no active notifications for the enemy team. <span class="badge3 ">* All skills are visible while in battle. However, when an invisible skill is being used the effect remains hidden regardless if the skill is used or not.</span></p>
+
+                    <p><button class="btn btn-manual" type="button" role="tab" data-toggle="collapse" data-target="#invisible" aria-expanded="false" aria-selected="true" tabindex="0">
+                        Skill Example</button></p>
+                    <div class="collapse" id="invisible">
+                        <div class="manual-pad" role="tabpanel" aria-hidden="false" style="display: block;"><u><strong>High Velocity Kick</strong></u><br><span class="focus enemy">Enemy</span> Targets one enemy, countering the first harmful skill they use for <span class="duration">one turn.</span> This skill is invisible.
+                        </div>
+                    </div>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>(M)</strong></u><br>A shorter term for movie characters in the Dragon Ball Universe.</p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>LV</strong></u><br>A characters level. Leveling up characters increases their battle capabilities as well as enabling them to use more advance skills.</p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>(S)</strong></u><br>A shorter term for Dragon Ball Super.</p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Skill Types</strong></u><br>Types of skills and effects that are being used on a given target. The game currently has 2 sets of classes: <span class="condition">Main Types</span> and <span class="condition">Sub Types</span>.
+                        To view more about types, visit the <a <a class="fixed5" href="#skilltypes"><strong>Skill Types</strong></a> section.
+                    </p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Stats</strong></u><br>A characters battle stats, used to determine how much damage a character deals, receives, and which characters moves first during each <span class="duration">turn.</span></p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>TP</strong></u><br>Training Points (Short for TP), are points used to level your character's stats. <span class="badge3">* You gain TP each time you level your character up through missions or battles.</span></p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>(Z)</strong></u><br>A shorter term for Dragon Ball Z.</p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Zenny</strong></u><br>A players ingame funds, used to purchase additional characters, items, and other miscellaneous options.</p>
+                </div>
+            </section>
+                 </div>
+                 </div>
+
+<div class="panel noround " style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange ">
+             <h3 class="OB">Skill Conditions <a data-toggle="collapse" class="pull-right white fa fa-plus-square" onclick="change(this);return false;" href="#SkillConditions" aria-expanded="true"></a></h3>
+             </div>
+                
+              <div class="panel-collapse collapse" id="SkillConditions" aria-expanded="true" >
+             <div class="panel-body">
+                 <section id="manual">
+                <h1 class="OB">Skill Conditions</h1>
+                <p class="pfixed TW">There are different types of damage that will be used on Budokai Online, each having a specific property.</p><br>
+                <h3 class="TW">Immunity Conditions</h3>
+                <div class="containerManual">
+                    <p><u><strong>Debuff Immunity</strong></u><br> The target becomes immune to all debuff skills.
+                    </p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Full Immunity</strong></u><br> The target becomes immune to all skill types.
+                    </p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Ki Immunity</strong></u><br> The target becomes immune to all Ki based skills.
+                    </p>
+                </div>
+                <div class="containerManual">
+                    <p><u><strong>Strength Immunity</strong></u><br> The target becomes immune to all Strength based skills.
+                    </p>
+            </section>
+            </div>
+            <div class="panel-body"><br>
+                <section id="manual">
+                    <h3 class="TW">Stun Conditions </h3>
+                    <div class="containerManual">
+                        <p><u><strong>Friendly Stun</strong></u><br> The target cannot perform or be targeted by friendly skills, power-ups and tranformations.
+                        </p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Full Stun</strong></u><br> The target cannot perform any skills.
+                        </p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Ki Stun</strong></u><br> The targets Ki skills cannot be used.
+                        </p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Strength Stun</strong></u><br> The targets Strength skills cannot be used.
+                        </p>
+                    </div>
+                </section>
+                                 </div>
+                 </div>
+                 </div>
+              <div class="panel noround " style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange ">
+             <h3 class="OB">Skill Types <a data-toggle="collapse" class="pull-right white fa fa-plus-square" onclick="change(this);return false;" href="#SkillTypes" aria-expanded="true"></a></h3>
+             </div>
+                
+                <div class="panel-body panel-collapse collapse" id="SkillTypes" aria-expanded="true">
+             <div class="panel-body">
+                  <section id="manual">
+                    <h1 class="OB">Skill Types</h1>
+                    <p class="pfixed TW">All skills have a specific type assigned to them and are categorized between two groups; <u>Main Types</u> and <u>Sub Types</u>. Main Type skills have an initial effect on the target, while Sub Type skills shows the type of connection
+                        the skill has between the target(s).</p><br>
+
+                    <h3 class="TW">Main Types</h3>
+                    <div class="containerManual">
+                        <p><u><strong>Defense</strong></u><br>Defense Types increases a characters defensive capabilities. Most defensive skills are immunities and reflections.</p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Power Down</strong></u><br>Power Downs decreases a characters stats or fighting capabilities. <span class="badge3">* Power Downs are stackable upon each other and usually lasts long periods of time.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Power Up</strong></u><br>Power Ups increases a characters energy, health, stats or fighting capabilities. <span class="badge3">* Power Ups are stackable upon each other and usually lasts for long periods of time.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Ki</strong></u><br>Skills that are based on the characters energy level. <span class="badge3">* The defense stat reduces the amount of ki damage a character receives.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Strength</strong></u><br>Skills that are based on the characters raw strength. <span class="badge3">* The defense stat reduces the amount of strength damage a character receives.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Transformation</strong></u><br>A characters physical change from one form to another, increasing their stats and allowing new capabilities. <span class="badge3">* Transformations are not stackable and usually end after energy runs out.</span></p>
+                    </div>
+                </section>
+            </div>
+            <div class="panel-body"><br>
+                <h3 class="TW">Conditions <a data-toggle="collapse" class="pull-right white fa fa-plus-square" onclick="change(this);return false;" href="#Conditions" aria-expanded="true"></a></h3>
+                <section id="manual">
+                    <div class="containerManual">
+                        <p><u><strong>Counter</strong></u><br>Counters has an immediate response to another skill or a specific effect, negating those skills in the process. <span class="badge3">* Counters are prioritized over speed and if a skill has been countered, the performer still loses energy and BP.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Immunity</strong></u><br>Immunity makes the target invulnerable to certain enemy skills and effects. <span class="badge3">* Immunities are prioritized over speed but becomes void in certain cases. If a skill ignores immunity then the target becomes prone to the incoming effect.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Leech</strong></u><br>Leeching is when the target has BP, HP, or EP drained, leaving them unable to perform certain skills.</p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Passive</strong></u><br>Passives have effect that are automatically applied to a specific character or item.</p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Reflect</strong></u><br>Reflections have their skills mirrored via an ally or enemies effect. <span class="badge3">* Reflections prioritize speed and can target both enemies and allies, sometimes simultaneously.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Removal</strong></u><br>A removal deletes a skill or item's effect from a given target. <span class="badge3">* Skills that have been removed can be re-applied only if they aren't cancelled by another effect.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Restoration</strong></u><br>Skills based on giving health or energy to a given target or reviving them from the dead.</p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Stun</strong></u><br>Stuns prevent a character from performing a certain effect or action.  <span class="badge3">* Stuns prioritize speed and can be ignored by skills with immunity effects, or general effects that allows the character to ignore stuns.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><u><strong>Dazed</strong></u><br>The character will randomly target a character when using an attack. <span class="badge3">* Dizzed prioritize speed and can be ignored by skills with immunity effects, or general effects that allows the character to ignore dizzed.</span></p>
+                    </div>
+                </section>
+                 </div>
+                 </div>
+                    <div class="panel noround " style="margin: 0px; border:black;">
+           <div class="panel-heading noround navbar-orange ">
+             <h3 class="OB">Targets & Focus <a data-toggle="collapse" class="pull-right white fa fa-plus-square" onclick="change(this);return false;" href="#Targets" aria-expanded="true"></a></h3>
+             </div>
+                
+             
+             <div class="panel-body panel-collapse collapse" id="Targets" aria-expanded="true">
+                  <section id="manual">
+                    <h1 class="OB">Targets & Focus</h1>
+                    <p class="TW">All skills require a target in order to focus certain effects onto them.</p>
+                    <div class="containerManual">
+                        <p><span class="focus ally">Ally</span> Targets a single ally on the player team.</p>
+                    </div>
+                    <div class="containerManual">
+                        <p><span class="focus enemy">Enemy</span> Targets a single enemy on the enemy team.</p>
+                    </div>
+                    <div class="containerManual">
+                        <p><span class="focus ally">Multiple Allies</span> Targets all available allies.</p>
+                    </div>
+                    <div class="containerManual">
+                        <p><span class="focus enemy">Multiple Enemies</span> Targets all available enemies.</p>
+                    </div>
+                    <div class="containerManual">
+                        <p><span class="focus ally">Other Allies</span> Targets one or more allies on the player team. <span class="badge3">* This does not target the skills performer.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><span class="focus enemy">Other Enemies</span> Targets one or more enemies on the enemy team but not the initial target. <span class="badge3">* Some effects vary or may not apply to the initial target.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><span class="focus ally">Random Ally</span> Targets a random ally on the player team. <span class="badge3">* This includes the skills performer.</span></p>
+                    </div>
+                    <div class="containerManual">
+                        <p><span class="focus enemy">Random Enemy</span> Targets a random enemy on the enemy team.</p>
+                    </div>
+                    <div class="containerManual">
+                        <p><span class="focus self">Self</span> Targets the initial character of the skill.</p>
+                    </div>
+                </section>
+                 </div>
+                 </div>
+
+
+
+
+
+  
+
+ 
+collapse-->
+</div>

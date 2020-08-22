@@ -1,0 +1,86 @@
+<form action="/planet/create" method="post">
+  <div class="panel ">
+    <div class="panel-heading navbar-custom-titles  white">Register Planet</div>
+    <div class="panel-body">
+
+
+
+
+      <div class="form-group">
+        <label for="Name" class="cb">Planet Name</label>
+        <input class="form-control" name="clanname" placeholder="Name">
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <img src='/images/smileys/s1.png' id="1" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" id2="1" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s4.png'
+            id="4" id2="1" id2="textUpdate" onclick='smiley(this);' />
+          <img src='/images/smileys/s5.png' id="5" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s8.png'
+            id="8" id2="1" onclick='smiley(this);' />
+          <img src='/images/smileys/s9.png' id="9" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s12.png'
+            id="12" id2="1" onclick='smiley(this);' />
+          <img src='/images/smileys/s13.png' id="13" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s16.png'
+            id="16" id2="1" onclick='smiley(this);' />
+          <img src='/images/smileys/s17.png' id="17" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s20.png'
+            id="20" id2="1" onclick='smiley(this);' />
+          <img src='/images/smileys/s21.png' id="21" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" id2="1" onclick='smiley(this);' /><img src='/images/smileys/s24.png'
+            id="24" id2="1" onclick='smiley(this);' />
+          <img src='/images/smileys/s25.png' id="25" id2="1" onclick='smiley(this);' />
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="btn-group " role="group" aria-label="...">
+            <button class="btn btn-default" id="1" id2="1" onclick="changeText(this)">Bold</button><button class="btn btn-default" id="2" id2="1" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" id2="1" onclick="changeText(this)">Quote</button>
+            <button
+              class="btn btn-default" id="4" id2="1" onclick="changeText(this)">Link</button>
+              <button class="btn btn-default" id="5" id2="1" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" id2="1" onclick="changeText(this)">Image</button><button class="btn btn-default" id="13" id2="1" onclick="changeText(this)">Image with Link</button>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">Text Size</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+                <ul class="dropdown-menu">
+                  <li><a id="7" id2="1" onclick="changeText(this)">H1 Largest</a></li>
+                  <li><a id="8" id2="1" onclick="changeText(this)">H2</a></li>
+                  <li><a id="9" id2="1" onclick="changeText(this)">H3</a></li>
+                  <li><a id="10" id2="1" onclick="changeText(this)">H4</a></li>
+                  <li><a id="11" id2="1" onclick="changeText(this)">H5</a></li>
+                  <li><a id="12" id2="1" onclick="changeText(this)">H6 Smallest</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <label for="Profile" class="cb">Planet History</label> <textarea name="body" id="textUpdate" class="form-control" min="5" max="5000" rows="15" required>  </textarea>
+
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body cb">
+          <label>Invitation Options</label><select name="invite" class="form-control">
+  <option value="Invite-Only">Invite Only</option>
+  <option value="Public">Public</option>
+  <option value="Private">Private</option>
+  
+ 
+</select>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body ">
+          <label for="Symbol" class="cb">Planet Symbol</label>
+          <input class="form-control" name="symbol" placeholder="Link to Symbol">
+        </div>
+      </div>
+
+
+      <button type="submit" class="btn btn-default center-block"><div class="coin gold dbzfont"><p>Z</p> </div> <b class="up skillshop dbzfont">5000 </b>   </button>
+</form>
+</div>

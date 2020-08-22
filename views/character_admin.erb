@@ -1,0 +1,79 @@
+<div class="panel panel-default marginup2">
+  <div class="panel-heading">Character Builder</div>
+  <div class="panel-body">
+      <label>Character Name (Please Space Saga Letter)</label>
+    <input class="form-control" id="characterName" value="Goku Z">
+    <label>Description</label>
+    <input class="form-control" id="characterDescription">
+    <label>Tags</label>
+    <br>
+     <input type="checkbox" name="characterTags" class="" value="Hero">Hero
+    <input type="checkbox" name="characterTags" value="Villian">Villian
+    <input type="checkbox" name="characterTags" value="Bio">Bio
+    <input type="checkbox" name="characterTags" value="Namekian">Namekian
+       <input type="checkbox" name="characterTags" class="Saiyan" value="Saiyan">Saiyan
+    <input type="checkbox" name="characterTags" value="God">God
+    <input type="checkbox" name="characterTags" value="Human">Human
+    <input type="checkbox" name="characterTags" value="Frieza's Army">Frieza's Army
+    <br> <br>
+     <label>Rarity</label>
+    <select class="form-control" id="characterRarity"> 
+    <option value="C">Common</option>
+    <option value="R">Rare</option>
+    <option value="S">SuperRare</option>
+    <option value="L">Legendary</option>
+    </select>
+    
+    <label>Character Stats Order by (Health,Energy,ki,strength,defense,speed)</label>
+   
+     <input class="form-control" id="characterStats" value="0,0,0,0,0,0">
+     <br><button class="btn-block" onclick="transform();">Add Transformations Alternatives</button>
+     <br><button class="btn-block" onclick="transformClear();">Clear Transformations Alternatives</button>
+  </div>
+</div>
+
+<div class="panel panel-default marginup2">
+  <div class="panel-heading">Create Skills</div>
+  <div class="panel-body">
+      <label>Number of Skills</label>
+
+    <input class="form-control" id="createSkills" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+     <label>Enter Skill ID's (Seperate with commas)</label>
+
+    <input class="form-control" id="createSkillsIDs">
+    
+    <br>
+          <button onclick="createSkills();" class="btn-block">Create Skill Amount</button>
+          
+  </div>
+</div>
+
+
+<div id="skillsArea">
+    
+</div>
+<button class="btn-block" id="create"> Create Character Code</button>
+
+ <a download="characterCode.txt" id="downloadlink" style="display: none" class="btn-block button1">Download</a>
+
+    <script src="/js/admin.js"></script>
+    
+    
+    
+    <div class="modal fade" id="alternativeSkills" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+         
+            <div class="modal-body modal-bg">
+                 <h4 class="modal-title" id="myModalLabel"><div class="button1">Registered </div> </h4>
+           
+                    <div class="shadow2" id="alternativeSkillsArea">
+
+		
+
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
