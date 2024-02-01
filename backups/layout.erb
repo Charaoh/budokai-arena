@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Rift :: Stage One</title>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="description" content="The Rift is an online multiplayer fighting game. Battle players around the world and become the ultimate challenger!">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/custom3.min.css?version=0.1" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css" rel="stylesheet">
+    <link href="/library/fontawesome/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/tagsort.min.css" rel="stylesheet">
+</head>
+
+<body class="hold-transition">
+  <% if session? %>
+
+  <nav class="navbar navbar-orange navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+         <div class="navbar-header">
+             <a class="navbar-brand"><img class="img-message img-circle img-responsive center-block up2" src="<%= @user.avater %>"></a>
+
+             <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                        <a id="main-nav-toggle" class="nav-icon userpanel">Userpanel <i class="fa fa-bars white"></i></a></button>
+                        </div>
+
+    </div>
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+
+        <div class="container">
+             <ul class="nav nav-justified "><li><a href="/user/<%= @user.username %>" class="userpanel">Welcome, <%= @user.username %></a> </li>
+      <li><a href="/settings" class="userpanel">Control Panel</a></li>
+      <li><a href="/messages" class="userpanel">Messages <span class="badge2"><%= @user.messages.count(:read => false) %></span></a></li>
+      <li><a href="/friends" class="userpanel">Friends <span class="badge2"><%= @user.friendships.all(:status => "friends").target.count(:updated_at.gt =>  30.minutes.ago) %></span></a></li>
+      <li><a href="/logout" class="userpanel">Logout</a></li>
+
+    <ul>
+
+        </div>
+
+</nav>
+
+<% else %>
+
+   <nav class="navbar navbar-orange navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+         <div class="navbar-header">
+
+             <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                        <a id="main-nav-toggle" class="nav-icon userpanel">Userpanel <i class="fa fa-bars white"></i></a></button>
+                        </div>
+
+    </div>
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+
+       <form class="navbar-form navbar-nav" action="/login" method="post">
+
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+
+                        <input type="password" class="form-control" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class=" button1">Sign In</button>
+                </form>
+                  <button class="button1" data-toggle="modal" data-target="#register">Register</button>
+                  <button href="#" class="button1" data-toggle="modal" data-target="#forgot_password">Forgot Password?</button>
+
+</nav>
+
+
+<% end %>
+
+<div class="pushdown"></div>
+
+ <div class="container none">
+
+     <img src="/images/budokailogo2.png" class="img-responsive center-block bannersize"></div>
+
+       <div class="social-images visible-xs">
+     <a href="https://discord.gg/VHb2DVt" target="_blank"><img src="/images/discord.png" class=""></a>
+     <a href="https://www.budokai-online.com/#" target="_blank"><img src="/images/reddit.png" class=""></a>
+     <a href="https://www.youtube.com/channel/UCX51rddEFy_Jx5l2RD-Ni3Q" target="_blank"><img src="/images/youtube.png" class=""></a>
+     <a href="https://twitter.com/budokaionline" target="_blank"><img src="/images/twitter.png" class=""></a>
+     <a href="https://www.facebook.com/profile.php?id=175922446158039" target="_blank"><img src="/images/facebook.png" class=""></a>
+
+     </div>
+
+   <div class="container none">
+
+    <ul class="navbar-image hidden-xs">
+       <div class="padding"></div>
+       <li class="navText"> <a href="/">HOMEPAGE</a></li>
+         <li class="navText"> <a href="/forums">FORUM</a></li>
+         <li class="navText"> <a href="/how_to_play">GAME MANUAL</a></li>
+         <li class="navText"> <a href="/ladder">LEADERBOARDS</a></li>
+         <li class="navText"> <a href="/characters">CHARACTERS</a></li>
+   <br>
+
+
+       <li class="navText smallText">VISIT THE MAIN PAGE </li>
+         <li class="navText smallText2">VISIT THE COMMUNITY </li>
+         <li class="navText smallText3">LEARN THE GAMEPLAY STYLE! </li>
+         <li class="navText smallText4">CHECK OUT WHOSE ON TOP!</li>
+         <li class="navText smallText5">BUILD THE ULTIMATE TEAM! </li>
+  <ul>
+         <div>
+
+              <div class="social-images">
+     <a href="https://discord.gg/VHb2DVt" target="_blank"><img src="/images/discord.png" class=""></a>
+     <a href="https://www.budokai-online.com/#" target="_blank"><img src="/images/reddit.png" class=""></a>
+     <a href="https://www.youtube.com/channel/UCX51rddEFy_Jx5l2RD-Ni3Q" target="_blank"><img src="/images/youtube.png" class=""></a>
+     <a href="https://twitter.com/budokaionline" target="_blank"><img src="/images/twitter.png" class=""></a>
+     <a href="https://www.facebook.com/profile.php?id=175922446158039" target="_blank"><img src="/images/facebook.png" class=""></a>
+
+     </div>
+         </div>
+         </div>
+
+
+
+     </div>
+</div>
+</div>
+    <div class="container cleanblack2">
+        <div class="row cleanblack2">
+            <div>
+                <nav class="navbar span12 navbar-orange visible-xs">
+                    <div class="container-fluid navimg">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed black" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <a id="main-nav-toggle" class="nav-icon white">Menu <i class="fa fa-bars "></i></a></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav nav-justified ">
+                                <li class="OB ">
+                                    <a class="nav-color" href="/">
+                                      Homepage
+                                    </a>
+                                </li>
+                                <li class="OB ">
+                                    <a class="nav-color" href="/how_to_play">
+                                        Game Manual
+                                    </a>
+                                </li>
+                                <li class="OB ">
+                                    <a class="nav-color" href="/forums">
+                                               Forum
+                                    </a>
+                                </li>
+
+
+                                <li class="OB ">
+                                    <a class="nav-color" href="/ladder">
+
+                Leaderboards
+                                    </a>
+                                </li>
+                                <li class="OB ">
+                                    <a class="nav-color" href="/characters">
+                Characters
+                                    </a>
+                                </li>
+                                <li class="OB ">
+                                    <a class="nav-color" data-toggle="dropdown" href="#">
+
+
+                Sections
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/faq"> FAQ</a></li>
+                                        <li><a href="/staff"> Staff</a></li>
+                                        <li><a href="/legal"> Legal</a></li>
+                                        <li><a href="/thanks"> Special Thanks!</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container-fluid -->
+                    </div>
+                </nav>
+            </div>
+
+
+
+
+
+    </div>
+</div>
+        </div>
+          </div>
+
+
+
+
+
+<div class="container mainContent">
+
+    <div class="col-lg-12">
+           <% if session? %>
+            <a class="nav-color  " target="_blank" href="/arena">
+                                    <img src="/images/PlayNow.png" class="img-responsive marginup2">
+                                    </a>
+     <% else %>
+      <a class="nav-color  " data-toggle="modal" data-target="#register" style="cursor:pointer">
+                                    <img src="/images/PlayNow.png" class="img-responsive marginup2">
+                                    </a>
+
+     <% end %>
+
+       <%= yield %>
+    </div>
+</div>
+</div>
+
+<div class="footer " style="clear:both;">
+<div class="container ">
+    <div class="footerText">
+    Budokai-Online is a fansite that is no way affiliated with the Dragon Ball
+Brand, Namco Bandai, Toei Animation or Akira Toriyama. All images, video
+footage and other media are copyright to their respective owners, no
+copyright infringement is intended. To view more regarding terms and
+conditions please visit our Disclaimer.
+</div>
+<div class="container text-center">
+    <br>
+    <ul>
+        <li>   <a class="links" href="/legal">Legal</a></li>
+        <li class="links"> | </li>
+   <li> <a class="links" href="/faq">Faq</a></li>
+   <li class="links"> | </li>
+  <li>  <a class="links" href="/thanks">Credit</a></li>
+    </ul>
+ <br>
+</div>
+</div>
+</div>
+
+
+
+    <!-- Forgot password -->
+<div class="modal fade" id="forgot_password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body modal-bg">
+              <div class=" button1 btn-block white" id="myModalLabel">Forgot Password</div>
+               <div class="shadow2">
+
+                <form action="/forgot_password" method="post">
+                    Enter the email address associated with your account: <input type="email" class="form-control" name="email">
+                    <br> <input type="submit" class="btn btn-default btn-block " value="Reset Password">
+                </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body modal-bg">
+                 <h4 class="modal-title" id="myModalLabel"><div class="button1">Register </div> </h4>
+               <form action="/signup" method="post">
+                    <div class="shadow2">
+    <li class="list-group-item noround"><label for="Username">Username</label> <input type="text" class="form-control" name="username" placeholder="Enter Username" required></li>
+    <li class="list-group-item "><label for="Birthday"> Password</label> <input type="password" class="form-control" name="passwordcheck" placeholder="Enter Password" required></li>
+
+    <li class="list-group-item "> <label for="Birthday">Confirm Password</label> <input type="password" class="form-control" name="password" placeholder="Enter Password" required></li>
+    <li class="list-group-item"><label for="Birthday">Email</label><input type="email" name="email" class="form-control" placeholder="Enter Email" required> </li>
+    <li class="list-group-item text-center noround"><input type="submit" href="/signup" class="btn btn-default btn-block"></li>
+
+  </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="/js/jq.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/tagsort.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/create.js"></script>
+    <script src="/js/validation.js?version=0.1"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('body').popover({
+                selector: '[data-toggle=popover]',
+                container: 'body',
+                trigger: 'hover'
+            });
+
+            $('body').tooltip({
+                selector: '[data-toggle=tooltip]'
+            });
+
+        });
+    </script>
+</body>
+
+</html>
+<!---Footer Information End-->

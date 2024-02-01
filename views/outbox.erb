@@ -1,202 +1,171 @@
 <div class="container cleanblack2 nomabt">
-   <div class="row cleanblack2">
-      <div class="col-lg-8">
-        
+  <div class="row cleanblack2">
+    <div class="col-lg-8">
       <div class="panel fix noround">
-  <div class="panel-heading fa fa-angle-double-right">
-    OutBox
-  </div>
-</div>
-<div class="panel cleanblack title">
-  <div class="panel-body">
-      <button data-toggle="modal" data-target="#new_message" class="btn btn-success noround col-xs-3">Compose</button>
-      <a href="/messages" class="btn btn-primary  noround col-xs-3">Inbox</a>
-      <a href="/outbox" class="btn btn-primary active noround col-xs-3">Outbox</a>
-       <button class="btn btn-danger noround col-xs-3 " id="delete">Delete</button>
+        <div class="panel-heading fa fa-angle-double-right">
+          OutBox
+        </div>
       </div>
+      <div class="panel cleanblack title">
+        <div class="panel-body">
+          <button data-toggle="modal" data-target="#new_message" class="btn btn-success noround col-xs-3">Compose</button>
+          <a href="/messages" class="btn btn-primary  noround col-xs-3">Inbox</a>
+          <a href="/outbox" class="btn btn-primary active noround col-xs-3">Outbox</a>
+          <button class="btn btn-danger noround col-xs-3 " id="delete">Delete</button>
+        </div>
       </div>
- <div class="panel cleanblack title">
-  <div class="panel-heading">
-  <table class="table table-responsive ">
-   
-
-    
-    
-    <tbody>
-
-        <% if @messages %>
-   <% @messages.each do |message| %> 
-     
-      <tr>
-        
-        <td><img class="img-message img-thumbnail pointer"  src="<%=message.from_user.avater %>"></td>
-        <td class="pointer" onclick="window.document.location='/message/[id]';"><b class="sfix">[user]</b><br><small>[title]</small></td>
-        <td>[time]</td>
-        <td><input type="checkbox" class="checkItem " id ="<%= message.id %>"> </td>
-        
-      </tr>
-      
-       <%end%>
+      <div class="panel cleanblack title">
+        <div class="panel-heading">
+          <table class="table table-responsive ">
+            <tbody>
+              <% if @messages %>
+                <% @messages.each do |message| %>
+                  <tr>
+                    <td><img class="img-message img-thumbnail pointer"  src="<%=message.from_user.avater %>"></td>
+                    <td class="pointer" onclick="window.document.location='/message/[id]';"><b class="sfix">[user]</b><br>
+                      <small>[title]</small></td>
+                    <td>[time]</td>
+                    <td><input type="checkbox" class="checkItem " id ="<%= message.id %>"> </td>
+                  </tr>
+                <%end%>
               <%end%>
- 
-    </tbody>
-  </table>
-  
-  </div>
-</div>
-
-     
-             
-
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-     <div class="col-lg-4">
+    <div class="col-lg-4">
       <div class="panel navbar-custom fix2 noround">
-  <div class="panel-heading fa fa-angle-double-right">
-    Ladder
-  </div>
-  
-</div>
-<div class="panel cleanblack title">
-  <div class="panel-body">
-    <div class="scroll">
-      <!--begin ladder media-->
-<div class="media ">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object img-thumbnail img-responsive img-avater " src="/ava/1.jpg" alt="...">
-    </a>
-  </div>
-  
-  <div class="media-body">
-    <h4 class="media-heading">[user] <small class="sfix">#[Rank]</small></h4>
-    [powerlevel]
-  </div>
-</div>
-  </div>
-  </div>
-  <!--end ladder media-->
-    
-</div>
-</div>
-
-
-</div>
-</div>
-   <!-- New Message --->
-            <div class="modal fade" id="new_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">New message</h4>
-                  </div>
-                  <div class="modal-body">
-                    <div class="alert alert-danger" role="alert">Uses spaces!</div>
-      
-      <div class="panel panel-default">
-  <div class="panel-body">
-    <img src='/images/smileys/s1.png' id="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4" onclick='smiley(this);' />
-    <img src='/images/smileys/s5.png' id="5" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" onclick='smiley(this);' /><img src='/images/smileys/s8.png' id="8" onclick='smiley(this);' />
-    <img src='/images/smileys/s9.png' id="9" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" onclick='smiley(this);' /><img src='/images/smileys/s12.png' id="12" onclick='smiley(this);' />
-    <img src='/images/smileys/s13.png' id="13" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" onclick='smiley(this);' /><img src='/images/smileys/s16.png' id="16" onclick='smiley(this);' />
-    <img src='/images/smileys/s17.png' id="17" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" onclick='smiley(this);' /><img src='/images/smileys/s20.png' id="20" onclick='smiley(this);' />
-    <img src='/images/smileys/s21.png' id="21" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" onclick='smiley(this);' /><img src='/images/smileys/s24.png' id="24" onclick='smiley(this);' />
-    <img src='/images/smileys/s25.png' id="25" onclick='smiley(this);' />
-  </div>
-</div>
-
-
-  <div class="panel panel-default">
-  <div class="panel-body">
-    <div class="btn-group "  role="group" aria-label="...">
-   <button class="btn btn-default" id="1" onclick="changeText(this)">Bold</button><button class="btn btn-default"  id="2" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" onclick="changeText(this)">Quote</button><button class="btn btn-default" id="4" onclick="changeText(this)">Link</button>
-   <button class="btn btn-default" id="5" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" onclick="changeText(this)">Image</button>
- <div class="btn-group">
-  <button type="button" class="btn btn-default">Text Size</button>
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a  id="7" onclick="changeText(this)">H1 Largest</a></li>
-    <li><a  id="8" onclick="changeText(this)">H2</a></li>
-    <li><a  id="9" onclick="changeText(this)">H3</a></li>
-    <li><a  id="10" onclick="changeText(this)">H4</a></li>
-    <li><a  id="11" onclick="changeText(this)">H5</a></li>
-    <li><a  id="12" onclick="changeText(this)">H6 Smallest</a></li>
-  </ul>
-</div>
-
-
-</div>
-   
- 
-  </div>
-  </div>
-  
- 
-                    <form action="/messages" method="post" id="new_message_form">
-                      <input type="hidden" name="location" value="/messages" class="form-control">
-                      <input type="hidden" id="previous" name="previous" class="form-control" required>
-                      To user: <input type="text" id="user" name="send_to" class="form-control" required> <br>
-                      Title: <input type="text" name="title" class="form-control" required> <br>
-                      Body: <textarea id="textUpdate" name="body" form="new_message_form" class="form-control" placeholder="Your message text goes here" rows="5" required></textarea> <br>
-                      <input type="submit" class="btn btn-primary col-lg-12" value="Send"><br>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
+        <div class="panel-heading fa fa-angle-double-right">
+          Ladder
+        </div>
+      </div>
+      <div class="panel cleanblack title">
+        <div class="panel-body">
+          <div class="scroll">
+            <!--begin ladder media-->
+            <div class="media ">
+              <div class="media-left">
+                <a href="#">
+                  <img class="media-object img-thumbnail img-responsive img-avater " src="/avatar/default1.jpg" alt="...">
+                </a>
               </div>
-              </div>
-            <!-- Confirm--->
-            <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Confirm</h4>
-                  </div>
-                  <div class="modal-body ">
-                    <form action="/delete" method="post" id="yes">
-                      <input type="hidden" name="confirm" id="confirmed"> 
-                      <div class="text-center">
-                      Are you sure?  </div> <br>
-                      
-                      <div class="text-center">
-                          <input type="submit" class="btn btn-success noround">
-                          <button type="button" data-dismiss="modal" class="btn btn-danger noround"> No</button>
-   
-</div>
-                    </form>
-                    
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger col-lg-3 pull-right " data-dismiss="modal">Close</button>
-                  </div>
-                </div>
+              <div class="media-body">
+                <h4 class="media-heading">[user] <small class="sfix">#[Rank]</small></h4>
+                [powerlevel]
               </div>
             </div>
-
-
+          </div>
+        </div>
+        <!--end ladder media-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- New Message --->
+<div class="modal fade" id="new_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New message</h4>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger" role="alert">Uses spaces!</div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <img src='/images/smileys/s1.png' id="1" onclick='smiley(this);' /> <img src='/images/smileys/s2.png' id="2" onclick='smiley(this);' /> <img src='/images/smileys/s3.png' id="3" onclick='smiley(this);' /><img src='/images/smileys/s4.png' id="4" onclick='smiley(this);' />
+            <img src='/images/smileys/s5.png' id="5" onclick='smiley(this);' /><img src='/images/smileys/s6.png' id="6" onclick='smiley(this);' /><img src='/images/smileys/s7.png' id="7" onclick='smiley(this);' /><img src='/images/smileys/s8.png' id="8" onclick='smiley(this);' />
+            <img src='/images/smileys/s9.png' id="9" onclick='smiley(this);' /><img src='/images/smileys/s10.png' id="10" onclick='smiley(this);' /><img src='/images/smileys/s11.png' id="11" onclick='smiley(this);' /><img src='/images/smileys/s12.png' id="12" onclick='smiley(this);' />
+            <img src='/images/smileys/s13.png' id="13" onclick='smiley(this);' /><img src='/images/smileys/s14.png' id="14" onclick='smiley(this);' /><img src='/images/smileys/s15.png' id="15" onclick='smiley(this);' /><img src='/images/smileys/s16.png' id="16" onclick='smiley(this);' />
+            <img src='/images/smileys/s17.png' id="17" onclick='smiley(this);' /><img src='/images/smileys/s18.png' id="18" onclick='smiley(this);' /><img src='/images/smileys/s19.png' id="19" onclick='smiley(this);' /><img src='/images/smileys/s20.png' id="20" onclick='smiley(this);' />
+            <img src='/images/smileys/s21.png' id="21" onclick='smiley(this);' /><img src='/images/smileys/s22.png' id="22" onclick='smiley(this);' /><img src='/images/smileys/s23.png' id="23" onclick='smiley(this);' /><img src='/images/smileys/s24.png' id="24" onclick='smiley(this);' />
+            <img src='/images/smileys/s25.png' id="25" onclick='smiley(this);' />
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="btn-group "  role="group" aria-label="...">
+              <button class="btn btn-default" id="1" onclick="changeText(this)">Bold</button><button class="btn btn-default"  id="2" onclick="changeText(this)">Italic</button><button class="btn btn-default" id="3" onclick="changeText(this)">Quote</button><button class="btn btn-default" id="4" onclick="changeText(this)">Link</button>
+              <button class="btn btn-default" id="5" onclick="changeText(this)">Strike</button><button class="btn btn-default" id="6" onclick="changeText(this)">Image</button>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">Text Size</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a  id="7" onclick="changeText(this)">H1 Largest</a></li>
+                  <li><a  id="8" onclick="changeText(this)">H2</a></li>
+                  <li><a  id="9" onclick="changeText(this)">H3</a></li>
+                  <li><a  id="10" onclick="changeText(this)">H4</a></li>
+                  <li><a  id="11" onclick="changeText(this)">H5</a></li>
+                  <li><a  id="12" onclick="changeText(this)">H6 Smallest</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form action="/messages" method="post" id="new_message_form">
+          <input type="hidden" name="location" value="/messages" class="form-control">
+          <input type="hidden" id="previous" name="previous" class="form-control" required>
+          To user: <input type="text" id="user" name="send_to" class="form-control" required> <br>
+          Title: <input type="text" name="title" class="form-control" required> <br>
+          Body: 
+          <textarea id="textUpdate" name="body" form="new_message_form" class="form-control" placeholder="Your message text goes here" rows="5" required></textarea>
+ <br>
+          <input type="submit" class="btn btn-primary col-lg-12" value="Send"><br>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Confirm--->
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confirm</h4>
+      </div>
+      <div class="modal-body ">
+        <form action="/delete" method="post" id="yes">
+          <input type="hidden" name="confirm" id="confirmed">
+          <div class="text-center">
+            Are you sure?  </div>
+ <br>
+          <div class="text-center">
+            <input type="submit" class="btn btn-success noround">
+            <button type="button" data-dismiss="modal" class="btn btn-danger noround"> No</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger col-lg-3 pull-right " data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
+  $('#checkAll').click(function () {
+      $(':checkbox.checkItem').prop('checked', this.checked);
+   });
 
-$('#checkAll').click(function () {    
-    $(':checkbox.checkItem').prop('checked', this.checked);    
- });
+   $('#delete').click(function () {
+    var notChecked = [], checked = [];
+      $(":checkbox").map(function() {
+          this.checked ? checked.push(this.id) : notChecked.push(this.id);
+      });
 
- $('#delete').click(function () {    
-  var notChecked = [], checked = [];
-    $(":checkbox").map(function() {
-        this.checked ? checked.push(this.id) : notChecked.push(this.id);
-    });
-    
-    var check = new Object();
-    check.array = checked;
-    console.log("checked: " + checked);
-    console.log("not checked: " + notChecked);
-    $("#confirm").modal("show");
-    $("#confirmed").val(check);
-    
- });</script>
+      var check = new Object();
+      check.array = checked;
+      console.log("checked: " + checked);
+      console.log("not checked: " + notChecked);
+      $("#confirm").modal("show");
+      $("#confirmed").val(check);
+
+   });
+</script>

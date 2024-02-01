@@ -1,0 +1,418 @@
+=== puma startup: 2024-01-07 04:02:20 -0600 ===
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-session-1.0.0/lib/sinatra/session.rb:45:in `new'.
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET / HTTP/1.1" 200 17917 0.0883
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /css/custom3.min.css?version=0.1 HTTP/1.1" 200 53276 0.0130
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-session-1.0.0/lib/sinatra/session.rb:45:in `new'.
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /css/tagsort.min.css HTTP/1.1" 200 - 0.0095
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-session-1.0.0/lib/sinatra/session.rb:45:in `new'.
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /css/bootstrap.min.css HTTP/1.1" 200 122422 0.0195
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /ava/ava1.png HTTP/1.1" 200 7848 0.0114
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /images/discord.png HTTP/1.1" 200 23117 0.0195
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /images/reddit.png HTTP/1.1" 200 20260 0.0173
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /images/youtube.png HTTP/1.1" 200 19766 0.0208
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /js/jq.min.js HTTP/1.1" 200 84345 0.0300
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /js/tagsort.min.js HTTP/1.1" 200 3780 0.0183
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /js/bootstrap.min.js HTTP/1.1" 200 36816 0.0237
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /images/twitter.png HTTP/1.1" 200 23687 0.0146
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /images/facebook.png HTTP/1.1" 200 19939 0.0142
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /js/create.js HTTP/1.1" 200 226998 0.0352
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /js/validation.js?version=0.1 HTTP/1.1" 200 290485 0.0351
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /images/post1.png HTTP/1.1" 200 143022 0.0242
+::1 - - [07/Jan/2024:04:02:25 -0600] "GET /images/PlayNow.png HTTP/1.1" 200 522644 0.0531
+::1 - - [07/Jan/2024:04:02:32 -0600] "GET /font/gil.otf HTTP/1.1" 302 - 0.0044
+::1 - - [07/Jan/2024:04:02:32 -0600] "GET /images/navabarimage.png HTTP/1.1" 200 22442 0.0213
+::1 - - [07/Jan/2024:04:02:32 -0600] "GET /images/mainContent.png HTTP/1.1" 200 99657 0.0394
+::1 - - [07/Jan/2024:04:02:32 -0600] "GET /font/Aero.ttf HTTP/1.1" 200 44464 0.0435
+::1 - - [07/Jan/2024:04:02:32 -0600] "GET / HTTP/1.1" 200 17917 0.0475
+::1 - - [07/Jan/2024:04:02:32 -0600] "GET /images/testbackground.png HTTP/1.1" 200 1756177 0.1979
+::1 - - [07/Jan/2024:04:02:44 -0600] "GET /images/down.png HTTP/1.1" 302 - 0.0061
+::1 - - [07/Jan/2024:04:02:44 -0600] "GET /images/up.png HTTP/1.1" 302 - 0.0098
+::1 - - [07/Jan/2024:04:02:44 -0600] "GET / HTTP/1.1" 200 17917 0.0824
+::1 - - [07/Jan/2024:04:02:44 -0600] "GET / HTTP/1.1" 200 17917 0.0901
+::1 - - [07/Jan/2024:04:03:15 -0600] "GET /forums HTTP/1.1" 200 7934 0.0511
+::1 - - [07/Jan/2024:04:03:15 -0600] "GET /css/custom2.css HTTP/1.1" 200 31507 0.0119
+::1 - - [07/Jan/2024:04:03:15 -0600] "GET /library/font-awesome-4.6.3/css/font-awesome.min.css HTTP/1.1" 302 - 0.0035
+::1 - - [07/Jan/2024:04:03:15 -0600] "GET /js/bootstrap.min.js HTTP/1.1" 200 36816 0.0105
+::1 - - [07/Jan/2024:04:03:15 -0600] "GET /js/tagsort.min.js HTTP/1.1" 200 3780 0.0093
+::1 - - [07/Jan/2024:04:03:16 -0600] "GET / HTTP/1.1" 200 17917 0.0534
+::1 - - [07/Jan/2024:04:03:16 -0600] "GET /js/validation.js HTTP/1.1" 200 290485 0.0663
+::1 - - [07/Jan/2024:04:03:20 -0600] "GET /font/OB.ttf HTTP/1.1" 200 53056 0.0188
+::1 - - [07/Jan/2024:04:03:20 -0600] "GET /font/OpenSans-Light.ttf HTTP/1.1" 200 222412 0.0373
+::1 - - [07/Jan/2024:04:03:20 -0600] "GET /images/forum/newbg2.png HTTP/1.1" 200 1476578 0.1303
+::1 - - [07/Jan/2024:04:03:21 -0600] "GET / HTTP/1.1" 200 17917 0.0343
+::1 - - [07/Jan/2024:04:03:21 -0600] "GET /library/font-awesome-4.6.3/css/font-awesome.min.css HTTP/1.1" 302 - 0.0037
+::1 - - [07/Jan/2024:04:03:21 -0600] "GET /images/budokailogo2.png HTTP/1.1" 200 30710 0.0112
+::1 - - [07/Jan/2024:04:03:21 -0600] "GET /js/bootstrap.min.js HTTP/1.1" 200 36816 0.0104
+::1 - - [07/Jan/2024:04:03:21 -0600] "GET /js/tagsort.min.js HTTP/1.1" 200 3780 0.0285
+::1 - - [07/Jan/2024:04:03:21 -0600] "GET / HTTP/1.1" 200 17917 0.0385
+::1 - - [07/Jan/2024:04:03:21 -0600] "GET /js/create.js HTTP/1.1" 200 226998 0.0469
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /arena HTTP/1.1" 200 26711 0.0393
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /css/tagsort.min.css HTTP/1.1" 200 - 0.0123
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /css/jquery-ui.css HTTP/1.1" 302 - 0.0024
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /css/custom.css HTTP/1.1" 200 46604 0.0115
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /library/font-awesome-4.6.3/css/font-awesome.min.css HTTP/1.1" 302 - 0.0031
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /css/bootstrap.min.css HTTP/1.1" 200 122422 0.0158
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /assets/zGu.jpg HTTP/1.1" 302 - 0.0030
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /assets/gold_capsule.png HTTP/1.1" 200 22296 0.0116
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET / HTTP/1.1" 200 17917 0.0447
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET / HTTP/1.1" 200 17917 0.0821
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /js/jquery-1.11.3.js HTTP/1.1" 200 96619 0.0906
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /js/Chart.min.js HTTP/1.1" 200 118957 0.1140
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /js/tagsort.min.js HTTP/1.1" 200 3780 0.0284
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET / HTTP/1.1" 200 17917 0.0406
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /js/bootstrap.min.js HTTP/1.1" 200 36816 0.0288
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /js/jquery-ui.min.js HTTP/1.1" 200 253385 0.1328
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /assets/test.png HTTP/1.1" 302 - 0.0028
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /ava/box.png HTTP/1.1" 200 627 0.0122
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /assets/blue_capsule.png HTTP/1.1" 200 25097 0.0124
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /js/create.js HTTP/1.1" 200 226998 0.0308
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /assets/purple_capsule.png HTTP/1.1" 200 25163 0.0277
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET / HTTP/1.1" 200 17917 0.0523
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /font/Aero.ttf HTTP/1.1" 200 44464 0.0364
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /images/up.png HTTP/1.1" 302 - 0.0059
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /images/down.png HTTP/1.1" 302 - 0.0083
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /assets/music1.mp3 HTTP/1.1" 206 6785199 0.1192
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET / HTTP/1.1" 200 17917 0.0630
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /font/OpenSans-Bold.ttf HTTP/1.1" 200 224592 0.1201
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET / HTTP/1.1" 200 17917 0.0527
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /js/game.js?version=0.4 HTTP/1.1" 200 776870 0.2258
+::1 - - [07/Jan/2024:04:03:22 -0600] "GET /images/favicon.ico HTTP/1.1" 200 1150 0.0082
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /images/inGameBackground.png HTTP/1.1" 200 1052802 0.2384
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/bar.png HTTP/1.1" 200 16305 0.0093
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /font/OB.ttf HTTP/1.1" 200 53056 0.0229
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/loadingscreen.png HTTP/1.1" 200 509840 0.0761
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/Mainmenu.png HTTP/1.1" 200 747844 0.0920
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/maingoku.png HTTP/1.1" 302 - 0.0038
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0445
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/select1.png HTTP/1.1" 302 - 0.0039
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0381
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/select2.png HTTP/1.1" 302 - 0.0037
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0457
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/select3.png HTTP/1.1" 302 - 0.0041
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0395
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/select4.png HTTP/1.1" 302 - 0.0033
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0388
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/select5.png HTTP/1.1" 302 - 0.0031
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0356
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/select6.png HTTP/1.1" 302 - 0.0032
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0378
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/button1.png HTTP/1.1" 302 - 0.0038
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0376
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/button2.png HTTP/1.1" 302 - 0.0033
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0366
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/button3.png HTTP/1.1" 302 - 0.0032
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0378
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/button4.png HTTP/1.1" 302 - 0.0036
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0373
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/button5.png HTTP/1.1" 302 - 0.0031
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0369
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/button6.png HTTP/1.1" 302 - 0.0035
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0409
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/button7.png HTTP/1.1" 302 - 0.0035
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0400
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/button8.png HTTP/1.1" 302 - 0.0031
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET / HTTP/1.1" 200 17917 0.0362
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /assets/scouter.mp3 HTTP/1.1" 200 10064 0.0094
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /skills/zGu.png HTTP/1.1" 200 14149 0.0100
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /skills/zKG.png HTTP/1.1" 200 4933 0.0095
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /skills/bKG.png HTTP/1.1" 200 4604 0.0090
+::1 - - [07/Jan/2024:04:03:23 -0600] "GET /skills/zKn.png HTTP/1.1" 200 5187 0.0088
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zNa.png HTTP/1.1" 200 5450 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zPo.png HTTP/1.1" 200 5384 0.0086
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zRz.png HTTP/1.1" 200 5054 0.0094
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zSn.png HTTP/1.1" 200 5004 0.0094
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zSV.png HTTP/1.1" 200 5148 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zTn.png HTTP/1.1" 200 4727 0.0097
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zYe.png HTTP/1.1" 200 4468 0.0097
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zYa.png HTTP/1.1" 200 5372 0.0090
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zCu.png HTTP/1.1" 200 5160 0.0090
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zCi.png HTTP/1.1" 200 5289 0.0095
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zKk.png HTTP/1.1" 200 4736 0.0096
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zRe.png HTTP/1.1" 200 5178 0.0088
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zBr.png HTTP/1.1" 200 4733 0.0089
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zJe.png HTTP/1.1" 200 4665 0.0091
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zGy.png HTTP/1.1" 200 5286 0.0094
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zRi.png HTTP/1.1" 200 4928 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zGo.png HTTP/1.1" 200 4768 0.0089
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zNl.png HTTP/1.1" 200 4821 0.0087
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zGJ.png HTTP/1.1" 200 4750 0.0096
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zDa.png HTTP/1.1" 200 5360 0.0089
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zCr.png HTTP/1.1" 200 4800 0.0091
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zZn.png HTTP/1.1" 200 5010 0.0097
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zFa.png HTTP/1.1" 302 - 0.0042
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET / HTTP/1.1" 200 17917 0.0453
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zCl.png HTTP/1.1" 302 - 0.0045
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET / HTTP/1.1" 200 17917 0.0388
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zNy.png HTTP/1.1" 200 4589 0.0090
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zGr.png HTTP/1.1" 200 3697 0.0092
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zSo.png HTTP/1.1" 200 5137 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zMa.png HTTP/1.1" 200 14441 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zDe.png HTTP/1.1" 200 4872 0.0105
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zDo.png HTTP/1.1" 200 5045 0.0100
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zTs.png HTTP/1.1" 200 5175 0.0090
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/zBa.png HTTP/1.1" 200 15069 0.0103
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/1.png HTTP/1.1" 200 4804 0.0107
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/2.png HTTP/1.1" 200 4802 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/3.png HTTP/1.1" 200 4859 0.0085
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/4.png HTTP/1.1" 200 5285 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/5.png HTTP/1.1" 200 5644 0.0092
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/6.png HTTP/1.1" 200 5068 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/7.png HTTP/1.1" 200 5190 0.0086
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/8.png HTTP/1.1" 200 4776 0.0089
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/9.png HTTP/1.1" 200 4407 0.0089
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/30.png HTTP/1.1" 200 26412 0.0097
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/31.png HTTP/1.1" 200 5230 0.0092
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/32.png HTTP/1.1" 200 5494 0.0091
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/33.png HTTP/1.1" 200 5234 0.0086
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/34.png HTTP/1.1" 200 4743 0.0094
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/35.png HTTP/1.1" 200 4328 0.0092
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/36.png HTTP/1.1" 200 4615 0.0087
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/37.png HTTP/1.1" 200 4774 0.0090
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/38.png HTTP/1.1" 200 5109 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/39.png HTTP/1.1" 200 4492 0.0089
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/40.png HTTP/1.1" 200 3941 0.0098
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/41.png HTTP/1.1" 200 4958 0.0120
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/42.png HTTP/1.1" 200 5532 0.0116
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/43.png HTTP/1.1" 200 4978 0.0126
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/44.png HTTP/1.1" 200 4647 0.0124
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/45.png HTTP/1.1" 200 4183 0.0092
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/46.png HTTP/1.1" 200 5007 0.0092
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/47.png HTTP/1.1" 200 5484 0.0093
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/48.png HTTP/1.1" 200 5663 0.0097
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/49.png HTTP/1.1" 200 5141 0.0091
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/50.png HTTP/1.1" 200 3397 0.0088
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/51.png HTTP/1.1" 200 5235 0.0090
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/52.png HTTP/1.1" 200 5350 0.0101
+::1 - - [07/Jan/2024:04:03:24 -0600] "GET /skills/53.png HTTP/1.1" 200 5214 0.0100
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/54.png HTTP/1.1" 200 4822 0.0096
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/55.png HTTP/1.1" 200 4724 0.0089
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/56.png HTTP/1.1" 200 5040 0.0091
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/57.png HTTP/1.1" 200 2808 0.0093
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/58.png HTTP/1.1" 200 4985 0.0091
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/59.png HTTP/1.1" 200 4815 0.0091
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/60.png HTTP/1.1" 200 4874 0.0099
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/61.png HTTP/1.1" 200 4427 0.0094
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/62.png HTTP/1.1" 200 4388 0.0093
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/63.png HTTP/1.1" 200 4774 0.0097
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/64.png HTTP/1.1" 200 4211 0.0090
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/65.png HTTP/1.1" 200 4757 0.0094
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/66.png HTTP/1.1" 200 4129 0.0089
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/67.png HTTP/1.1" 200 4166 0.0089
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/68.png HTTP/1.1" 200 4374 0.0099
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/69.png HTTP/1.1" 200 4560 0.0096
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/70.png HTTP/1.1" 200 4182 0.0092
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/71.png HTTP/1.1" 200 5271 0.0094
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/72.png HTTP/1.1" 200 5171 0.0097
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/73.png HTTP/1.1" 200 4288 0.0093
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/74.png HTTP/1.1" 200 5085 0.0093
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/75.png HTTP/1.1" 200 4937 0.0089
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/76.png HTTP/1.1" 200 4875 0.0090
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/77.png HTTP/1.1" 200 3817 0.0104
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/78.png HTTP/1.1" 200 5170 0.0120
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/79.png HTTP/1.1" 200 4749 0.0130
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/80.png HTTP/1.1" 200 5068 0.0122
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/81.png HTTP/1.1" 200 4745 0.0104
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/82.png HTTP/1.1" 200 3907 0.0091
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/83.png HTTP/1.1" 200 4622 0.0090
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/84.png HTTP/1.1" 200 4957 0.0093
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/85.png HTTP/1.1" 200 5058 0.0097
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/86.png HTTP/1.1" 200 4625 0.0097
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/87.png HTTP/1.1" 200 3473 0.0095
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/88.png HTTP/1.1" 200 4289 0.0092
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/89.png HTTP/1.1" 200 4313 0.0093
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/90.png HTTP/1.1" 200 3485 0.0091
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/91.png HTTP/1.1" 200 4426 0.0094
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/92.png HTTP/1.1" 200 5031 0.0095
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/93.png HTTP/1.1" 200 5020 0.0090
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/94.png HTTP/1.1" 200 5205 0.0089
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/95.png HTTP/1.1" 200 4522 0.0088
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/96.png HTTP/1.1" 200 3708 0.0093
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/97.png HTTP/1.1" 200 4949 0.0089
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/98.png HTTP/1.1" 200 4934 0.0097
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/99.png HTTP/1.1" 200 4284 0.0098
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/100.png HTTP/1.1" 200 3878 0.0115
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/101.png HTTP/1.1" 200 4954 0.0102
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/102.png HTTP/1.1" 200 5291 0.0089
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/103.png HTTP/1.1" 200 4881 0.0091
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/104.png HTTP/1.1" 200 5194 0.0089
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/105.png HTTP/1.1" 200 5020 0.0092
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/106.png HTTP/1.1" 200 4977 0.0088
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/107.png HTTP/1.1" 200 4908 0.0090
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/108.png HTTP/1.1" 200 4473 0.0092
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/109.png HTTP/1.1" 200 5084 0.0093
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/110.png HTTP/1.1" 200 4225 0.0087
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/111.png HTTP/1.1" 200 4047 0.0092
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/112.png HTTP/1.1" 200 4823 0.0100
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/113.png HTTP/1.1" 200 5084 0.0096
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/114.png HTTP/1.1" 200 3340 0.0118
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/115.png HTTP/1.1" 200 15309 0.0123
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/116.png HTTP/1.1" 200 4605 0.0119
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/117.png HTTP/1.1" 200 5056 0.0122
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/118.png HTTP/1.1" 200 5130 0.0089
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/119.png HTTP/1.1" 200 4997 0.0092
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/120.png HTTP/1.1" 200 4931 0.0098
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/121.png HTTP/1.1" 200 3963 0.0104
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/122.png HTTP/1.1" 200 5113 0.0098
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/123.png HTTP/1.1" 200 4913 0.0098
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/124.png HTTP/1.1" 200 4291 0.0090
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/125.png HTTP/1.1" 200 4129 0.0093
+::1 - - [07/Jan/2024:04:03:25 -0600] "GET /skills/126.png HTTP/1.1" 200 4781 0.0095
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/127.png HTTP/1.1" 200 17322 0.0100
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/128.png HTTP/1.1" 200 16758 0.0102
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/129.png HTTP/1.1" 200 5019 0.0091
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/130.png HTTP/1.1" 200 4817 0.0087
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/131.png HTTP/1.1" 200 4093 0.0090
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/132.png HTTP/1.1" 200 3354 0.0094
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/133.png HTTP/1.1" 200 4792 0.0090
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/134.png HTTP/1.1" 200 4529 0.0089
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/135.png HTTP/1.1" 200 4879 0.0092
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/136.png HTTP/1.1" 200 5022 0.0105
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/137.png HTTP/1.1" 200 4967 0.0091
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/138.png HTTP/1.1" 200 4609 0.0087
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/139.png HTTP/1.1" 200 4902 0.0091
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/140.png HTTP/1.1" 200 4895 0.0089
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/141.png HTTP/1.1" 200 4952 0.0089
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/142.png HTTP/1.1" 200 3761 0.0086
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/143.png HTTP/1.1" 200 4960 0.0087
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/144.png HTTP/1.1" 200 3385 0.0094
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/145.png HTTP/1.1" 200 4903 0.0090
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/146.png HTTP/1.1" 200 5336 0.0091
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/147.png HTTP/1.1" 200 4390 0.0091
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/148.png HTTP/1.1" 200 4465 0.0092
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/149.png HTTP/1.1" 200 4940 0.0093
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/150.png HTTP/1.1" 200 5043 0.0088
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/151.png HTTP/1.1" 302 - 0.0033
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0433
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/152.png HTTP/1.1" 302 - 0.0039
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0386
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/153.png HTTP/1.1" 302 - 0.0033
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0358
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/154.png HTTP/1.1" 302 - 0.0031
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0368
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/155.png HTTP/1.1" 302 - 0.0041
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0363
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/156.png HTTP/1.1" 302 - 0.0031
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0358
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/157.png HTTP/1.1" 302 - 0.0034
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0374
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/158.png HTTP/1.1" 302 - 0.0031
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0363
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/159.png HTTP/1.1" 302 - 0.0032
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0379
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/160.png HTTP/1.1" 302 - 0.0030
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0368
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/161.png HTTP/1.1" 302 - 0.0034
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET / HTTP/1.1" 200 17917 0.0399
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/162.png HTTP/1.1" 200 11874 0.0124
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/163.png HTTP/1.1" 200 13758 0.0127
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/164.png HTTP/1.1" 200 10741 0.0128
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/165.png HTTP/1.1" 200 5302 0.0103
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/10000.png HTTP/1.1" 200 5424 0.0100
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/10001.png HTTP/1.1" 200 5371 0.0095
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/10002.png HTTP/1.1" 200 5347 0.0100
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/10003.png HTTP/1.1" 200 4434 0.0091
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/10004.png HTTP/1.1" 200 5347 0.0093
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/10005.png HTTP/1.1" 200 5429 0.0091
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/10006.png HTTP/1.1" 200 5469 0.0085
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/10007.png HTTP/1.1" 200 5525 0.0091
+::1 - - [07/Jan/2024:04:03:26 -0600] "GET /skills/10008.png HTTP/1.1" 200 4925 0.0096
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10009.png HTTP/1.1" 200 5411 0.0096
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10010.png HTTP/1.1" 200 5260 0.0093
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10011.png HTTP/1.1" 200 4996 0.0089
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10012.png HTTP/1.1" 200 4309 0.0093
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10013.png HTTP/1.1" 200 4771 0.0093
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10014.png HTTP/1.1" 200 4843 0.0093
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10015.png HTTP/1.1" 200 4501 0.0090
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10016.png HTTP/1.1" 200 5011 0.0090
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10017.png HTTP/1.1" 200 4701 0.0092
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10018.png HTTP/1.1" 200 4435 0.0091
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/10020.png HTTP/1.1" 200 5120 0.0088
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /skills/G.png HTTP/1.1" 200 5252 0.0092
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /assets/Ko.png HTTP/1.1" 200 21780 0.0095
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /assets/loadingscreen2.png HTTP/1.1" 200 560337 0.0451
+2024-01-07 04:03:27 - SinatraWebsocket::Error::ConfigurationError - Could not find an async callback in our environment!:
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-websocket-0.3.1/lib/sinatra-websocket.rb:16:in `from_env'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-websocket-0.3.1/lib/sinatra-websocket/ext/sinatra/request.rb:17:in `websocket'
+	/mnt/c/laragon/www/game/budokai/routes/arena.rb:373:in `block in <class:BudokaiArena>'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1611:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1611:in `block in compile!'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:975:in `block (3 levels) in route!'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:994:in `route_eval'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:975:in `block (2 levels) in route!'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1015:in `block in process_route'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1013:in `catch'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1013:in `process_route'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:973:in `block in route!'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:972:in `each'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:972:in `route!'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1085:in `block in dispatch!'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1067:in `catch'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1067:in `invoke'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1082:in `dispatch!'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:907:in `block in call!'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1067:in `catch'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1067:in `invoke'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:907:in `call!'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:895:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/session/abstract/id.rb:252:in `context'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/session/abstract/id.rb:247:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/session/abstract/id.rb:252:in `context'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/session/abstract/id.rb:247:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-protection-1.5.5/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-protection-1.5.5/lib/rack/protection/path_traversal.rb:16:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-protection-1.5.5/lib/rack/protection/json_csrf.rb:18:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-protection-1.5.5/lib/rack/protection/base.rb:49:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-protection-1.5.5/lib/rack/protection/base.rb:49:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-protection-1.5.5/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/logger.rb:15:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:212:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/head.rb:13:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/methodoverride.rb:22:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/show_exceptions.rb:25:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:182:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:2013:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1487:in `block in call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1787:in `synchronize'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:1487:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/tempfile_reaper.rb:15:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/lint.rb:49:in `_call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/lint.rb:37:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/showexceptions.rb:24:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/commonlogger.rb:33:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/sinatra-1.4.8/lib/sinatra/base.rb:219:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/chunked.rb:54:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/rack-1.6.13/lib/rack/content_length.rb:15:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/puma-6.4.1/lib/puma/configuration.rb:272:in `call'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/puma-6.4.1/lib/puma/request.rb:100:in `block in handle_request'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/puma-6.4.1/lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/puma-6.4.1/lib/puma/request.rb:99:in `handle_request'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/puma-6.4.1/lib/puma/server.rb:464:in `process_client'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/puma-6.4.1/lib/puma/server.rb:245:in `block in run'
+	/home/melo/.rvm/gems/ruby-2.7.2/gems/puma-6.4.1/lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /arena HTTP/1.1" 500 213301 0.0565
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /images/left.png HTTP/1.1" 302 - 0.0044
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /images/right.png HTTP/1.1" 302 - 0.0034
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET / HTTP/1.1" 200 17917 0.0675
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET / HTTP/1.1" 200 17917 0.0763
+::1 - - [07/Jan/2024:04:03:27 -0600] "GET /assets/tutorial0.png HTTP/1.1" 200 161729 0.0904
+::1 - - [07/Jan/2024:04:03:28 -0600] "GET /font/TW.ttf HTTP/1.1" 200 59908 0.0130

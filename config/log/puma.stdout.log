@@ -1,0 +1,10 @@
+=== puma startup: 2024-01-07 04:02:20 -0600 ===
+[41728] - Worker 0 (PID: 41746) booted in 0.0s, phase: 0
+[41728] - Worker 1 (PID: 41748) booted in 0.0s, phase: 0
+Count: 0
+0
+No Websocket
+Websocket Connection
+[41728] - Gracefully shutting down workers...
+[41728] === puma shutdown: 2024-01-07 04:05:48 -0600 ===
+[41728] - Goodbye!

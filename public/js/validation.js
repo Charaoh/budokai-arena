@@ -783,7 +783,7 @@ function showCharacter(n)
     $('.character').contents().remove();
     $("#skill").contents().remove();
     //$("#skill").hide().fadeIn(1000);
-    $("#skillavater").attr('src', "/ava/box.png");
+    $("#skillavater").attr('src', "/avatar/box.png");
 $("#skilldescription").text("");
 $("#skillname").text("Skill Name");
 $("#skillinfo").text(" ");
@@ -4477,7 +4477,7 @@ break;
 
         default:
             b.push("Description");
-            b.push("/ava/box.png");
+            b.push("/avatar/box.png");
             b.push("None");
     } //end switch
 

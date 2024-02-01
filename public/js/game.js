@@ -36,23 +36,16 @@ var converter = new showdown.Converter();
 
 
 window.onload = function() {
-
-
     canvas = document.getElementById('myCanvas');
     canvas.width = 1200;
     canvas.height = 720;
-
-    //622
 
     stage = new createjs.Stage("myCanvas");
     stage.textBaseline = "alphabetic";
     createjs.Touch.enable(stage);
     stage.enableMouseOver();
-
-
     createjs.Ticker.setFPS(15);
     createjs.Ticker.addEventListener('tick', stage);
-
 
     queue = new createjs.LoadQueue(false);
     queue.installPlugin(createjs.Sound);
@@ -83,7 +76,7 @@ window.onload = function() {
 		{id: 'button7', src: 'assets/button7.png'},
 		{id: 'button8', src: 'assets/button8.png'},	
 	    {id: 'select', src: 'assets/scouter.mp3'},
-        {id: 0, src: 'ava/box.png'},
+        {id: 0, src: 'avatar/box.png'},
         {id: 'zGu', src: 'skills/zGu.png'}, //Face Stuff
         {id: 'zKG', src: 'skills/zKG.png'},
         {id: 'bKG', src: 'skills/bKG.png'},
@@ -288,7 +281,7 @@ window.onload = function() {
         {id: 'G', src: 'skills/G.png'},
         {id: 'ko', src: 'assets/Ko.png'},
         {id: 'green', src: 'assets/gold_capsule.png'},
-        {id: "?", src: '/ava/box.png'},
+        {id: "?", src: '/avatar/box.png'},
         {id: "load", src: '/assets/loadingscreen2.png'},
     ]);
 
@@ -301,14 +294,10 @@ window.onload = function() {
 
 };
 
-
-
-
 /*
 
 effect_box = Box that changes when clicking on characters/skills.
 */
-
 
 function updateLoading() {
     var a = queue.progress * 100 | 0;
@@ -3744,7 +3733,7 @@ function characterList(a, c) {
 
         default:
             b.push("Description");
-            b.push("/ava/box.png");
+            b.push("/avatar/box.png");
             b.push("None");
     } //end switch
 
@@ -4179,7 +4168,8 @@ function queueLoaded(event) {
 
 
 function websocketGo() {
-    ws = new WebSocket('wss://game-ninetailschris.c9users.io/arena');
+    //ws = new WebSocket('wss://game-ninetailschris.c9users.io/arena');
+    ws = new WebSocket('ws://localhost:9292/arena');
     ws.onopen = function(m) {
         console.log('websocket opened ');
     };
@@ -5227,7 +5217,7 @@ function showCharacter(num, num2) {
 
         });
         p1stats.current = num;
-        $("#newimage").attr('src', "/ava/box.png");
+        $("#newimage").attr('src', "/avatar/box.png");
         $("#newdescription").text("");
         $("#skillname").text("-Skill Name");
         $("#newinfo").text("");
@@ -5252,7 +5242,7 @@ function showCharacter(num, num2) {
         var us = p1stats.stats[a];
 
         $("#teamtitle").text("Character Selection");
-        $("#currentimage").attr('src', "/ava/box.png");
+        $("#currentimage").attr('src', "/avatar/box.png");
         $("#currentdescription").text("");
         $("#skillname").text("-Skill Name");
         $("#currentinfo").text("");
@@ -5273,7 +5263,7 @@ function showCharacter(num, num2) {
 
         a = $(num).attr('data-character');
         p1stats.ch = a;
-        $("#currentimage").attr('src', "/ava/box.png");
+        $("#currentimage").attr('src', "/avatar/box.png");
         $("#currentdescription").text("");
         $("#skillname").text("-Skill Name");
         $("#currentinfo").text("");
@@ -6352,7 +6342,7 @@ function skillD(n, t)
         $(".selection").empty();
         $("#savebutton").empty()
         $("#currentdescription").text("");
-        $("#currentimage").attr('src', "/ava/box.png");
+        $("#currentimage").attr('src', "/avatar/box.png");
         $("#currentTitle").text("");
         $("#currentinfo").text("");
         $("#currentstats").text("");
@@ -6380,7 +6370,7 @@ function skillD(n, t)
 
 
         $("#teamtitle").text("Skill Selection");
-        $("#currentimage").attr('src', "/ava/box.png");
+        $("#currentimage").attr('src', "/avatar/box.png");
         $("#currentdescription").text("");
         $("#currentTitle").text("");
         $("#currentlevel").hide();

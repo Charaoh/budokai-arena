@@ -1,91 +1,61 @@
 class BudokaiArena < Sinatra::Application
-  
   get '/how_to_play' do
-  if session?
-  @user = User.first(:username => session[:username])   
+    @user = User.first(username: session[:username]) if session?
+    erb :howtoplay
   end
-  erb :howtoplay
-  end
-  
+
   get '/faq' do
-  if session?
-  @user = User.first(:username => session[:username])   
+    @user = User.first(username: session[:username]) if session?
+
+    erb :questions
   end
 
-  erb :questions
-     
-  end
-  
   get '/thanks' do
-  
-  
-  if session?
-  @user = User.first(:username => session[:username])   
+    @user = User.first(username: session[:username]) if session?
+    erb :thanks
   end
-  erb :thanks
-  end
- 
+
   get '/ladder' do
+    l = Leaderboards.last
+    @ladders = JSON.parse(l.users)
+    puts @ladders.count
+    @user = User.first(username: session[:username]) if session?
 
-  l = Leaderboards.last
-  @ladders  =JSON.parse(l.users)
-  puts @ladders.count
-  if session?
-  @user = User.first(:username => session[:username])   
+    erb :layout
   end
-     
-  erb :ladder
-  end
-  
+
   post '/ladder/dragonverse' do
-  content_type :json  
-  ladder = Leaderboards.last
-  { :report => ladder.dragonverse}.to_json
+    content_type :json
+    ladder = Leaderboards.last
+    { report: ladder.dragonverse }.to_json
   end
-  
+
   post '/ladder/user' do
-content_type :json  
-   ladder = Leaderboards.last
-   { :report => ladder.users}.to_json
+    content_type :json
+    ladder = Leaderboards.last
+    { report: ladder.users }.to_json
   end
-  
+
   get '/ladder/rank' do
-  
-  @ladders = User.all(:limit => 200, :order => [ :rank.desc ]).paginate(:page => params[:page], :per_page => 20)
-  if session?
-  @user = User.first(:username => session[:username])   
+    @ladders = User.all(limit: 200, order: [:rank.desc]).paginate(page: params[:page], per_page: 20)
+    @user = User.first(username: session[:username]) if session?
   end
-        
-  end
- 
+
   get '/legal' do
+    @user = User.first(username: session[:username]) if session?
 
-  
-  if session?
-  @user = User.first(:username => session[:username])   
+    erb :legal
   end
-     
-  erb :legal  
-  end
-  
-  
+
   get '/characters' do
-  
-  if session?
-  @user = User.first(:username => session[:username])   
+    @user = User.first(username: session[:username]) if session?
+
+    erb :characters
   end
-  
-  erb :characters
-  end
-  
+
   get '/staff' do
+    @user = User.first(username: session[:username]) if session?
 
-  if session?
-  @user = User.first(:username => session[:username])   
+    erb :staff_list
   end
-  
-  erb :staff_list
-  end
-  
 end
-

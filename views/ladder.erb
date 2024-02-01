@@ -1,20 +1,16 @@
-
-              
-          <div class="panel noround transparent" style="margin: 0px; border:black;">
-  
-             <div class="panel-body navbar-orange leaderboard">
-                    <h2 class="OB text-center panel-text pageName">Leaderboards</h2>
-                         <div class="row">
-                         <div class="col-lg-6" >
-                    <button onclick="ladderChoice(2);" class="button1 active noround btn-block">Rank</button>
-
-               </div>
-               <div class="col-lg-6" >
-                   <button href="#" onclick="ladderChoice(1);" class="button1 noround  btn-block">Dragonverse</button>
-                 </div>
-                 </div>
-                 <br>
-                 <div class="scrollList ">
+<div class="panel noround transparent" style="margin: 0px; border:black;">
+  <div class="panel-body navbar-orange leaderboard">
+    <h2 class="OB text-center panel-text pageName">Leaderboards</h2>
+    <div class="row">
+      <div class="col-lg-6" >
+        <button onclick="ladderChoice(2);" class="button1 active noround btn-block">Rank</button>
+      </div>
+      <div class="col-lg-6" >
+        <button href="#" onclick="ladderChoice(1);" class="button1 noround  btn-block">Dragonverse</button>
+      </div>
+    </div>
+    <br>
+    <div class="scrollList ">
       <table class="table table-responsive text-center ">
         <thead>
           <tr>
@@ -26,22 +22,19 @@
             <th>Ratio</th>
           </tr>
         </thead>
-
-
-
         <tbody id="importLadder">
-          
           <% puts @ladders.count %>
- <% count = 0 %>
+          <% count = 0 %>
           <% if @ladders %>
             <% @ladders.each do |l| %>
-            <% puts count %>
-            <% count += 1 %>
+              <% puts count %>
+              <% count += 1 %>
               <tr>
-                <td class="OB"> <div class="pull-left rank">#<%= count %></div> <img class="img-message img-circle pointer " src="<%= l['avater'] %>"></td>
+                <td class="OB">
+                  <div class="pull-left rank">#<%= count %></div>
+                  <img class="img-message img-circle pointer " src="<%= l['avater'] %>"></td>
                 <td>
-              
-                 <a  href="/user/<%= l['username'] %> "><%= l['username'] %> </a>
+                  <a  href="/user/<%= l['username'] %> "><%= l['username'] %> </a>
                 </td>
                 <td>
                   <%= l['rank'] %>
@@ -53,24 +46,13 @@
                   <%= l['average'] %>%
                 </td>
                 <td>
-                 <%= l['wins'] %> - <%= l['losses'] %> (<%= l['streak'] %>)
+                  <%= l['wins'] %> - <%= l['losses'] %> (<%= l['streak'] %>)
                 </td>
-
-
               </tr>
-              <% end %>
-
-                <% end %>
+            <% end %>
+          <% end %>
         </tbody>
-
       </table>
-      </div>
-               </div>
+    </div>
   </div>
-  </div>
-  
-  
-      
-
-      
- 
+</div>
